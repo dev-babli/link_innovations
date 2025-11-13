@@ -1,0 +1,112 @@
+/**
+ * Link Innovations - McKinsey-Inspired Professional Color System
+ * Clean, minimal, professional palette
+ */
+
+:root {
+  /* Primary Colors - McKinsey Inspired */
+  --color-primary: #001F3F;
+  --color-primary-rgb: 0, 31, 63;
+
+  /* Accent Colors */
+  --color-accent-blue: #0066CC;
+  --color-accent-blue-rgb: 0, 102, 204;
+
+  --color-accent-slate: #5A6C7D;
+  --color-accent-slate-rgb: 90, 108, 125;
+
+  --color-accent-gold: #D4AF37;
+  --color-accent-gold-rgb: 212, 175, 55;
+
+  /* Neutral Colors */
+  --color-neutral-dark: #2C3E50;
+  --color-neutral-light: #F5F7FA;
+  --color-neutral-medium: #7F8C8D;
+
+  /* Text Colors */
+  --color-text-primary-dark: #001F3F;
+  --color-text-primary-light: #FFFFFF;
+  --color-text-secondary-dark: #5A6C7D;
+  --color-text-secondary-light: #F5F7FA;
+  --color-text-tertiary-dark: #7F8C8D;
+  --color-text-tertiary-light: #BDC3C7;
+
+  /* Background Colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F7FA;
+  --color-bg-tertiary: #ECF0F1;
+
+  /* Gradient Presets - Subtle and Professional */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent-blue)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--color-accent-blue),
+    var(--color-accent-slate)
+  );
+  --gradient-subtle: linear-gradient(
+    180deg,
+    var(--color-bg-primary),
+    var(--color-bg-secondary)
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-blue),
+    var(--color-accent-gold)
+  );
+
+  /* Minimal Glass Effects */
+  --glass-background: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(0, 31, 63, 0.1);
+  --glass-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+
+  /* Professional Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 16px 32px 0 rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Utility Classes */
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.glass-card {
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}

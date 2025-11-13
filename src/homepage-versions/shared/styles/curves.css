@@ -1,0 +1,203 @@
+/**
+ * Curved Dividers and Organic Shapes
+ * Matching Grovia reference site aesthetic
+ */
+
+/* Curved Section Divider */
+.curve-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.curve-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+.curve-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+/* SVG Curve Paths */
+.curve-svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* Top Curve (concave up) */
+.curve-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.curve-top svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom Curve (concave down) */
+.curve-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.curve-bottom svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wave Pattern */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Organic Blob Shapes */
+.organic-blob {
+  position: absolute;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  filter: blur(40px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.organic-blob-primary {
+  background: var(--robin-egg-blue);
+}
+
+.organic-blob-secondary {
+  background: var(--brandeis-blue);
+}
+
+/* Curved Container */
+.curved-container {
+  position: relative;
+  border-radius: 0 0 3rem 3rem;
+  overflow: hidden;
+}
+
+.curved-container-top {
+  border-radius: 3rem 3rem 0 0;
+}
+
+.curved-container-both {
+  border-radius: 3rem;
+}
+
+/* Section with Curved Edges */
+.section-curved {
+  position: relative;
+  padding: 4rem 0;
+}
+
+.section-curved::before,
+.section-curved::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 0;
+}
+
+.section-curved::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    currentColor 100%
+  );
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.section-curved::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    transparent 0%,
+    currentColor 100%
+  );
+  clip-path: ellipse(100% 100% at 50% 100%);
+}
+
+/* Smooth Curve Transition */
+.curve-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+.curve-transition::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: inherit;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  z-index: 1;
+}
+
+.curve-transition::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: inherit;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  z-index: 1;
+}
+
+/* Responsive Curves */
+@media (max-width: 768px) {
+  .curve-divider-top,
+  .curve-divider-bottom,
+  .curve-top,
+  .curve-bottom {
+    height: 60px;
+  }
+  
+  .wave-divider {
+    height: 80px;
+  }
+}
+

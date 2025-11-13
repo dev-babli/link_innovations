@@ -1,0 +1,67 @@
+/* Purple Mystic Theme - Homepage 1 */
+:root {
+  --primary: #6c35de;
+  --secondary: #a364ff;
+  --text: #ffffff;
+  --accent: #cb80ff;
+  --bg: #241b35;
+  --defaultColor: #ffc7ff;
+}
+
+.purple-mystic-theme {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.purple-mystic-theme h1,
+.purple-mystic-theme h2,
+.purple-mystic-theme h3,
+.purple-mystic-theme h4,
+.purple-mystic-theme h5,
+.purple-mystic-theme h6 {
+  color: var(--text);
+}
+
+.purple-mystic-theme p {
+  color: var(--text);
+}
+
+.purple-mystic-theme span {
+  color: var(--accent);
+}
+
+.purple-mystic-theme button {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.purple-mystic-theme .primary-bg {
+  background-color: var(--primary);
+}
+
+.purple-mystic-theme .secondary-bg {
+  background-color: var(--secondary);
+}
+
+.purple-mystic-theme .accent-bg {
+  background-color: var(--accent);
+}
+
+.purple-mystic-theme .text-primary {
+  color: var(--primary);
+}
+
+.purple-mystic-theme .text-secondary {
+  color: var(--secondary);
+}
+
+.purple-mystic-theme .text-accent {
+  color: var(--accent);
+}
+
+
+
+
+
+
+

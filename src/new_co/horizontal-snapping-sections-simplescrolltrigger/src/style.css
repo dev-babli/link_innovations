@@ -1,0 +1,16 @@
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}

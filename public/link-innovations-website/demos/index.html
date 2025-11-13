@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Innovations - Component Demos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .component-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .component-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .component-card:hover::before {
+            opacity: 1;
+        }
+        
+        .component-card:nth-child(1) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .component-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .component-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .component-card:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .component-card:nth-child(5) {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .component-card:nth-child(6) {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        
+        .component-number {
+            font-size: 3rem;
+            font-weight: 700;
+            opacity: 0.3;
+            margin-bottom: 10px;
+        }
+        
+        .component-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .component-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .component-tech {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            font-style: italic;
+        }
+        
+        .full-site-link {
+            display: block;
+            text-align: center;
+            background: #1e3c72;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .full-site-link:hover {
+            background: #2a5298;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .component-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Link Innovations</h1>
+        <p class="subtitle">Interactive Component Showcase</p>
+        
+        <div class="component-grid">
+            <a href="./01-flip-loader.html" class="component-card">
+                <div class="component-number">01</div>
+                <div class="component-title">FLIP Loading Animation</div>
+                <div class="component-description">
+                    Dynamic preloader with morphing letter animations transitioning through multiple layout states.
+                </div>
+                <div class="component-tech">GSAP Flip Plugin</div>
+            </a>
+            
+            <a href="./02-hero-zoom.html" class="component-card">
+                <div class="component-number">02</div>
+                <div class="component-title">Hero Image Zoom</div>
+                <div class="component-description">
+                    Scroll-triggered pinned hero section with smooth zoom effect and parallax background.
+                </div>
+                <div class="component-tech">ScrollTrigger</div>
+            </a>
+            
+            <a href="./03-services-smoother.html" class="component-card">
+                <div class="component-number">03</div>
+                <div class="component-title">Services Showcase</div>
+                <div class="component-description">
+                    Smooth scrolling parallax section with speed-controlled elements and image grids.
+                </div>
+                <div class="component-tech">ScrollSmoother</div>
+            </a>
+            
+            <a href="./04-service-cards.html" class="component-card">
+                <div class="component-number">04</div>
+                <div class="component-title">Infinite Service Cards</div>
+                <div class="component-description">
+                    Horizontal infinite-scrolling card carousel with seamless loop and snap points.
+                </div>
+                <div class="component-tech">ScrollTrigger + Custom Loop</div>
+            </a>
+            
+            <a href="./05-team-carousel.html" class="component-card">
+                <div class="component-number">05</div>
+                <div class="component-title">Team Carousel</div>
+                <div class="component-description">
+                    3D vertical carousel showcasing team members with depth effects and multiple navigation options.
+                </div>
+                <div class="component-tech">GSAP Transforms</div>
+            </a>
+            
+            <a href="./06-mega-menu.html" class="component-card">
+                <div class="component-number">06</div>
+                <div class="component-title">Mega Menu Navigation</div>
+                <div class="component-description">
+                    Animated overlay navigation with background transitions and split-text character animations.
+                </div>
+                <div class="component-tech">SplitText + Timeline</div>
+            </a>
+        </div>
+        
+        <a href="../index.html" class="full-site-link">
+            🚀 View Complete Integrated Website
+        </a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+Cloud Services — Page Content (Link Innovation)
+
+SEO / Meta
+- URL slug: /services/cloud-services
+- Meta title: Cloud Services — Migration, IaC & Cost Optimization | Link Innovation
+- Meta description: Modernize, migrate, and optimize cloud infrastructure with IaC, FinOps, and managed SRE practices. Secure and cost-effective cloud operations.
+- Focus keywords: cloud services, cloud migration, IaC, FinOps, SRE, cloud security
+
+Page Header / Hero
+H1 (hero): Cloud Services — Migration, IaC & Managed Operations
+Subhead (hero): Cloud-native architecture, infrastructure automation, and cost-efficient operations for scalable systems.
+Hero brief paragraph (16–22 words): Migrate, modernize, and operate cloud environments with infrastructure as code, observability, and FinOps practices.
+Hero CTAs:
+- Primary: Schedule a Cloud Readiness Review
+- Secondary: See Cloud Solutions
+Hero image suggestion: hero_cloud.webp or animated cloud stack.
+
+Intro / Elevator Pitch
+Short paragraph (60–80 words):
+Link Innovation helps enterprises migrate legacy systems, adopt infrastructure-as-code, and optimize cloud costs. We focus on automation, reliability, and security to maximize cloud ROI while minimizing risk. Our SRE-driven managed services keep critical systems available and performant.
+
+Problems We Solve (H2)
+- Risky lift-and-shift migrations and long rollback windows.
+- High cloud spend due to poor resource sizing.
+- Lack of observability and frequent outages.
+- Slow, manual infrastructure provisioning.
+
+Our Capabilities (H2)
+Intro: End-to-end cloud services covering migration, automation, operations, and optimization.
+
+Sub-service cards
+1. Cloud Migration & Modernization
+   Lift-and-shift or refactor strategies and execution.
+   - Use cases: legacy apps, database migration, data replatforming.
+   - Outcomes: faster deployment, modernization path.
+
+2. Infrastructure as Code (IaC) & Automation
+   Terraform, Pulumi, CDK, and automated environment provisioning.
+   - Use cases: repeatable infra, blue/green deployments.
+   - Outcomes: lower error rate, faster spin-up of environments.
+
+3. Cloud Cost Optimization (FinOps)
+   Rightsizing, reserved instances, autoscaling and billing automation.
+   - Use cases: cost reduction programs, budget alerts.
+   - Outcomes: 20–40% cost savings typically.
+
+4. Managed Cloud Operations (SRE / DevOps)
+   Monitoring, incident management, on-call, and runbooks.
+   - Use cases: production support, release automation.
+   - Outcomes: improved uptime and faster recovery.
+
+5. Cloud Security & Compliance
+   Secure configurations, encryption, and compliance checks.
+   - Use cases: PCI/GDPR readiness, security baselines.
+   - Outcomes: secure cloud posture and audit readiness.
+
+How We Deliver (H2)
+Cloud delivery lifecycle:
+1. Assess — cloud readiness and TCO analysis.
+2. Architect — migration plan and reference architectures.
+3. Migrate & Modernize — execution and cutover planning.
+4. Operate & Optimize — FinOps and SRE-led operations.
+Timeline examples: Readiness review (1–2 weeks), Migration (4–12 weeks), Ongoing managed ops (monthly).
+
+Outcomes & KPIs (H2)
+- Deployment frequency: 3× improvement with CI/CD and IaC.
+- Cost savings: 20–40% through FinOps measures.
+- Uptime & reliability: 99.9%+ with SRE practices.
+- Mean time to recovery improved substantially.
+
+Architecture & Tech Stack (H2)
+Recommended stack:
+- Cloud platforms: AWS, Azure, GCP
+- IaC: Terraform, Pulumi, AWS CDK
+- Containers & Orchestration: Docker, Kubernetes (EKS/AKS/GKE)
+- CI/CD: GitHub Actions, Jenkins, GitLab CI, ArgoCD
+- Monitoring: Prometheus, Grafana, Datadog, CloudWatch
+- Storage & DB: RDS, Aurora, S3, Redis
+- FinOps: CloudHealth, Spot.io, Cost Explorer
+
+Integrations & Data Sources (H2)
+- On-prem systems, VMware, legacy DBs
+- SaaS systems and third-party APIs
+- Observability and logging systems
+
+Case Study (H2)
+Title: Migration & Cost Optimization for SaaSCo
+Problem: SaaSCo faced high cloud spend and slow release cadence.
+Solution: Performed migration to managed Kubernetes, refactored key services, implemented IaC and FinOps program.
+Outcome: Reduced monthly cloud costs by 38% and improved deployment velocity by 4×.
+
+Pricing Models & Engagement Options (H2)
+- Cloud Readiness Review — fixed fee
+- Migration Project — fixed/t&m (4–12 weeks)
+- Managed Cloud Ops (SRE) — monthly retainer
+- FinOps Program — consulting + ongoing automation
+
+Testimonials / Trust (H2)
+- “Link Innovation helped us cut cloud costs and scale reliably.” — VP Engineering, SaaSCo
+
+FAQ (H2)
+Q: Which cloud platform should we choose?
+A: We recommend assessing business needs; we are multi-cloud and can recommend AWS/Azure/GCP based on workload.
+
+CTAs, Forms & Microcopy
+Primary CTA: Schedule a Cloud Readiness Review
+Form fields: Company, Name, Email, Cloud provider preference, Approx monthly spend, Short description.
+Confirmation microcopy: “Thanks — our cloud team will review and follow up with a readiness plan.”
+
+Wireframe / Layout
+1. Hero with cloud illustration, H1, CTAs
+2. Problems & goals
+3. Capabilities grid
+4. Migration plan & timeline
+5. Case study & results
+6. Tech stack logos
+7. Pricing & contact form
+
+JSON content snippet (for CMS)
+{
+  "title": "Cloud Services",
+  "slug": "cloud-services",
+  "company": "Link Innovation",
+  "hero": {
+    "title": "Cloud Services — Migration, IaC & Managed Operations",
+    "subtitle": "Cloud-native architecture, infrastructure automation, and cost-efficient operations for scalable systems.",
+    "image": "hero_cloud.webp"
+  }
+}

@@ -1,0 +1,137 @@
+Cybersecurity — Page Content (Link Innovation)
+
+SEO / Meta
+- URL slug: /services/cybersecurity
+- Meta title: Cybersecurity Services — MDR, AppSec & Cloud Security | Link Innovation
+- Meta description: Protect your digital assets with managed detection, application security, and cloud posture management. 24/7 MDR, penetration testing, and compliance readiness.
+- Focus keywords: cybersecurity services, MDR, SOC, application security, cloud security, IAM, compliance
+
+Page Header / Hero
+H1 (hero): Cybersecurity — Managed Detection, AppSec & Cloud Security
+Subhead (hero): Proactive threat detection, secure development, and cloud posture management to keep your systems resilient.
+Hero brief paragraph (16–22 words): Secure your apps and cloud with 24/7 monitoring, DevSecOps, and compliance-driven controls.
+Hero CTAs:
+- Primary: Start a Free Security Assessment (button — form → audit request)
+- Secondary: See Security Offerings (anchor)
+Hero image suggestion: security dashboard Lottie or hero_cyber.webp.
+
+Intro / Elevator Pitch
+Short paragraph (60–80 words):
+Link Innovation offers end-to-end cybersecurity services combining managed detection and response, application security, and cloud posture management. We embed security into the development lifecycle, run continuous monitoring, and provide compliance support to reduce risk and ensure business continuity.
+
+Problems We Solve (H2)
+- Undetected threats and slow incident response.
+- Insecure application code and CI/CD pipelines.
+- Cloud misconfigurations exposing sensitive data.
+- Gaps in identity management and privileged access controls.
+
+Our Capabilities (H2)
+Intro: Practical security services designed for enterprises with modern cloud and development practices.
+
+Sub-service cards
+1. Managed Detection & Response (MDR / SOC)
+   24×7 monitoring, threat hunting, and incident response.
+   - Use cases: proactive threat detection, automated playbooks, alert triage.
+   - Outcomes: faster remediation and reduced dwell time.
+
+2. Application & Infrastructure Security
+   Vulnerability scanning, penetration testing, secure code reviews.
+   - Use cases: pre-release pentests, SCA, SAST/DAST integrations.
+   - Outcomes: fewer production vulnerabilities and secure releases.
+
+3. Cloud Security & Posture Management (CSPM)
+   Continuous assessment and hardening for AWS/Azure/GCP.
+   - Use cases: misconfiguration remediation, policy enforcement.
+   - Outcomes: lower cloud risk and compliance alignment.
+
+4. Identity & Access Management (IAM / Zero Trust)
+   Implement SSO, MFA, least-privilege access, and PAM.
+   - Use cases: workforce access controls, SaaS identity governance.
+   - Outcomes: reduced lateral movement and tighter access controls.
+
+5. Governance, Risk & Compliance (GRC)
+   Audit readiness (ISO 27001, SOC 2), policy design, and risk assessments.
+   - Use cases: compliance programs, vendor risk assessments.
+   - Outcomes: audit readiness and reduced regulatory exposure.
+
+How We Deliver (H2)
+Security lifecycle model:
+1. Assess — risk assessment, asset mapping, baseline controls.
+2. Protect — hardening, secure SDLC, IAM implementation.
+3. Detect — monitoring, logging, advanced analytics.
+4. Respond & Recover — playbooks, incident response, remediation.
+Typical engagement: Assessment (1–2 weeks) → Remediation (2–6 weeks) → Managed services (ongoing).
+
+Outcomes & KPIs (H2)
+- Mean time to detect (MTTD) improvement: from days to minutes.
+- Vulnerability remediation rate: 90% within SLA.
+- Cloud misconfiguration reduction: 70% after remediation.
+- Compliance readiness: ISO/SOC audit pass rates improved.
+
+Architecture & Tech Stack (H2)
+Recommended stack:
+- SIEM & MDR: Splunk, Elastic, Azure Sentinel, Datadog Security
+- Endpoint & EDR: CrowdStrike, SentinelOne
+- AppSec tools: Burp Suite, Snyk, Veracode, OWASP ZAP
+- Cloud security: Prisma Cloud, AWS Security Hub, Azure Defender
+- IAM & PAM: Okta, Azure AD, CyberArk
+- DevSecOps: SCA/SAST/DAST CI integrations, IaC scanning (Checkov/Terraform)
+- Incident response: Phantom, Cortex XSOAR, custom SOAR playbooks
+
+Integrations & Data Sources (H2)
+- Cloud platforms (AWS, Azure, GCP)
+- CI/CD pipelines and artifact stores
+- Identity providers (Okta, Azure AD)
+- Logging & telemetry (CloudWatch, ELK, Datadog)
+
+Case Study (H2)
+Title: Securing FinTech Platform X
+Problem: FinTech client suffered frequent false positives and long alert triage times.
+Solution: Implemented MDR with tuned detection rules, integrated EDR, and improved runbooks.
+Outcome: Reduced triage time by 70%, eliminated 40% of false positives, and passed SOC 2 audit.
+Assets: detection metrics, runbook examples, remediation timeline.
+
+Pricing Models & Engagement Options (H2)
+- Security Assessment — fixed fee (1–2 weeks)
+- Remediation Project — fixed or T&M (2–8 weeks)
+- Managed Security (MDR/SOC) — monthly retainer (SLAs)
+- Ad-hoc testing — penetration testing, red team exercises
+
+Testimonials / Trust (H2)
+- “Link Innovation helped us harden our cloud posture and reduced our incident volume.” — CTO, FinTech X
+- Certifications & logos: ISO 27001, SOC 2, PCI (if applicable)
+
+FAQ (H2)
+Q: Do you offer 24×7 SOC support?
+A: Yes — MDR is available as a managed service with optional 24×7 coverage and escalation.
+Q: How do you handle sensitive customer data?
+A: We use secure vaults, encryption, strict RBAC and attestations; we can work on-site or under NDA.
+Q: Can you integrate into our CI/CD pipeline?
+A: Yes — we integrate SAST/SCA/DAST into CI and provide remediation guidance.
+
+CTAs, Forms & Microcopy
+Primary CTA: Start a Free Security Assessment
+Form fields: Company, Name, Email, Critical systems, Preferred SLA, Short description, Budget.
+Confirmation microcopy: “Thanks — our security team will review and follow up with available audit slots.”
+
+Wireframe / Layout
+1. Hero with security illustration, H1, CTA
+2. Problems & threats (visual)
+3. Capabilities grid (cards)
+4. Security lifecycle (Assess→Protect→Detect→Respond)
+5. Case study
+6. Tools & integrations (logos)
+7. Pricing & managed services
+8. FAQ + contact form
+
+JSON content snippet (for CMS)
+{
+  "title": "Cybersecurity",
+  "slug": "cybersecurity",
+  "company": "Link Innovation",
+  "hero": {
+    "title": "Cybersecurity — Managed Detection, AppSec & Cloud Security",
+    "subtitle": "Proactive threat detection, secure development, and cloud posture management to keep your systems resilient.",
+    "image": "hero_cyber.webp"
+  }
+}

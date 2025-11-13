@@ -1,0 +1,111 @@
+/**
+ * Design Tokens - CSS Variables
+ * Link Innovations Premium Homepage Design System
+ */
+
+:root {
+  /* Color Palette */
+  --robin-egg-blue: #00c4b8;
+  --robin-egg-blue-rgb: 0, 196, 184;
+  --brandeis-blue: #016cf7;
+  --brandeis-blue-rgb: 1, 108, 247;
+  --black: #000000;
+  --night: #141414;
+  --baby-powder: #fdfffd;
+  
+  /* Semantic Colors */
+  --color-primary: var(--robin-egg-blue);
+  --color-secondary: var(--brandeis-blue);
+  --color-background: var(--baby-powder);
+  --color-background-dark: var(--night);
+  --color-text: var(--black);
+  --color-text-dark: var(--night);
+  --color-text-light: var(--baby-powder);
+  
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-headline: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Font Sizes */
+  --text-hero: clamp(2.5rem, 5vw, 5rem);
+  --text-h1: clamp(3rem, 4vw, 3.5rem);
+  --text-h2: clamp(2.5rem, 3.5vw, 3rem);
+  --text-h3: clamp(2rem, 2.5vw, 2.5rem);
+  --text-body: 1.125rem;
+  --text-body-large: 1.25rem;
+  --text-small: 0.875rem;
+  
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+  
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+  --spacing-5xl: 8rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 3rem;
+  --radius-full: 9999px;
+  
+  /* Container Max Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+  --container-7xl: 1280px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Glow Effects */
+  --glow-primary: 0 0 20px rgba(0, 196, 184, 0.3);
+  --glow-secondary: 0 0 20px rgba(1, 108, 247, 0.3);
+  --glow-primary-strong: 0 0 40px rgba(0, 196, 184, 0.5);
+  --glow-secondary-strong: 0 0 40px rgba(1, 108, 247, 0.5);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --text-hero: clamp(2rem, 4vw, 2.5rem);
+    --text-h1: clamp(2rem, 3vw, 2.5rem);
+    --text-h2: clamp(1.75rem, 2.5vw, 2rem);
+    --text-h3: clamp(1.5rem, 2vw, 1.75rem);
+    --text-body: 1rem;
+    --text-body-large: 1.125rem;
+  }
+}
+

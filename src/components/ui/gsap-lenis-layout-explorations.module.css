@@ -1,0 +1,347 @@
+/* GSAP Lenis Layout Explorations Component */
+/* Link Innovations Premium Design */
+
+.audioEnable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(253, 255, 253, 0.9);
+  text-transform: uppercase;
+  gap: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.enableButton {
+  border: 1px solid rgba(253, 255, 253, 0.9);
+  background: transparent;
+  color: rgba(253, 255, 253, 0.9);
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.enableButton:hover {
+  background: rgba(253, 255, 253, 0.9);
+  color: #0a0a0a;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(253, 255, 253, 0.9);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gradientReveal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 500vh;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #000000 20%,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0.4) 70%,
+    transparent 100%
+  );
+  z-index: 1500;
+  pointer-events: none;
+  transform: translateY(0);
+}
+
+.geometricBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.geometricSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.gridLine {
+  stroke: rgba(0, 196, 184, 0.15);
+  stroke-width: 1;
+  stroke-opacity: 0.3;
+  shape-rendering: crispEdges;
+}
+
+.circleOutline {
+  stroke: rgba(0, 196, 184, 0.3);
+  stroke-width: 1;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.circleFilled {
+  stroke: rgba(1, 108, 247, 0.3);
+  stroke-width: 1;
+  fill: rgba(0, 196, 184, 0.05);
+  vector-effect: non-scaling-stroke;
+}
+
+.geometricText {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  fill: rgba(253, 255, 253, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s ease;
+}
+
+.centerCircle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 60;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.circleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glowingCircle {
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: none;
+  position: relative;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.section {
+  height: 200vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.section1 {
+  background-image: linear-gradient(135deg, rgba(0, 196, 184, 0.1) 0%, rgba(1, 108, 247, 0.1) 100%),
+    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');
+  background-blend-mode: overlay;
+}
+
+.section2 {
+  background-image: linear-gradient(135deg, rgba(1, 108, 247, 0.1) 0%, rgba(0, 196, 184, 0.1) 100%),
+    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');
+  background-blend-mode: overlay;
+}
+
+.section3 {
+  background-image: linear-gradient(135deg, rgba(0, 196, 184, 0.1) 0%, rgba(1, 108, 247, 0.1) 100%),
+    url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop');
+  background-blend-mode: overlay;
+}
+
+.sectionContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 2rem;
+}
+
+.siteFooter {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: #141414;
+  z-index: 10;
+  margin-top: 0;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footerContentSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.footerLeft,
+.footerRight {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(253, 255, 253, 0.9);
+  line-height: 1.2;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: right;
+  max-width: 40%;
+}
+
+.footerCredits {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.7em;
+  color: rgba(253, 255, 253, 0.6);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.footerCredits a {
+  color: rgba(253, 255, 253, 0.9);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footerCredits a:hover {
+  opacity: 0.7;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .geometricText {
+    font-size: 10px;
+  }
+
+  .glowingCircle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footerRight {
+    max-width: 50%;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .geometricText {
+    font-size: 9px;
+  }
+
+  .glowingCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .section {
+    background-attachment: scroll;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .footerRight {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .footerCredits {
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+
+  .siteFooter {
+    padding: 1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .geometricText {
+    font-size: 8px;
+  }
+
+  .glowingCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footerLeft,
+  .footerRight {
+    font-size: 10px;
+  }
+
+  .footerCredits {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+  }
+
+  .sectionContent {
+    padding: 1rem;
+  }
+}
+
+

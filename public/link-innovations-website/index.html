@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Innovations - IT Solutions & Services</title>
+    <link href='//fonts.googleapis.com/css?family=Signika+Negative:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+    <link rel="stylesheet" href='https://codepen.io/GreenSock/pen/xxmzBrw.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Mona+Sans:wght@400;600&display=swap">
+    <link rel="preload" href="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434289/osfkc154kf3aztkcdcby.png" as="image">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="menu-overlay">
+        <div class="menu-overlay__bg-container" aria-hidden="true">
+            <div class="menu-overlay__bg-img">
+                <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434241/opxgbbzugvuyyhbzk4ws.png" data-bg-for="default" alt="">
+            </div>
+            <div class="menu-overlay__bg-img">
+                <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434289/osfkc154kf3aztkcdcby.png" data-bg-for="home" alt="">
+            </div>
+            <div class="menu-overlay__bg-img">
+                <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434301/cc3hjrumxxq3061khxdu.png" data-bg-for="about" alt="">
+            </div>
+            <div class="menu-overlay__bg-img">
+                <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434322/fgkuhyyp1f5fhx6fi8ui.png" data-bg-for="services" alt="">
+            </div>
+            <div class="menu-overlay__bg-img">
+                <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434241/n2jnauiij31xa7vqwrnx.png" data-bg-for="industries" alt="">
+            </div>
+            <div class="menu-overlay__bg-img">
+                <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757434319/rn9dvqmdyayydlomcnp8.png" data-bg-for="contact" alt="">
+            </div>
+        </div>
+
+        <div class="menu-overlay__content">
+            <div class="menu-overlay__links">
+                <div class="menu-overlay__main">
+                    <ul>
+                        <li>
+                            <a href="#home" data-text-anim>HOME</a>
+                        </li>
+                        <li>
+                            <a href="#about" data-text-anim>ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="#services" data-text-anim>SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="#industries" data-text-anim>INDUSTRIES</a>
+                        </li>
+                        <li>
+                            <a href="#contact" data-text-anim>CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-overlay__socials">
+                    <ul>
+                        <li><a href="https://linkedin.com/company/link-innovations" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/linkinnovations" target="_blank">Twitter</a></li>
+                        <li><a href="https://facebook.com/linkinnovations" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <nav class="wrapper">
+            <div class="menu-bar">
+                <div class="logo-wrapper">
+                    <img src="https://res.cloudinary.com/dbsuruevi/image/upload/v1757498600/wfj2gg7ft8mxdlgaaemc.svg" alt="Link Innovations">
+                </div>
+                <div class="navbar__menu" id="menu-toggle">
+                    <span class="toggle-line-top"></span>
+                    <span class="toggle-line-bottom"></span>
+                </div>
+                <a href="#services" class="navbar__btn btn">
+                    <span class="btn-txt">EXPLORE SERVICES</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none">
+                        <path fill="#2F2411" d="m17.76 6.857-5.727-5.688a.821.821 0 0 0-1.147.01.81.81 0 0 0-.01 1.139l4.33 4.3H.819a.821.821 0 0 0-.578.238.81.81 0 0 0 .578 1.388h14.389l-4.33 4.3a.813.813 0 0 0-.19.892.813.813 0 0 0 .765.505.824.824 0 0 0 .581-.248l5.727-5.688a.81.81 0 0 0 0-1.148Z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader" class="container final">
+        <div class="letter L">L</div>
+        <div class="letter I">I</div>
+        <div class="letter N">N</div>
+        <div class="letter K">K</div>
+        <div class="for">for</div>
+        <div class="gsap">INNOVATIONS</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content" style="display: none;">
+        <!-- Hero Section with Zoom -->
+        <section id="hero">
+            <div class="wrapper-hero">
+                <div class="content">
+                    <section class="section hero"></section>
+                </div>
+                <div class="image-container">
+                    <img src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="Link Innovations">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content after hero to allow scrolling -->
+        <section style="min-height: 100vh; background: #111; display: flex; align-items: center; justify-content: center; padding: 60px 20px;">
+            <div style="max-width: 800px; text-align: center; color: white;">
+                <h2 style="font-size: 3rem; margin-bottom: 20px; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Link Innovations
+                </h2>
+                <p style="font-size: 1.5rem; line-height: 1.8; color: rgba(255,255,255,0.8);">
+                    Transforming businesses through innovative IT solutions. From cloud infrastructure to AI-powered analytics, we deliver excellence at every level.
+                </p>
+            </div>
+        </section>
+        
+        <section style="min-height: 100vh; background: linear-gradient(135deg, #1e3c72 0%, #0a1628 100%); display: flex; align-items: center; justify-content: center; padding: 60px 20px;">
+            <div style="max-width: 900px; text-align: center; color: white;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 40px; font-weight: 700;">
+                    Our Services
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div style="padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #667eea;">IT Staffing</h3>
+                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Connect with top-tier technology talent</p>
+                    </div>
+                    <div style="padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #f093fb;">Cloud Services</h3>
+                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Scale your infrastructure seamlessly</p>
+                    </div>
+                    <div style="padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #4facfe;">Data Analytics</h3>
+                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Unlock insights from your data</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- GSAP and Plugin Scripts -->
+    <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3'></script>
+    <script src='https://assets.codepen.io/16327/Flip.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src='https://assets.codepen.io/16327/ScrollSmoother.min.js?v=94387867'></script>
+    <script src='https://unpkg.com/gsap@3/dist/SplitText.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+</html>
+

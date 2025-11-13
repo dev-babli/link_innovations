@@ -1,0 +1,67 @@
+/* Electric Blue Theme - Homepage 3 */
+:root {
+  --primary: #0085ff;
+  --secondary: #69b4ff;
+  --text: #ffffff;
+  --accent: #006fff;
+  --bg: #1e1e1e;
+  --defaultColor: #e0ffff;
+}
+
+.electric-blue-theme {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.electric-blue-theme h1,
+.electric-blue-theme h2,
+.electric-blue-theme h3,
+.electric-blue-theme h4,
+.electric-blue-theme h5,
+.electric-blue-theme h6 {
+  color: var(--text);
+}
+
+.electric-blue-theme p {
+  color: var(--text);
+}
+
+.electric-blue-theme span {
+  color: var(--accent);
+}
+
+.electric-blue-theme button {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.electric-blue-theme .primary-bg {
+  background-color: var(--primary);
+}
+
+.electric-blue-theme .secondary-bg {
+  background-color: var(--secondary);
+}
+
+.electric-blue-theme .accent-bg {
+  background-color: var(--accent);
+}
+
+.electric-blue-theme .text-primary {
+  color: var(--primary);
+}
+
+.electric-blue-theme .text-secondary {
+  color: var(--secondary);
+}
+
+.electric-blue-theme .text-accent {
+  color: var(--accent);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+/* Teal Tech Theme - Homepage 2 */
+:root {
+  --primary: #00adb5;
+  --secondary: #aae3e2;
+  --text: #eeeeee;
+  --accent: #ac7dd2;
+  --bg: #222831;
+  --defaultColor: #fdf6fd;
+}
+
+.teal-tech-theme {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.teal-tech-theme h1,
+.teal-tech-theme h2,
+.teal-tech-theme h3,
+.teal-tech-theme h4,
+.teal-tech-theme h5,
+.teal-tech-theme h6 {
+  color: var(--text);
+}
+
+.teal-tech-theme p {
+  color: var(--text);
+}
+
+.teal-tech-theme span {
+  color: var(--accent);
+}
+
+.teal-tech-theme button {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.teal-tech-theme .primary-bg {
+  background-color: var(--primary);
+}
+
+.teal-tech-theme .secondary-bg {
+  background-color: var(--secondary);
+}
+
+.teal-tech-theme .accent-bg {
+  background-color: var(--accent);
+}
+
+.teal-tech-theme .text-primary {
+  color: var(--primary);
+}
+
+.teal-tech-theme .text-secondary {
+  color: var(--secondary);
+}
+
+.teal-tech-theme .text-accent {
+  color: var(--accent);
+}
+
+
+
+
+
+
+

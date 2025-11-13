@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Infinite Service Cards | Link Innovations</title>
+    <link rel='stylesheet' href='https://codepen.io/GreenSock/pen/xxmzBrw.css'>
+    <style>
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: Mori;
+            background: #111;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .gallery {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .cards {
+            position: absolute;
+            width: 14rem;
+            height: 18rem;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .cards li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 14rem;
+            height: 18rem;
+            text-align: center;
+            line-height: 18rem;
+            font-size: 2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 0.8rem;
+        }
+        
+        .cards li img {
+            max-width: 90%;
+            opacity: 0;
+        }
+        
+        .actions {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        button {
+            display: inline-block;
+            outline: none;
+            padding: 12px 25px;
+            background: var(--dark);
+            border: solid 2px var(--light);
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 99px;
+            font-weight: 600;
+            cursor: pointer;
+            line-height: 18px;
+            margin: 1rem;
+        }
+        
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            z-index: 10000;
+            font-weight: 600;
+        }
+        
+        .instruction {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #111;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html" class="back-link">← Back to Demos</a>
+    <div class="instruction">👇 Scroll or use buttons to navigate cards</div>
+    
+    <div class="gallery">
+        <ul class="cards">
+            <li><img src="https://assets.codepen.io/16327/portrait-number-1.png" alt="IT Staffing" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-2.png" alt="Cloud Services" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-3.png" alt="Data Analytics" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-4.png" alt="Managed IT" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-5.png" alt="Cybersecurity" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-1.png" alt="IT Staffing" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-2.png" alt="Cloud Services" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-3.png" alt="Data Analytics" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-4.png" alt="Managed IT" /></li>
+            <li><img src="https://assets.codepen.io/16327/portrait-number-5.png" alt="Cybersecurity" /></li>
+        </ul>
+        <div class="actions">
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+        </div>
+    </div>
+    
+    <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src="../../../src/new_co/infinite-scrolling-cards-with-gsap-and-scrolltrigger-continuous-snap/dist/script.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.to("img", {opacity: 1, delay: 0.1});
+        
+        let iteration = 0;
+        const spacing = 0.1,
+            snap = gsap.utils.snap(spacing),
+            cards = gsap.utils.toArray('.cards li'),
+            seamlessLoop = buildSeamlessLoop(cards, spacing),
+            scrub = gsap.to(seamlessLoop, {
+                totalTime: 0,
+                duration: 0.5,
+                ease: "power3",
+                paused: true
+            }),
+            trigger = ScrollTrigger.create({
+                start: 0,
+                onUpdate(self) {
+                    if (self.progress === 1 && self.direction > 0 && !self.wrapping) {
+                        wrapForward(self);
+                    } else if (self.progress < 1e-5 && self.direction < 0 && !self.wrapping) {
+                        wrapBackward(self);
+                    } else {
+                        scrub.vars.totalTime = snap((iteration + self.progress) * seamlessLoop.duration());
+                        scrub.invalidate().restart();
+                        self.wrapping = false;
+                    }
+                },
+                end: "+=3000",
+                pin: ".gallery"
+            });
+        
+        function wrapForward(trigger) {
+            iteration++;
+            trigger.wrapping = true;
+            trigger.scroll(trigger.start + 1);
+        }
+        
+        function wrapBackward(trigger) {
+            iteration--;
+            if (iteration < 0) {
+                iteration = 9;
+                seamlessLoop.totalTime(seamlessLoop.totalTime() + seamlessLoop.duration() * 10);
+                scrub.pause();
+            }
+            trigger.wrapping = true;
+            trigger.scroll(trigger.end - 1);
+        }
+        
+        function scrubTo(totalTime) {
+            let progress = (totalTime - seamlessLoop.duration() * iteration) / seamlessLoop.duration();
+            if (progress > 1) {
+                wrapForward(trigger);
+            } else if (progress < 0) {
+                wrapBackward(trigger);
+            } else {
+                trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
+            }
+        }
+        
+        document.querySelector(".next").addEventListener("click", () => scrubTo(scrub.vars.totalTime + spacing));
+        document.querySelector(".prev").addEventListener("click", () => scrubTo(scrub.vars.totalTime - spacing));
+        
+        function buildSeamlessLoop(items, spacing) {
+            let overlap = Math.ceil(1 / spacing),
+                startTime = items.length * spacing + 0.5,
+                loopTime = (items.length + overlap) * spacing + 1,
+                rawSequence = gsap.timeline({paused: true}),
+                seamlessLoop = gsap.timeline({
+                    paused: true,
+                    repeat: -1,
+                    onRepeat() {
+                        this._time === this._dur && (this._tTime += this._dur - 0.01);
+                    }
+                }),
+                l = items.length + overlap * 2,
+                time = 0, i, index, item;
+            
+            gsap.set(items, {xPercent: 400, opacity: 0, scale: 0});
+            
+            for (i = 0; i < l; i++) {
+                index = i % items.length;
+                item = items[index];
+                time = i * spacing;
+                rawSequence.fromTo(item, {scale: 0, opacity: 0}, {scale: 1, opacity: 1, zIndex: 100, duration: 0.5, yoyo: true, repeat: 1, ease: "power1.in", immediateRender: false}, time)
+                    .fromTo(item, {xPercent: 400}, {xPercent: -400, duration: 1, ease: "none", immediateRender: false}, time);
+                i <= items.length && seamlessLoop.add("label" + i, time);
+            }
+            
+            rawSequence.time(startTime);
+            seamlessLoop.to(rawSequence, {
+                time: loopTime,
+                duration: loopTime - startTime,
+                ease: "none"
+            }).fromTo(rawSequence, {time: overlap * spacing + 1}, {
+                time: startTime,
+                duration: startTime - (overlap * spacing + 1),
+                immediateRender: false,
+                ease: "none"
+            });
+            return seamlessLoop;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

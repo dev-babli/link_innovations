@@ -1,0 +1,68 @@
+{
+  "apis": {
+    "gemini": {
+      "apiKey": "YOUR_GEMINI_API_KEY_HERE",
+      "model": "gemini-pro",
+      "temperature": 0.7,
+      "maxTokens": 2048,
+      "note": "Options: gemini-1.5-flash (faster, free), gemini-1.5-pro (better quality), gemini-1.5-flash-8b (fastest)"
+    },
+    "imageGeneration": {
+      "provider": "gemini-imagen",
+      "note": "Using Google's Imagen 3 (same API key as Gemini)",
+      "model": "imagen-3.0-generate-001",
+      "style": "photorealistic",
+      "quality": "high",
+      "fallbackProvider": "replicate",
+      "replicateKey": "YOUR_REPLICATE_KEY_HERE_OPTIONAL"
+    }
+  },
+  "project": {
+    "root": "../",
+    "designSystemDocs": [
+      "DESIGN_SYSTEM_LEARNING_SUMMARY.md",
+      "LINK_INNOVATIONS_STYLE_GUIDE.md",
+      "MIDJOURNEY_IMAGE_PROMPTS.md",
+      "IMAGE_GENERATION_STYLE_GUIDE.md"
+    ],
+    "scanPaths": [
+      "src/app",
+      "src/components"
+    ]
+  },
+  "output": {
+    "imageDir": "../public/images",
+    "reportDir": "../automation-reports",
+    "formats": ["webp", "jpg"],
+    "maxFileSizes": {
+      "hero": 500,
+      "service": 400,
+      "card": 200,
+      "icon": 50,
+      "background": 300
+    },
+    "dimensions": {
+      "hero": { "width": 1920, "height": 1080 },
+      "hero-mobile": { "width": 1080, "height": 1920 },
+      "service": { "width": 1600, "height": 900 },
+      "card": { "width": 1200, "height": 900 },
+      "blog": { "width": 800, "height": 600 },
+      "icon": { "width": 512, "height": 512 }
+    }
+  },
+  "generation": {
+    "variationsPerImage": 2,
+    "enableParallelGeneration": true,
+    "maxParallelRequests": 3,
+    "retryAttempts": 3,
+    "retryDelay": 5000
+  },
+  "brandColors": {
+    "primaryBlue": "#3B82F6",
+    "primaryPurple": "#8B5CF6",
+    "primaryCyan": "#06B6D4",
+    "accentCoral": "#FF7A59",
+    "accentYellow": "#E8FF7A"
+  }
+}
+

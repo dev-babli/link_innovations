@@ -1,0 +1,126 @@
+Mobile App Development — Page Content (Link Innovation)
+
+SEO / Meta
+- URL slug: /services/mobile-app-development
+- Meta title: Mobile App Development — React Native & Flutter | Link Innovation
+- Meta description: Build cross-platform and native mobile apps with offline support, cloud integration, and analytics. From MVP to app store launches.
+- Focus keywords: mobile app development, react native, flutter, offline-first, app deployment
+
+Page Header / Hero
+H1 (hero): Mobile App Development — Cross-Platform & Native
+Subhead (hero): Fast-to-market mobile apps with native capabilities and cloud integration.
+Hero brief paragraph (16–22 words): Deliver responsive, offline-capable mobile apps with analytics and CI/CD for scalable releases.
+Hero CTAs:
+- Primary: Start Mobile Discovery
+- Secondary: See Mobile Cases
+Hero image suggestion: hero_web_mobile.webp or device mockups (hero_web_mobile.webp).
+
+Intro / Elevator Pitch
+Short paragraph (60–80 words):
+Link Innovation develops mobile apps that combine cross-platform speed with native performance. From offline-first architectures to advanced native integrations, we deliver secure, scalable apps with smooth UX and measurable engagement metrics.
+
+Problems We Solve (H2)
+- Slow time-to-market for native apps.
+- Fragmented user experiences across platforms.
+- Offline and sync challenges in low-connectivity regions.
+- Complex app store submissions and versioning.
+
+Our Capabilities (H2)
+Intro: Mobile engineering services covering cross-platform, native enhancements, offline sync, and analytics.
+
+Sub-service cards
+1. Cross-Platform App Development (React Native / Flutter)
+   Single codebase for Android & iOS.
+   - Use cases: consumer apps, employee apps, field apps.
+   - Outcomes: faster delivery and lower maintenance costs.
+
+2. Native App Enhancements (iOS & Android)
+   Device-specific modules: camera, sensors, biometrics.
+   - Use cases: AR, advanced sensors, background processing.
+   - Outcomes: native-grade performance where needed.
+
+3. Offline-First & Sync Architecture
+   Local-first storage and conflict resolution strategies.
+   - Use cases: field data collection, intermittent networks.
+   - Outcomes: reliable user experience and data integrity.
+
+4. Cloud-Integrated Mobile Apps
+   Real-time sync, push notifications, secure API integration.
+   - Use cases: messaging apps, real-time dashboards.
+   - Outcomes: engaging, connected mobile experiences.
+
+5. App Store Deployment & Analytics
+   Store listing, CI/CD, crash analytics, and A/B testing.
+   - Use cases: launches and continuous improvement.
+   - Outcomes: smoother releases and better retention.
+
+How We Deliver (H2)
+Mobile delivery model:
+1. Discovery & Design — UX, wireframes, device flows.
+2. Build — cross-platform/core native modules.
+3. Test — device lab, automation, crash monitoring.
+4. Release & Monitor — store release, analytics, iteration.
+Typical timeline: MVP (6–10 weeks), Production (ongoing improvements).
+
+Outcomes & KPIs (H2)
+- Time-to-market reduction: ~40% with cross-platform.
+- Crash rate: reduced via CI/CD and monitoring.
+- Engagement: improved retention with performance optimization.
+
+Architecture & Tech Stack (H2)
+Recommended stack:
+- Frameworks: React Native, Flutter, Swift, Kotlin
+- Backends: Firebase, Supabase, AWS Amplify, GraphQL APIs
+- CI/CD: Fastlane, Bitrise, App Center, GitHub Actions
+- Analytics: Firebase Analytics, Mixpanel, PostHog
+- Testing: Appium, Detox, BrowserStack
+
+Integrations & Data Sources (H2)
+- Push services (FCM, APNs)
+- Crash reporting and analytics
+- Payment gateways and social logins
+
+Case Study (H2)
+Title: Field Ops Mobile App for FieldCo
+Problem: FieldCo needed offline data capture and sync for remote teams.
+Solution: Built an offline-first React Native app with background sync and conflict resolution.
+Outcome: Field data availability increased from 60% to 98% and user adoption rose.
+
+Pricing Models & Engagement Options (H2)
+- Discovery & Prototype — fixed scope
+- App Build — fixed/T&M engagement
+- Support & Maintenance — monthly retainer
+
+Testimonials / Trust (H2)
+- “Link Innovation’s mobile app helped our field teams operate offline and reliably.” — Head of FieldOps, FieldCo
+
+FAQ (H2)
+Q: Do you support Android TV or tablets?
+A: Yes — we design responsive experiences for multiple device classes.
+Q: How do you handle offline conflicts?
+A: We design sync strategies with conflict resolution, versioning, and user prompts.
+
+CTAs, Forms & Microcopy
+Primary CTA: Start Mobile Discovery
+Form fields: Company, Name, Email, Platform (iOS/Android), Device targets, Timeline.
+Confirmation microcopy: “Thanks — our mobile team will reach out to schedule a discovery call.”
+
+Wireframe / Layout
+1. Hero with device mockups, H1, CTAs
+2. Problems & user needs
+3. Capabilities grid
+4. Architecture & offline strategy
+5. Case study & metrics
+6. Pricing & contact form
+
+JSON content snippet (for CMS)
+{
+  "title": "Mobile App Development",
+  "slug": "mobile-app-development",
+  "company": "Link Innovation",
+  "hero": {
+    "title": "Mobile App Development — Cross-Platform & Native",
+    "subtitle": "Fast-to-market mobile apps with native capabilities and cloud integration.",
+    "image": "hero_web_mobile.webp"
+  }
+}

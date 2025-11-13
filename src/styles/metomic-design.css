@@ -1,0 +1,168 @@
+/* Metomic Design System */
+/* Dark theme with coral/purple accents - Privacy/Compliance focused */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Metomic Primary Colors */
+  --metomic-background-primary: #0a0b14;
+  --metomic-background-secondary: #13141f;
+  --metomic-background-tertiary: #1f1f2e;
+  --metomic-background-quaternary: #3e3f52;
+
+  /* Metomic Accent Colors */
+  --metomic-accent-purple-primary: #8b7fe8;
+  --metomic-accent-purple-secondary: #6b5fd8;
+  --metomic-accent-coral: #ff7a59;
+  --metomic-accent-orange: #ff8f6b;
+  --metomic-accent-blue: #4d7fff;
+
+  /* Metomic Text Colors */
+  --metomic-text-primary: #ffffff;
+  --metomic-text-secondary: #b8b9c8;
+  --metomic-text-tertiary: #8b8c9d;
+
+  /* Metomic Borders & Surfaces */
+  --metomic-border-subtle: rgba(255, 255, 255, 0.08);
+  --metomic-surface-glass: rgba(255, 255, 255, 0.05);
+
+  /* Metomic Typography */
+  --metomic-font-display:
+    "Inter", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+  --metomic-font-body:
+    "Inter", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+
+  /* Metomic Text Sizes */
+  --metomic-text-hero-h1: 4.5rem;
+  --metomic-text-h1: 3.5rem;
+  --metomic-text-h2: 3rem;
+  --metomic-text-h3: 2rem;
+  --metomic-text-h4: 1.5rem;
+  --metomic-text-body-lg: 1.25rem;
+  --metomic-text-body: 1rem;
+  --metomic-text-body-sm: 0.875rem;
+
+  /* Metomic Font Weights */
+  --metomic-font-weight-light: 300;
+  --metomic-font-weight-regular: 400;
+  --metomic-font-weight-medium: 500;
+  --metomic-font-weight-semibold: 600;
+  --metomic-font-weight-bold: 700;
+
+  /* Metomic Line Heights */
+  --metomic-leading-hero-h1: 1.1;
+  --metomic-leading-h1: 1.15;
+  --metomic-leading-h2: 1.2;
+  --metomic-leading-h3: 1.3;
+  --metomic-leading-body: 1.6;
+
+  /* Metomic Letter Spacing */
+  --metomic-tracking-hero-h1: -0.02em;
+  --metomic-tracking-h1: -0.015em;
+  --metomic-tracking-h2: -0.01em;
+  --metomic-tracking-h3: -0.005em;
+
+  /* Metomic Radii */
+  --metomic-radius-xs: 0.25rem;
+  --metomic-radius-base: 0.5rem;
+  --metomic-radius-card: 1rem;
+  --metomic-radius-large: 1.5rem;
+  --metomic-radius-xl: 2rem;
+}
+
+/* Metomic Component Classes */
+.metomic-theme {
+  background-color: var(--metomic-background-primary);
+  color: var(--metomic-text-primary);
+  font-family: var(--metomic-font-body);
+}
+
+.metomic-card {
+  background-color: var(--metomic-background-tertiary);
+  border: 1px solid var(--metomic-border-subtle);
+  border-radius: var(--metomic-radius-card);
+}
+
+.metomic-card-glass {
+  background-color: var(--metomic-surface-glass);
+  border: 1px solid var(--metomic-border-subtle);
+  border-radius: var(--metomic-radius-card);
+  backdrop-filter: blur(10px);
+}
+
+.metomic-button-primary {
+  background-color: var(--metomic-accent-coral);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--metomic-radius-base);
+  font-weight: var(--metomic-font-weight-medium);
+  transition: all 0.3s ease;
+}
+
+.metomic-button-primary:hover {
+  background-color: var(--metomic-accent-orange);
+  transform: translateY(-1px);
+}
+
+.metomic-button-secondary {
+  background-color: var(--metomic-accent-purple-primary);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--metomic-radius-base);
+  font-weight: var(--metomic-font-weight-medium);
+  transition: all 0.3s ease;
+}
+
+.metomic-button-secondary:hover {
+  background-color: var(--metomic-accent-purple-secondary);
+}
+
+/* Metomic Typography Utilities */
+.metomic-hero-h1 {
+  font-size: var(--metomic-text-hero-h1);
+  line-height: var(--metomic-leading-hero-h1);
+  letter-spacing: var(--metomic-tracking-hero-h1);
+  font-weight: var(--metomic-font-weight-semibold);
+  font-family: var(--metomic-font-display);
+  color: var(--metomic-text-primary);
+}
+
+.metomic-h1 {
+  font-size: var(--metomic-text-h1);
+  line-height: var(--metomic-leading-h1);
+  letter-spacing: var(--metomic-tracking-h1);
+  font-weight: var(--metomic-font-weight-semibold);
+  font-family: var(--metomic-font-display);
+  color: var(--metomic-text-primary);
+}
+
+.metomic-h2 {
+  font-size: var(--metomic-text-h2);
+  line-height: var(--metomic-leading-h2);
+  letter-spacing: var(--metomic-tracking-h2);
+  font-weight: var(--metomic-font-weight-medium);
+  font-family: var(--metomic-font-display);
+  color: var(--metomic-text-primary);
+}
+
+.metomic-body-lg {
+  font-size: var(--metomic-text-body-lg);
+  line-height: var(--metomic-leading-body);
+  font-weight: var(--metomic-font-weight-regular);
+  color: var(--metomic-text-secondary);
+}
+
+.metomic-body {
+  font-size: var(--metomic-text-body);
+  line-height: var(--metomic-leading-body);
+  color: var(--metomic-text-secondary);
+}
+
+.metomic-body-sm {
+  font-size: var(--metomic-text-body-sm);
+  line-height: 1.5;
+  color: var(--metomic-text-tertiary);
+  font-weight: var(--metomic-font-weight-regular);
+}
+
+

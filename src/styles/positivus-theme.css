@@ -1,0 +1,168 @@
+/**
+ * Positivus Design Theme for Link Innovations
+ * Minimal, professional design system with Link Innovations purple/blue color scheme
+ */
+
+:root {
+  /* Link Innovations Color Palette */
+  --positivus-purple: #8B5CF6;
+  --positivus-purple-light: #A78BFA;
+  --positivus-purple-dark: #7C3AED;
+  --positivus-purple-subtle: rgba(139, 92, 246, 0.1);
+  
+  --positivus-blue: #3B82F6;
+  --positivus-blue-light: #60A5FA;
+  --positivus-blue-dark: #2563EB;
+  --positivus-blue-subtle: rgba(59, 130, 246, 0.1);
+  
+  --positivus-cyan: #06B6D4;
+  --positivus-cyan-light: #22D3EE;
+  --positivus-cyan-dark: #0891B2;
+  --positivus-cyan-subtle: rgba(6, 182, 212, 0.1);
+
+  /* Neutral Colors */
+  --positivus-white: #FFFFFF;
+  --positivus-black: #000000;
+  --positivus-gray-50: #F9FAFB;
+  --positivus-gray-100: #F3F4F6;
+  --positivus-gray-200: #E5E7EB;
+  --positivus-gray-300: #D1D5DB;
+  --positivus-gray-400: #9CA3AF;
+  --positivus-gray-500: #6B7280;
+  --positivus-gray-600: #4B5563;
+  --positivus-gray-700: #374151;
+  --positivus-gray-800: #1F2937;
+  --positivus-gray-900: #111827;
+
+  /* Dark Mode Background */
+  --positivus-dark-bg: #0a0a0f;
+  --positivus-dark-card: rgba(255, 255, 255, 0.05);
+  --positivus-dark-border: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --positivus-font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --positivus-font-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Spacing Scale (8px base) */
+  --positivus-space-xs: 0.5rem;   /* 8px */
+  --positivus-space-sm: 0.75rem;  /* 12px */
+  --positivus-space-md: 1rem;     /* 16px */
+  --positivus-space-lg: 1.5rem;  /* 24px */
+  --positivus-space-xl: 2rem;     /* 32px */
+  --positivus-space-2xl: 3rem;    /* 48px */
+  --positivus-space-3xl: 4rem;    /* 64px */
+  --positivus-space-4xl: 6rem;    /* 96px */
+
+  /* Border Radius */
+  --positivus-radius-sm: 0.375rem;  /* 6px */
+  --positivus-radius-md: 0.5rem;    /* 8px */
+  --positivus-radius-lg: 0.75rem;   /* 12px */
+  --positivus-radius-xl: 1rem;      /* 16px */
+  --positivus-radius-2xl: 1.5rem;   /* 24px */
+  --positivus-radius-full: 9999px;
+
+  /* Shadows */
+  --positivus-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --positivus-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --positivus-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --positivus-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --positivus-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* Transitions */
+  --positivus-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --positivus-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --positivus-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Container Widths */
+  --positivus-container-sm: 640px;
+  --positivus-container-md: 768px;
+  --positivus-container-lg: 1024px;
+  --positivus-container-xl: 1280px;
+  --positivus-container-2xl: 1536px;
+}
+
+/* Utility Classes */
+.positivus-container {
+  width: 100%;
+  max-width: var(--positivus-container-xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--positivus-space-lg);
+  padding-right: var(--positivus-space-lg);
+}
+
+@media (min-width: 640px) {
+  .positivus-container {
+    padding-left: var(--positivus-space-xl);
+    padding-right: var(--positivus-space-xl);
+  }
+}
+
+.positivus-section {
+  padding-top: var(--positivus-space-4xl);
+  padding-bottom: var(--positivus-space-4xl);
+}
+
+@media (max-width: 768px) {
+  .positivus-section {
+    padding-top: var(--positivus-space-3xl);
+    padding-bottom: var(--positivus-space-3xl);
+  }
+}
+
+/* Typography Classes */
+.positivus-heading-1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.positivus-heading-2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.positivus-heading-3 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.positivus-heading-4 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.positivus-body-large {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.positivus-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.positivus-body-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .positivus-heading-1 {
+    font-size: 2.5rem;
+  }
+  
+  .positivus-heading-2 {
+    font-size: 2rem;
+  }
+  
+  .positivus-heading-3 {
+    font-size: 1.75rem;
+  }
+}
+

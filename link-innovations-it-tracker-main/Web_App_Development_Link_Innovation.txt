@@ -1,0 +1,128 @@
+Web App Development — Page Content (Link Innovation)
+
+SEO / Meta
+- URL slug: /services/web-app-development
+- Meta title: Web Application Development — React, Next.js, API-First | Link Innovation
+- Meta description: Build performant, accessible, and scalable web applications with modern stacks like React, Next.js, and Node. From MVPs to enterprise portals.
+- Focus keywords: web app development, React development, Next.js, enterprise portals, API development
+
+Page Header / Hero
+H1 (hero): Web App Development — Scalable, Fast & Accessible
+Subhead (hero): Modern web apps with robust APIs, inclusive UX, and cloud-native deployment.
+Hero brief paragraph (16–22 words): Build web applications and dashboards that are fast, secure, and maintainable using modern frameworks and CI/CD.
+Hero CTAs:
+- Primary: Get an MVP Quote
+- Secondary: Explore Web Solutions
+Hero image suggestion: hero_web_mobile.webp or dashboard imagery.
+
+Intro / Elevator Pitch
+Short paragraph (60–80 words):
+Link Innovation designs and develops web applications that balance speed, scalability, and user experience. From consumer-facing sites to complex enterprise portals and dashboards, we use modern frameworks, API-first design, and automated pipelines to deliver robust products that are easy to maintain and evolve.
+
+Problems We Solve (H2)
+- Slow, unmaintainable legacy web platforms.
+- Poor user experience and accessibility gaps.
+- Monolithic architectures that hinder scaling.
+- Fragmented data and poor integrations.
+
+Our Capabilities (H2)
+Intro: Full-stack web development services across frontend, backend, and integrations.
+
+Sub-service cards
+1. Custom Web Application Development
+   Tailored applications using React, Next.js, and TypeScript.
+   - Use cases: SaaS platforms, marketplaces, internal tools.
+   - Outcomes: modular, testable, scalable codebases.
+
+2. CMS & Content Platforms
+   Headless CMS using Sanity, Strapi, or custom API-first CMS.
+   - Use cases: marketing sites, blogs, knowledge bases.
+   - Outcomes: easy content management and multi-language support.
+
+3. Enterprise Portals & Dashboards
+   Data-driven portals with BI integrations and role-based access.
+   - Use cases: operations portals, executive dashboards.
+   - Outcomes: actionable insights and secure access controls.
+
+4. API Development & System Integration
+   REST/GraphQL APIs, microservices architecture, and secure integrations.
+   - Use cases: payment gateways, third-party integrations.
+   - Outcomes: reliable backend and integration stability.
+
+5. UI/UX Design & Accessibility
+   Responsive design, accessibility audits, and interaction design.
+   - Use cases: conversion-focused landing pages, inclusive enterprise UX.
+   - Outcomes: improved conversions and accessibility compliance.
+
+How We Deliver (H2)
+Web delivery process:
+1. Discover & Design — UX, flows, prototypes.
+2. Build — component-driven frontend, API-first backend.
+3. Test — automated testing, performance tuning.
+4. Deploy & Monitor — CI/CD, observability, feature flags.
+Typical timeline: MVP (4–8 weeks), Enterprise portal (8–16 weeks).
+
+Outcomes & KPIs (H2)
+- Page load improvements (LCP/FID) and better Core Web Vitals.
+- Faster time-to-market for features via component reuse.
+- Accessibility compliance improvements.
+- Reduced maintenance costs long-term.
+
+Architecture & Tech Stack (H2)
+Recommended stack:
+- Frontend: React, Next.js, TypeScript, Tailwind CSS
+- Backend: Node.js, Express, NestJS, Next API routes
+- DB: PostgreSQL, MongoDB, Redis
+- APIs: REST, GraphQL, tRPC
+- DevOps: Vercel, Netlify, Docker, GitHub Actions
+- Monitoring: Sentry, Datadog, Lighthouse
+
+Integrations & Data Sources (H2)
+- Analytics (GA4, PostHog), BI (Power BI, Looker)
+- Payment gateways, CRMs, internal APIs
+- Headless CMS and content services
+
+Case Study (H2)
+Title: Enterprise Dashboard for RetailCo
+Problem: RetailCo needed consolidated operational dashboards across stores.
+Solution: Built Next.js portal with aggregated data pipelines and custom visualizations.
+Outcome: Reduced reporting time from days to real-time dashboards; improved decision making.
+
+Pricing Models & Engagement Options (H2)
+- MVP Quote — fixed scope (4–8 weeks)
+- Product Development — T&M or fixed priced engagements
+- Support & Maintenance — monthly retainer
+
+Testimonials / Trust (H2)
+- “Link Innovation rebuilt our portal and saved countless hours of manual reconciliation.” — Head of Ops, RetailCo
+
+FAQ (H2)
+Q: Do you support accessibility standards?
+A: Yes — we follow WCAG guidelines and perform audits for compliance.
+Q: Can you integrate existing APIs?
+A: Yes — we design secure adapters and integration layers.
+
+CTAs, Forms & Microcopy
+Primary CTA: Get an MVP Quote
+Form fields: Company, Name, Email, Project description, Platform, Budget, Timeline.
+Confirmation microcopy: “Thanks — we’ll review your project and share an estimated timeline.”
+
+Wireframe / Layout
+1. Hero with dashboard imagery, H1, CTAs
+2. Problems & benefits
+3. Capabilities grid
+4. Architecture & stack
+5. Case study
+6. Pricing & contact form
+
+JSON content snippet (for CMS)
+{
+  "title": "Web App Development",
+  "slug": "web-app-development",
+  "company": "Link Innovation",
+  "hero": {
+    "title": "Web App Development — Scalable, Fast & Accessible",
+    "subtitle": "Modern web apps with robust APIs, inclusive UX, and cloud-native deployment.",
+    "image": "hero_web_mobile.webp"
+  }
+}

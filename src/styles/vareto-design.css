@@ -1,0 +1,237 @@
+/* Vareto Design System */
+/* Light theme with yellow accent - Finance/Planning focused */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Vareto Primary Colors */
+  --vareto-background-primary: #f5f3fb;
+  --vareto-background-secondary: #ffffff;
+
+  /* Vareto Accent Colors */
+  --vareto-accent-yellow: #e8ff7a;
+  --vareto-accent-yellow-alt: #d4f157;
+
+  /* Vareto Text Colors */
+  --vareto-text-primary: #000000;
+  --vareto-text-secondary: #4a4a4a;
+  --vareto-text-tertiary: #6b6b6b;
+
+  /* Vareto UI Colors */
+  --vareto-ui-purple-light: #c8c0e6;
+  --vareto-ui-purple-medium: #a89dd9;
+  --vareto-ui-purple-dark: #7b6fbf;
+  --vareto-ui-blue: #4a90e2;
+  --vareto-ui-green: #50c878;
+
+  /* Vareto Borders & Surfaces */
+  --vareto-border-divider: #e0e0e0;
+  --vareto-input-border: #d1d1d1;
+  --vareto-input-background: #ffffff;
+
+  /* Vareto Shadows */
+  --vareto-shadow: rgba(0, 0, 0, 0.08);
+  --vareto-shadow-card: rgba(0, 0, 0, 0.06);
+  --vareto-shadow-elevated: rgba(0, 0, 0, 0.08);
+  --vareto-shadow-deep: rgba(0, 0, 0, 0.12);
+  --vareto-shadow-screenshot: rgba(0, 0, 0, 0.1);
+
+  /* Vareto Typography */
+  --vareto-font-display: "Inter", system-ui, -apple-system, sans-serif;
+  --vareto-font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Vareto Text Sizes */
+  --vareto-text-h1: 80px;
+  --vareto-text-h2: 56px;
+  --vareto-text-h3: 40px;
+  --vareto-text-h4: 28px;
+  --vareto-text-body-lg: 20px;
+  --vareto-text-body-regular: 16px;
+  --vareto-text-body-sm: 14px;
+  --vareto-text-label: 12px;
+  --vareto-text-button: 16px;
+  --vareto-text-number-lg: 48px;
+
+  /* Vareto Line Heights */
+  --vareto-leading-h1: 1.1;
+  --vareto-leading-h2: 1.15;
+  --vareto-leading-h3: 1.2;
+  --vareto-leading-h4: 1.3;
+  --vareto-leading-body: 1.6;
+
+  /* Vareto Letter Spacing */
+  --vareto-tracking-h1: -0.02em;
+  --vareto-tracking-h2: -0.015em;
+  --vareto-tracking-h3: -0.01em;
+
+  /* Vareto Radii */
+  --vareto-radius-small: 0.5rem;
+  --vareto-radius-medium: 0.75rem;
+  --vareto-radius-large: 1rem;
+  --vareto-radius-extra-large: 1.25rem;
+
+  /* Vareto Button Styles */
+  --vareto-button-primary-bg: #000000;
+  --vareto-button-primary-text: #ffffff;
+}
+
+/* Vareto Component Classes */
+.vareto-theme {
+  background-color: var(--vareto-background-primary);
+  color: var(--vareto-text-primary);
+  font-family: var(--vareto-font-body);
+}
+
+.vareto-card {
+  background-color: var(--vareto-background-secondary);
+  border: 1px solid var(--vareto-border-divider);
+  border-radius: var(--vareto-radius-medium);
+  box-shadow: 0 1px 3px var(--vareto-shadow-card);
+}
+
+.vareto-card-elevated {
+  background-color: var(--vareto-background-secondary);
+  border: 1px solid var(--vareto-border-divider);
+  border-radius: var(--vareto-radius-large);
+  box-shadow: 0 4px 6px var(--vareto-shadow-elevated);
+  transition: all 0.3s ease;
+}
+
+.vareto-card-elevated:hover {
+  box-shadow: 0 10px 20px var(--vareto-shadow-deep);
+  transform: translateY(-2px);
+}
+
+.vareto-button-primary {
+  background-color: var(--vareto-button-primary-bg);
+  color: var(--vareto-button-primary-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--vareto-radius-small);
+  font-size: var(--vareto-text-button);
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.vareto-button-primary:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.02);
+}
+
+.vareto-button-accent {
+  background-color: var(--vareto-accent-yellow);
+  color: var(--vareto-text-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--vareto-radius-small);
+  font-size: var(--vareto-text-button);
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.vareto-button-accent:hover {
+  background-color: var(--vareto-accent-yellow-alt);
+}
+
+/* Vareto Typography Utilities */
+.vareto-h1 {
+  font-size: var(--vareto-text-h1);
+  font-weight: 400;
+  line-height: var(--vareto-leading-h1);
+  letter-spacing: var(--vareto-tracking-h1);
+  font-family: var(--vareto-font-display);
+  color: var(--vareto-text-primary);
+}
+
+.vareto-h2 {
+  font-size: var(--vareto-text-h2);
+  font-weight: 400;
+  line-height: var(--vareto-leading-h2);
+  letter-spacing: var(--vareto-tracking-h2);
+  font-family: var(--vareto-font-display);
+  color: var(--vareto-text-primary);
+}
+
+.vareto-h3 {
+  font-size: var(--vareto-text-h3);
+  font-weight: 500;
+  line-height: var(--vareto-leading-h3);
+  letter-spacing: var(--vareto-tracking-h3);
+  font-family: var(--vareto-font-display);
+  color: var(--vareto-text-primary);
+}
+
+.vareto-h4 {
+  font-size: var(--vareto-text-h4);
+  font-weight: 600;
+  line-height: var(--vareto-leading-h4);
+  font-family: var(--vareto-font-display);
+  color: var(--vareto-text-primary);
+}
+
+.vareto-body-lg {
+  font-size: var(--vareto-text-body-lg);
+  font-weight: 400;
+  line-height: var(--vareto-leading-body);
+  color: var(--vareto-text-secondary);
+}
+
+.vareto-body-regular {
+  font-size: var(--vareto-text-body-regular);
+  font-weight: 400;
+  line-height: var(--vareto-leading-body);
+  color: var(--vareto-text-secondary);
+}
+
+.vareto-body-sm {
+  font-size: var(--vareto-text-body-sm);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--vareto-text-tertiary);
+}
+
+.vareto-label {
+  font-size: var(--vareto-text-label);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--vareto-text-secondary);
+}
+
+.vareto-number-lg {
+  font-size: var(--vareto-text-number-lg);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--vareto-text-primary);
+}
+
+/* Vareto Badge */
+.vareto-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--vareto-accent-yellow);
+  color: var(--vareto-text-primary);
+  border-radius: 9999px;
+  font-size: var(--vareto-text-label);
+  font-weight: 500;
+}
+
+/* Vareto Input */
+.vareto-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--vareto-input-background);
+  border: 1px solid var(--vareto-input-border);
+  border-radius: var(--vareto-radius-small);
+  font-size: var(--vareto-text-body-regular);
+  color: var(--vareto-text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.vareto-input:focus {
+  outline: none;
+  border-color: var(--vareto-ui-blue);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+

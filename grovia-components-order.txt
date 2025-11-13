@@ -1,0 +1,37 @@
+COMPONENT ORDER FOR /grovia PAGE
+=================================
+Edit this file to reorder components. Keep one component per line.
+After editing, tell me to "update the grovia page with this order" or similar.
+
+Current order (top to bottom):
+1. Navigation
+2. HeroSectionNew
+3. Hero
+4. ProcessSection
+5. FeaturesSection
+6. Integrations
+7. SuccessStories
+8. FaqSection
+9. ProcessCards
+10. OurAIServices
+11. CenterModeProductivitySlider
+12. AITransformationCirrusInteractive
+13. Process
+14. RuixenFeatureSection
+15. StackFeatureSection
+16. WhyChooseUsBento
+17. GalleryHoverCarousel
+18. ProjectsSection
+19. CardHoverRevealSection
+20. TestimonialsColumns
+21. TrustedBySparkles
+22. CTAWithShader
+23. Footer
+
+=================================
+INSTRUCTIONS:
+- Edit the numbers/order above to match your desired order
+- Keep component names exactly as shown
+- After editing, save and tell me to apply the changes
+=================================
+

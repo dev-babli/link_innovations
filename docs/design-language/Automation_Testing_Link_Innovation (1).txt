@@ -1,0 +1,127 @@
+Automation Testing — Page Content (Link Innovation)
+
+SEO / Meta
+- URL slug: /services/automation-testing
+- Meta title: Automation Testing — E2E, API & Performance | Link Innovation
+- Meta description: Ensure quality at speed with test automation across UI, API, mobile, and performance testing integrated into CI/CD pipelines.
+- Focus keywords: test automation, automation testing, E2E testing, performance testing, CI/CD testing
+
+Page Header / Hero
+H1 (hero): Automation Testing — End-to-End & CI-Integrated
+Subhead (hero): Automated test frameworks to validate quality across web, APIs, and mobile — embedded in your release pipelines.
+Hero brief paragraph (16–22 words): Reduce regressions and accelerate releases with test automation integrated into CI/CD, mobile labs, and performance testing.
+Hero CTAs:
+- Primary: Request a Test Automation Assessment
+- Secondary: See Testing Services
+Hero image suggestion: hero_testing.webp or testing pipeline illustration.
+
+Intro / Elevator Pitch
+Short paragraph (60–80 words):
+Link Innovation provides full-stack test automation services to ensure faster, more reliable releases. From functional E2E tests to API and performance testing, our frameworks are built to integrate with your CI/CD pipelines and scale with your product lifecycle.
+
+Problems We Solve (H2)
+- Manual regression cycles delaying releases.
+- Unreliable test coverage and flaky tests.
+- Performance bottlenecks undetected until production.
+- Mobile fragmentation and device coverage challenges.
+
+Our Capabilities (H2)
+Intro: Testing services and frameworks for modern development teams.
+
+Sub-service cards
+1. Functional Test Automation
+   UI and functional workflows automated with Cypress, Playwright, or Selenium.
+   - Use cases: regression suites, smoke tests.
+   - Outcomes: faster release validation and fewer regressions.
+
+2. API & Integration Testing
+   Contract and integration testing with Postman, RestAssured, and contract tests.
+   - Use cases: API stability, schema validation.
+   - Outcomes: reliable backend integration and fewer runtime errors.
+
+3. Mobile App Test Automation
+   Appium, Detox and cloud device labs for multi-device coverage.
+   - Use cases: behavioral, compatibility testing.
+   - Outcomes: consistent mobile experiences across devices.
+
+4. Performance & Load Testing
+   k6, JMeter, Gatling to simulate traffic and identify bottlenecks.
+   - Use cases: scale testing, capacity planning.
+   - Outcomes: identify performance limits and optimize resources.
+
+5. Continuous Testing (CI/CD Integration)
+   Embed test suites in GitHub Actions, Jenkins, or Azure DevOps pipelines.
+   - Use cases: pre-merge checks, nightly regression runs.
+   - Outcomes: shift-left testing and faster feedback loops.
+
+How We Deliver (H2)
+Testing engagement model:
+1. Audit — test coverage & flakiness analysis.
+2. Framework build — implement automation frameworks and pipelines.
+3. Integrate — CI/CD embedding and reporting dashboards.
+4. Maintain — test upkeep and expansion as product evolves.
+Timeline: Audit (1–2 weeks), Framework (2–6 weeks), Ongoing maintenance.
+
+Outcomes & KPIs (H2)
+- Regression cycle time reduced by up to 80%.
+- Test coverage improvement and fewer production bugs.
+- Performance baselining and fewer outages under load.
+
+Architecture & Tech Stack (H2)
+Recommended stack:
+- Web: Cypress, Playwright, Selenium
+- Mobile: Appium, Detox, BrowserStack
+- API: Postman, Newman, RestAssured
+- Performance: JMeter, k6, Gatling
+- CI/CD: GitHub Actions, Jenkins, Azure DevOps
+- Reporting: Allure, TestRail, custom dashboards
+
+Integrations & Data Sources (H2)
+- CI/CD pipelines, artifact stores, monitoring tools
+- Device farms and cloud labs for mobile testing
+
+Case Study (H2)
+Title: Automated Regression for SaaS Platform Y
+Problem: Long regression cycles delayed releases and caused rollbacks.
+Solution: Implemented Cypress E2E suites, integrated into CI with parallel runs and flaky test handling.
+Outcome: Regression time reduced from 48 hours to under 3 hours and rollback rate decreased significantly.
+
+Pricing Models & Engagement Options (H2)
+- Testing Audit — fixed fee
+- Framework Build — fixed/t&M
+- Continuous Testing Support — monthly retainer
+
+Testimonials / Trust (H2)
+- “Link Innovation’s automation cut our regression window and improved release confidence.” — QA Lead, SaaSY
+
+FAQ (H2)
+Q: How do you handle flaky tests?
+A: We implement test isolation, retries with backoff, improved selectors, and parallelization strategies.
+Q: Do you provide device labs?
+A: Yes — we integrate with BrowserStack, Firebase Test Lab, and cloud device providers.
+
+CTAs, Forms & Microcopy
+Primary CTA: Request a Test Automation Assessment
+Form fields: Company, Name, Email, Tech stack, Areas of concern, Priority.
+Confirmation microcopy: “Thanks — our testing practice will review and get back to schedule an audit.”
+
+Wireframe / Layout
+1. Hero with pipeline imagery, H1, CTAs
+2. Problems & testing gaps
+3. Capabilities grid
+4. Audit & framework steps
+5. Case study & metrics
+6. Tool integrations & reporting
+7. Pricing & contact form
+
+JSON content snippet (for CMS)
+{
+  "title": "Automation Testing",
+  "slug": "automation-testing",
+  "company": "Link Innovation",
+  "hero": {
+    "title": "Automation Testing — End-to-End & CI-Integrated",
+    "subtitle": "Automated test frameworks to validate quality across web, APIs, and mobile — embedded in your release pipelines.",
+    "image": "hero_testing.webp"
+  }
+}

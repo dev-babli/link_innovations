@@ -1,0 +1,151 @@
+AI & Automation — Page Content (Link Innovation)
+
+SEO / Meta
+- URL slug: /services/ai-automation
+- Meta title: AI & Automation Services — Agentic AI, Generative AI & RPA | Link Innovation
+- Meta description: Transform operations with agentic AI, generative models, and intelligent automation. Predictive analytics, MLOps, and RPA to reduce manual work and accelerate decisions. Book a free AI assessment.
+- Focus keywords: agentic AI, generative AI, RPA, predictive analytics, MLOps, AI automation services
+
+Page Header / Hero
+H1 (hero): AI & Automation — Agentic AI, GenAI & Intelligent Automation
+Subhead (hero): From autonomous agent workflows to production-grade LLMs — we design AI that acts, integrates, and scales.
+Hero brief paragraph (16–22 words): Deploy agentic AI and GenAI to automate decision workflows, reduce manual effort, and unlock new business value.
+Hero CTAs:
+- Primary: Request an AI Readiness Review (button — form → demo/calendar)
+- Secondary: See AI Use Cases (anchor — scroll to Use Cases)
+Hero image suggestion: neon brain-network Lottie + rotating agent icon (use hero_ai.webp).
+
+Intro / Elevator Pitch
+Short paragraph (60–80 words):
+AI & Automation turns data into action. Link Innovation combines generative models, autonomous agents, and RPA to automate repetitive tasks, accelerate decision-making, and deliver measurable ROI. Whether you need intelligent document processing, autonomous workflow agents, or predictive maintenance models, our team designs production-ready AI systems with robust MLOps and enterprise-grade security.
+
+Problems We Solve (H2)
+- Manual processes slow down operations and increase error rates.
+- Teams struggle to surface timely insights from growing data.
+- LLMs and agents are hard to integrate and monitor in production.
+- Model drift and performance gaps create business risk.
+
+Our Capabilities (H2)
+Intro: We package capabilities into fast, measurable outcomes — from discovery to production.
+
+Sub-service cards
+1. Agentic AI Solutions
+   Autonomous agents that plan, reason, and execute workflows.
+   - Use cases: Customer support agents, automated data analysts, procurement bots.
+   - Outcomes: reduce manual handoffs, automated end-to-end workflows.
+
+2. Generative AI (GenAI)
+   Domain-tuned LLMs for content, summarization, code generation, and copilots.
+   - Use cases: contract summarization, intelligent chat assistants, automated content drafts.
+   - Outcomes: faster content creation, improved CSAT.
+
+3. Process Automation (RPA + AI)
+   Smart bots + orchestration for rule-based and cognition-enhanced tasks.
+   - Use cases: invoice processing, claims handling, HR onboarding flows.
+   - Outcomes: lower processing time & error rates.
+
+4. Predictive Analytics & ML Models
+   Forecasting, anomaly detection, prescriptive insights.
+   - Use cases: demand forecasting, predictive maintenance, fraud scoring.
+   - Outcomes: reduced downtime, improved forecast accuracy.
+
+5. AI Integration & MLOps
+   API-first deployments, monitoring, versioning & CI for models.
+   - Use cases: model governance, retraining pipelines, data drift alerts.
+   - Outcomes: stable model performance in production.
+
+6. Computer Vision (optional add-on)
+   Inspection, OCR, and visual recognition for manufacturing, retail, and healthcare.
+
+How We Deliver (H2)
+4-step delivery model:
+1. Discover — Data assessment, business KPI mapping, PoC scope.
+2. Design — Solution architecture, LLM prompt engineering, agent design.
+3. Build — Model training, pipeline, RPA bots, integration with systems.
+4. Operate — MLOps, monitoring, periodic retraining, business dashboards.
+Typical timeline: PoC (3–6 weeks) → MVP (6–10 weeks) → Production (ongoing ops).
+
+Outcomes & KPIs (H2)
+- Time saved on manual tasks: up to 60% (typical)
+- Forecast accuracy improvement: 10–30%
+- Request automation: 50–80% automation rate
+- Faster detection of model drift with monitoring
+
+Architecture & Tech Stack (H2)
+Recommended stack:
+- Model & LLM: OpenAI / Azure OpenAI, Anthropic, Hugging Face
+- Prompt orchestration & agents: LangChain, LlamaIndex, custom agent frameworks
+- MLOps: MLflow, TFX, Kubeflow, Sagemaker/Vertex pipelines
+- Processing & infra: Python (FastAPI), Docker, Kubernetes (EKS/GKE/AKS)
+- Data & streaming: PostgreSQL, S3, Kafka / PubSub, Spark (if needed)
+- RPA / Orchestration: UiPath, Airflow, Temporal
+- Monitoring: Prometheus, Grafana, ELK, Sentry
+- Security: Vault, WAF, IAM, encryption at rest & transit
+
+Integrations & Data Sources (H2)
+- ERPs, CRMs (SAP, Oracle, Salesforce)
+- Document stores & email systems (SharePoint, Google Drive, Exchange)
+- Data warehouses (Snowflake, Redshift)
+- Internal APIs and third-party SaaS
+
+Case Study (H2)
+Title: Autonomous Claims Processing for InsureCo
+Problem: Manual claim intake averaged 36 hours per claim and high error rates.
+Solution: Link Innovation built an agentic workflow combining GenAI summarization, OCR, and RPA, integrated with the insurer’s claims system and dashboards.
+Outcome: Claim intake time reduced from 36 hours → 6 hours (83% faster). Error rate reduced 45%. ROI realized in 5 months.
+
+Pricing Models & Engagement Options (H2)
+- Discovery / Readiness Review — fixed fee (1–2 weeks) — deliverable: AI readiness report & PoC plan.
+- PoC / MVP — T&M or fixed-scope (4–8 weeks) — working prototype.
+- Productization & Ops — monthly retainer / managed service (SLA-based).
+- License / Component — for reusable platforms (white-labelled agents).
+
+Testimonials / Trust (H2)
+- “Link Innovation’s AI agents reduced our manual processing time by over 70% and helped us scale.” — Head of Ops, InsureCo
+- Client logos carousel (place below)
+
+FAQ (H2)
+Q: How do you protect sensitive data in LLMs?
+A: We use data isolation, encryption, private hosted models, redaction, and strict access policies.
+
+Q: What data is required for a PoC?
+A: Representative sample documents/data (1–4 weeks), business rules, and target KPIs.
+
+Q: How long until ROI?
+A: Many clients see measurable impact within 3–6 months after deployment (PoC → MVP → ops).
+
+CTAs, Forms & Microcopy
+Primary CTA: Request an AI Readiness Review
+Form fields: Company, Name, Email, Phone (optional), Service interest, Short description, Budget (optional), Upload sample data (optional). Include UTM fields.
+Confirmation microcopy: “Thanks — we’ll review your request and send available times for a 30-min intro.”
+
+Wireframe / Layout
+1. Hero (full width) with left illustration, H1, subhead, CTAs
+2. Problems (bullets)
+3. Capabilities grid (cards)
+4. Delivery timeline (visual)
+5. Case study carousel
+6. Tech & integrations (logos)
+7. Pricing & CTA
+8. FAQ + contact form
+
+JSON content snippet (for CMS)
+{
+  "title": "AI & Automation",
+  "slug": "ai-automation",
+  "company": "Link Innovation",
+  "hero": {
+    "title": "AI & Automation — Agentic AI, GenAI & Intelligent Automation",
+    "subtitle": "From autonomous agent workflows to production-grade LLMs — we design AI that acts, integrates, and scales.",
+    "image": "hero_ai.webp"
+  },
+  "sections": [
+    {"type":"intro","text":"AI & Automation turns data into action. Link Innovation combines generative models..."},
+    {"type":"capabilities","items":[
+      {"title":"Agentic AI Solutions","desc":"Autonomous agents that plan...","icon":"agentic_ai.webp"},
+      {"title":"Generative AI (GenAI)","desc":"Domain-tuned LLMs...","icon":"generative_ai.webp"}
+    ]},
+    {"type":"case_study","title":"Autonomous Claims Processing","metrics":{"time_reduction":"83%"}}
+  ]
+}
+

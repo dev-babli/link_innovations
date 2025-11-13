@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - FLIP Loading Animation | Link Innovations</title>
+    <link href='//fonts.googleapis.com/css?family=Signika+Negative:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://codepen.io/GreenSock/pen/xxmzBrw.css'>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: "Mori";
+            font-weight: 300;
+            height: 100vh;
+            overflow: hidden;
+            background: #111;
+        }
+        
+        .container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .container.grid, .container.columns {
+            align-content: stretch;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        
+        .letter {
+            text-align: center;
+            color: black;
+            font-size: 10vmax;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 6px;
+        }
+        
+        .container.grid .letter {
+            flex-basis: 50%;
+        }
+        
+        .container.columns .letter {
+            flex-basis: 25%;
+        }
+        
+        .for, .gsap {
+            font-size: 5vmax;
+            color: var(--color-surface-white);
+        }
+        
+        .for {
+            padding: 2px 1.6vmax;
+            font-weight: 300;
+            display: none;
+        }
+        
+        .gsap {
+            padding: 2px 0;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .container.final .for, .container.final .gsap {
+            display: block;
+        }
+        
+        .L {
+            background: var(--color-blue);
+        }
+        
+        .I {
+            background: var(--color-pink);
+        }
+        
+        .N {
+            background: var(--color-ui-blue-lt);
+        }
+        
+        .K {
+            background: var(--color-ui-blue);
+        }
+        
+        .container.plain .letter {
+            background: transparent;
+            color: var(--color-surface-white);
+            padding: 0;
+        }
+        
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+        }
+        
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html" class="back-link">← Back to Demos</a>
+    
+    <div class="container final">
+        <div class="letter L">L</div>
+        <div class="letter I">I</div>
+        <div class="letter N">N</div>
+        <div class="letter K">K</div>
+        <div class="for">for</div>
+        <div class="gsap">INNOVATIONS</div>
+    </div>
+    
+    <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js'></script>
+    <script src='https://assets.codepen.io/16327/Flip.min.js'></script>
+    <script>
+        gsap.registerPlugin(Flip);
+        
+        let layouts = ["final", "plain", "columns", "grid"],
+            container = document.querySelector(".container"),
+            curLayout = 0;
+        
+        function nextState() {
+            const state = Flip.getState(".letter, .for, .gsap", {props: "color,backgroundColor", simple: true});
+            
+            container.classList.remove(layouts[curLayout]);
+            curLayout = (curLayout + 1) % layouts.length;
+            container.classList.add(layouts[curLayout]);
+            
+            Flip.from(state, {
+                absolute: true,
+                stagger: 0.07,
+                duration: 0.7,
+                ease: "power2.inOut",
+                spin: curLayout === 0,
+                simple: true,
+                onEnter: (elements, animation) => gsap.fromTo(elements, {opacity: 0}, {opacity: 1, delay: animation.duration() - 0.1}),
+                onLeave: elements => gsap.to(elements, {opacity: 0})
+            });
+            
+            gsap.delayedCall(curLayout === 0 ? 3.5 : 1.5, nextState);
+        }
+        
+        gsap.delayedCall(1, nextState);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

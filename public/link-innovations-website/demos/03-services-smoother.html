@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Services Showcase | Link Innovations</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap">
+    <style>
+        @font-face {
+            font-family: "wild_worldbold";
+            src: url("https://assets.codepen.io/756881/wild_world-webfont.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: #111;
+            font-family: "Open Sans", sans-serif;
+            color: white;
+            overscroll-behavior: none;
+            font-weight: 300;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+        
+        section { min-height: 100vh; }
+        p { line-height: 1.35; }
+        
+        #content {
+            padding: 0 0.75rem;
+            overflow: visible;
+            width: 100%;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 0.5rem;
+        }
+        
+        .flow--lg > * + * { margin-top: 2em; }
+        .flow > * + * { margin-top: 1em; }
+        
+        .title {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 50vh;
+        }
+        
+        h1 {
+            font-size: clamp(12px, 8vw, 100px);
+            text-align: center;
+            line-height: 0.67;
+            margin: 0 auto;
+            font-family: "wild_worldbold";
+        }
+        
+        h2 { font-size: 1.5rem; font-weight: 500; }
+        
+        .heading {
+            position: absolute;
+            top: 50vh;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        
+        .heading p {
+            font-family: "wild_worldbold";
+            font-size: clamp(12px, 15.5vw, 250px);
+            text-align: center;
+            line-height: 0.67;
+            margin: 0;
+            color: #111;
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: white;
+        }
+        
+        .text-container { position: relative; }
+        .text-container p { position: absolute; top: 0; left: 0; right: 0; color: transparent; }
+        .text-container p:first-child { color: white; }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0.2rem;
+            width: 70vw;
+            margin: 0 auto;
+            padding-top: 40vh;
+        }
+        
+        .image_cont {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+        }
+        
+        .image_cont img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 150%;
+            object-fit: cover;
+        }
+        
+        .parallax-slab {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .parallax-slab img {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 180%;
+            object-fit: cover;
+        }
+        
+        .content {
+            border-left: solid 1px white;
+            padding: 0.5rem 2rem;
+        }
+        
+        .spacer { min-height: 50vh; }
+        
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            z-index: 10000;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html" class="back-link">← Back to Demos</a>
+    
+    <div id="wrapper">
+        <section id="content">
+            <div class="heading" aria-hidden="true">
+                <p>innovative</p>
+                <div class="text-container">
+                    <p>solutions</p>
+                    <p data-speed="0.95">solutions</p>
+                    <p data-speed="0.9">solutions</p>
+                    <p data-speed="0.85">solutions</p>
+                    <p data-speed="0.8">solutions</p>
+                </div>
+            </div>
+            
+            <section class="image-grid container">
+                <div class="image_cont" data-speed="1">
+                    <img data-speed="auto" src="https://images.unsplash.com/photo-1556856425-366d6618905d?w=400" alt="">
+                </div>
+                <div class="image_cont" data-speed="1.7">
+                    <img data-speed="auto" src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?w=400" alt="">
+                </div>
+                <div class="image_cont" data-speed="1.5">
+                    <img data-speed="auto" src="https://images.unsplash.com/photo-1609166214994-502d326bafee?w=400" alt="">
+                </div>
+            </section>
+            
+            <section class="title container flow--lg">
+                <h1>Link Innovations</h1>
+                <p>Comprehensive IT solutions with smooth parallax scrolling effects.</p>
+            </section>
+            
+            <section class="container">
+                <div class="flow content">
+                    <h2>IT Staffing & Recruitment</h2>
+                    <p>Connect with top-tier IT talent for your technology needs.</p>
+                </div>
+            </section>
+            
+            <section class="parallax-slab">
+                <img data-speed="auto" src="https://assets.codepen.io/756881/smoothscroller-1.jpg" alt="">
+            </section>
+            
+            <section class="container">
+                <div class="flow content">
+                    <h2>Cloud & Application Services</h2>
+                    <p>Migrate and manage your cloud infrastructure with expertise.</p>
+                </div>
+            </section>
+            
+            <section class="spacer"></section>
+        </section>
+    </div>
+    
+    <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3'></script>
+    <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
+    <script src='https://assets.codepen.io/16327/ScrollSmoother.min.js?v=94387867'></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        
+        const smoother = ScrollSmoother.create({
+            wrapper: "#wrapper",
+            content: "#content",
+            smooth: 1,
+            normalizeScroll: true,
+            ignoreMobileResize: true,
+            effects: true,
+            preventDefault: true
+        });
+        
+        gsap.set(".heading", { yPercent: -150, opacity: 1 });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

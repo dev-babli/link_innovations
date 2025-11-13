@@ -1,0 +1,139 @@
+/**
+ * Luxury Typography System
+ * Premium, elegant typography following Apple/Stripe/Linear principles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+:root {
+  /* Luxury Font Families */
+  --font-luxury-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-luxury-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  
+  /* Luxury Typography Scale */
+  --text-hero-luxury: clamp(4.5rem, 8vw, 6rem); /* 72-96px */
+  --text-h1-luxury: clamp(3rem, 5vw, 4.5rem); /* 48-72px */
+  --text-h2-luxury: clamp(2.5rem, 4vw, 3.5rem); /* 40-56px */
+  --text-h3-luxury: clamp(2rem, 3vw, 2.5rem); /* 32-40px */
+  --text-body-luxury: clamp(1.125rem, 1.5vw, 1.25rem); /* 18-20px */
+  --text-body-large-luxury: clamp(1.25rem, 2vw, 1.5rem); /* 20-24px */
+  --text-small-luxury: 0.875rem; /* 14px */
+  
+  /* Luxury Line Heights */
+  --leading-tight-luxury: 1.1;
+  --leading-normal-luxury: 1.5;
+  --leading-relaxed-luxury: 1.75;
+  --leading-loose-luxury: 2;
+  
+  /* Luxury Font Weights */
+  --weight-light-luxury: 300;
+  --weight-regular-luxury: 400;
+  --weight-medium-luxury: 500;
+  --weight-semibold-luxury: 600;
+  --weight-bold-luxury: 700;
+  --weight-extrabold-luxury: 800;
+  
+  /* Luxury Letter Spacing */
+  --tracking-tight-luxury: -0.02em;
+  --tracking-normal-luxury: 0;
+  --tracking-wide-luxury: 0.02em;
+}
+
+/* Luxury Typography Classes */
+.luxury-hero {
+  font-family: var(--font-luxury-serif);
+  font-size: var(--text-hero-luxury);
+  font-weight: var(--weight-bold-luxury);
+  line-height: var(--leading-tight-luxury);
+  letter-spacing: var(--tracking-tight-luxury);
+  color: #000000;
+}
+
+.luxury-h1 {
+  font-family: var(--font-luxury-serif);
+  font-size: var(--text-h1-luxury);
+  font-weight: var(--weight-bold-luxury);
+  line-height: var(--leading-tight-luxury);
+  letter-spacing: var(--tracking-tight-luxury);
+  color: #000000;
+}
+
+.luxury-h2 {
+  font-family: var(--font-luxury-serif);
+  font-size: var(--text-h2-luxury);
+  font-weight: var(--weight-bold-luxury);
+  line-height: var(--leading-tight-luxury);
+  letter-spacing: var(--tracking-tight-luxury);
+  color: #000000;
+}
+
+.luxury-h3 {
+  font-family: var(--font-luxury-serif);
+  font-size: var(--text-h3-luxury);
+  font-weight: var(--weight-bold-luxury);
+  line-height: var(--leading-normal-luxury);
+  letter-spacing: var(--tracking-normal-luxury);
+  color: #000000;
+}
+
+.luxury-body {
+  font-family: var(--font-luxury-sans);
+  font-size: var(--text-body-luxury);
+  font-weight: var(--weight-regular-luxury);
+  line-height: var(--leading-relaxed-luxury);
+  letter-spacing: var(--tracking-normal-luxury);
+  color: #4A4A4A;
+}
+
+.luxury-body-large {
+  font-family: var(--font-luxury-sans);
+  font-size: var(--text-body-large-luxury);
+  font-weight: var(--weight-regular-luxury);
+  line-height: var(--leading-relaxed-luxury);
+  letter-spacing: var(--tracking-normal-luxury);
+  color: #4A4A4A;
+}
+
+/* Dark Mode Luxury Typography */
+.dark .luxury-hero,
+.dark .luxury-h1,
+.dark .luxury-h2,
+.dark .luxury-h3 {
+  color: #FFFFFF;
+}
+
+.dark .luxury-body,
+.dark .luxury-body-large {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Luxury Text Gradient */
+.luxury-text-gradient {
+  background: linear-gradient(135deg, #00c4b8 0%, #016cf7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury Text Shadow */
+.luxury-text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.luxury-text-glow {
+  text-shadow: 0 0 20px rgba(0, 196, 184, 0.3);
+}
+
+/* Responsive Luxury Typography */
+@media (max-width: 768px) {
+  :root {
+    --text-hero-luxury: clamp(2.5rem, 8vw, 3.5rem); /* 40-56px */
+    --text-h1-luxury: clamp(2rem, 6vw, 2.5rem); /* 32-40px */
+    --text-h2-luxury: clamp(1.75rem, 5vw, 2rem); /* 28-32px */
+    --text-h3-luxury: clamp(1.5rem, 4vw, 1.75rem); /* 24-28px */
+    --text-body-luxury: 1rem; /* 16px */
+    --text-body-large-luxury: 1.125rem; /* 18px */
+  }
+}
+

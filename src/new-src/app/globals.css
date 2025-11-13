@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Shadcn/UI colors - Light theme only */
+  --color-background: #f5f3ef;
+  --color-foreground: #000000;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #000000;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #000000;
+
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #f5f3ef; /* Muted background */
+  --color-secondary-foreground: #000000;
+
+  --color-muted: #f5f3ef;
+  --color-muted-foreground: #000000;
+
+  --color-accent: #f4ee9e; /* Accent Yellow */
+  --color-accent-foreground: #000000;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: rgba(0, 0, 0, 0.08); /* Border Subtle */
+  --color-input: rgba(0, 0, 0, 0.08); /* Border Subtle for input */
+  --color-ring: #000000; /* Text Primary for ring */
+
+  --color-chart-1: #e67e22;
+  --color-chart-2: #2d8659;
+  --color-chart-3: #1e3a5f;
+  --color-chart-4: #f1c40f;
+  --color-chart-5: #e74c3c;
+
+  --color-sidebar: #f7f7f7;
+  --color-sidebar-foreground: #404040;
+  --color-sidebar-primary: #1a1a1a;
+  --color-sidebar-primary-foreground: #fafafa;
+  --color-sidebar-accent: #f0f0f0;
+  --color-sidebar-accent-foreground: #1a1a1a;
+  --color-sidebar-border: #d4d4d8;
+  --color-sidebar-ring: #3b82f6;
+
+  /* Grovia specific colors */
+  --color-background-primary: #f5f3ef;
+  --color-background-secondary: #ffffff;
+  --color-background-dark: #3d464f;
+  --color-background-dark-alt: #4a5158;
+
+  --color-accent-yellow: #f4ee9e;
+  --color-accent-yellow-green: #e8f29e;
+  --color-accent-tag: #d7f2a8;
+
+  --color-text-primary: #000000;
+  --color-text-secondary: #000000;
+  --color-text-tertiary: #000000;
+  --color-text-inverse: #ffffff;
+  --color-text-inverse-secondary: #ffffff;
+
+  --color-button-primary-bg: #ffffff;
+  --color-button-primary-text: #000000;
+  --color-button-secondary-border: #1a1a1a;
+
+  /* Button color tokens for Tailwind */
+  --button-primary-bg: var(--color-button-primary-bg);
+  --button-primary-text: var(--color-button-primary-text);
+
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --color-border-medium: rgba(0, 0, 0, 0.12);
+
+  --color-overlay-light: rgba(0, 0, 0, 0.03);
+  --color-shadow-soft: rgba(0, 0, 0, 0.06);
+
+  /* Typography */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", sans-serif;
+  --font-display: "Inter", var(--font-sans);
+  --font-body: "Inter", var(--font-sans);
+
+  /* Shadcn/UI radius */
+  --radius-lg: 0.75rem; /* Adjusted from 0.5rem to match design system medium radius */
+  --radius-md: 0.75rem; /* Adjusted from calc(0.5rem - 2px) to match design system medium radius */
+  --radius-sm: 0.5rem; /* Adjusted from calc(0.5rem - 4px) to match design system small radius */
+
+  /* Shadcn/UI animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to currentColor in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-body);
+  }
+
+  /* Button utility classes */
+  .bg-button-primary-bg {
+    background-color: var(--color-button-primary-bg);
+  }
+
+  .text-button-primary-text {
+    color: var(--color-button-primary-text);
+  }
+
+  /* Hero text colors with !important */
+  .hero-heading-black {
+    color: #000000 !important;
+  }
+
+  .hero-text-white {
+    color: #ffffff !important;
+  }
+
+  /* MVerticalCard text colors with !important for better contrast */
+  .mvertical-card-title {
+    color: #ffffff !important;
+  }
+
+  .mvertical-card-text {
+    color: #ffffff !important;
+  }
+
+  .mvertical-card-label {
+    color: #ffffff !important;
+  }
+
+  /* MVerticalCard right side text - all white with !important */
+  .mvertical-card-right-title {
+    color: #ffffff !important;
+  }
+
+  .mvertical-card-right-text {
+    color: #ffffff !important;
+  }
+
+  .mvertical-card-right-label {
+    color: #ffffff !important;
+  }
+
+  /* MVerticalCard left side boxes - white transparent glassmorphic with !important */
+  .mvertical-card-box-bg {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+  }
+
+  .mvertical-card-box-bg-active {
+    background-color: rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .mvertical-card-box-bg-hover {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .mvertical-card-box-border {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .mvertical-card-box-border-active {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .mvertical-card-icon-bg {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .mvertical-card-icon-bg-active {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .mvertical-card-icon-bg-hover {
+    background-color: rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .mvertical-card-icon-border {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .mvertical-card-icon-border-active {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  /* Process component text colors with !important - Enhanced visibility */
+  .process-text-black {
+    color: #000000 !important;
+    font-weight: 600 !important;
+  }
+
+  .process-text-white {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+  }
+
+  .process-text-black-opacity {
+    color: rgba(0, 0, 0, 0.95) !important;
+    font-weight: 500 !important;
+  }
+
+  .process-text-white-opacity {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500 !important;
+  }
+}
+
+@layer base {
+  :root {
+    /* Shadcn/UI variables */
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --popover: var(--color-popover);
+    --popover-foreground: var(--color-popover-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --destructive: var(--color-destructive);
+    --destructive-foreground: var(--color-destructive-foreground);
+    --border: var(--color-border);
+    --input: var(--color-input);
+    --ring: var(--color-ring);
+    --chart-1: var(--color-chart-1);
+    --chart-2: var(--color-chart-2);
+    --chart-3: var(--color-chart-3);
+    --chart-4: var(--color-chart-4);
+    --chart-5: var(--color-chart-5);
+    --radius: var(--radius-lg); /* Use the large radius as default */
+    --sidebar-background: var(--color-sidebar);
+    --sidebar-foreground: var(--color-sidebar-foreground);
+    --sidebar-primary: var(--color-sidebar-primary);
+    --sidebar-primary-foreground: var(--color-sidebar-primary-foreground);
+    --sidebar-accent: var(--color-sidebar-accent);
+    --sidebar-accent-foreground: var(--color-sidebar-accent-foreground);
+    --sidebar-border: var(--color-sidebar-border);
+    --sidebar-ring: var(--color-sidebar-ring);
+  }
+
+  /* Base typography and HTML element styles */
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    color: var(--color-text-primary);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 4.5rem; /* 72px */
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 3.5rem; /* 56px */
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    font-size: 2.5rem; /* 40px */
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  h5 {
+    font-size: 1.75rem; /* 28px */
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: var(--color-text-primary);
+  }
+
+  .text-large-paragraph {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .text-small {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: var(--color-text-tertiary);
+  }
+
+  .text-nav-link {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .text-button {
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .text-tag {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    h1 {
+      font-size: 3rem; /* Example mobile adjustment */
+    }
+    h2 {
+      font-size: 2.5rem; /* Example mobile adjustment */
+    }
+  }
+
+  /* Shadcn/UI base styles */
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}

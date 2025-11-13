@@ -1,0 +1,67 @@
+/* Cyber Purple Theme - Homepage 4 */
+:root {
+  --primary: #6a00ff;
+  --secondary: #a64aff;
+  --text: #ffffff;
+  --accent: #00e5ff;
+  --bg: #1a1a1a;
+  --defaultColor: #ffb1ff;
+}
+
+.cyber-purple-theme {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.cyber-purple-theme h1,
+.cyber-purple-theme h2,
+.cyber-purple-theme h3,
+.cyber-purple-theme h4,
+.cyber-purple-theme h5,
+.cyber-purple-theme h6 {
+  color: var(--text);
+}
+
+.cyber-purple-theme p {
+  color: var(--text);
+}
+
+.cyber-purple-theme span {
+  color: var(--accent);
+}
+
+.cyber-purple-theme button {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.cyber-purple-theme .primary-bg {
+  background-color: var(--primary);
+}
+
+.cyber-purple-theme .secondary-bg {
+  background-color: var(--secondary);
+}
+
+.cyber-purple-theme .accent-bg {
+  background-color: var(--accent);
+}
+
+.cyber-purple-theme .text-primary {
+  color: var(--primary);
+}
+
+.cyber-purple-theme .text-secondary {
+  color: var(--secondary);
+}
+
+.cyber-purple-theme .text-accent {
+  color: var(--accent);
+}
+
+
+
+
+
+
+

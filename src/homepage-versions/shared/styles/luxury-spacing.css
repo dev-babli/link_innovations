@@ -1,0 +1,98 @@
+/**
+ * Luxury Spacing System
+ * Golden Ratio based spacing for premium layouts
+ */
+
+:root {
+  /* Golden Ratio (φ ≈ 1.618) */
+  --phi: 1.618033988749895;
+  
+  /* Luxury Spacing Scale (Golden Ratio Based) */
+  --spacing-luxury-xs: 0.5rem; /* 8px */
+  --spacing-luxury-sm: 1rem; /* 16px */
+  --spacing-luxury-md: 1.618rem; /* ~26px */
+  --spacing-luxury-lg: 2.618rem; /* ~42px */
+  --spacing-luxury-xl: 4.236rem; /* ~68px */
+  --spacing-luxury-2xl: 6.854rem; /* ~110px */
+  --spacing-luxury-3xl: 11.09rem; /* ~177px */
+  
+  /* Section Padding */
+  --section-padding-desktop: 10rem; /* 160px */
+  --section-padding-mobile: 5rem; /* 80px */
+  
+  /* Component Gaps */
+  --gap-component: 4rem; /* 64px */
+  --gap-section: 5rem; /* 80px */
+  
+  /* Card Padding */
+  --card-padding: 3rem; /* 48px */
+  --card-padding-large: 4rem; /* 64px */
+  
+  /* Text Spacing */
+  --text-spacing-heading: 2rem; /* 32px */
+  --text-spacing-heading-large: 3rem; /* 48px */
+}
+
+/* Luxury Spacing Utilities */
+.luxury-section {
+  padding-top: var(--section-padding-desktop);
+  padding-bottom: var(--section-padding-desktop);
+}
+
+.luxury-section-sm {
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+}
+
+.luxury-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.luxury-gap {
+  gap: var(--gap-component);
+}
+
+.luxury-gap-section {
+  margin-top: var(--gap-section);
+}
+
+/* Luxury Card Padding */
+.luxury-card {
+  padding: var(--card-padding);
+}
+
+.luxury-card-large {
+  padding: var(--card-padding-large);
+}
+
+/* Luxury Text Spacing */
+.luxury-text-spacing {
+  margin-bottom: var(--text-spacing-heading);
+}
+
+.luxury-text-spacing-large {
+  margin-bottom: var(--text-spacing-heading-large);
+}
+
+/* Responsive Luxury Spacing */
+@media (max-width: 768px) {
+  :root {
+    --section-padding-desktop: 5rem; /* 80px */
+    --gap-component: 2rem; /* 32px */
+    --gap-section: 3rem; /* 48px */
+    --card-padding: 2rem; /* 32px */
+    --card-padding-large: 2.5rem; /* 40px */
+    --text-spacing-heading: 1.5rem; /* 24px */
+    --text-spacing-heading-large: 2rem; /* 32px */
+  }
+  
+  .luxury-section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+}
+

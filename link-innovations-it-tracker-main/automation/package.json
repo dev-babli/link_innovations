@@ -1,0 +1,36 @@
+{
+  "name": "link-innovations-image-automation",
+  "version": "1.0.0",
+  "description": "Automated image generation system for Link Innovations using AI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.js",
+    "generate-images": "node index.js",
+    "generate-bonus": "node generate-bonus-images.js",
+    "generate-extra": "node generate-extra-images.js",
+    "analyze": "node index.js --analyze-only",
+    "test": "node index.js --dry-run"
+  },
+  "keywords": [
+    "automation",
+    "image-generation",
+    "AI",
+    "design-system"
+  ],
+  "author": "Link Innovations",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.24.0",
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.7.7",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "glob": "^11.0.0",
+    "gray-matter": "^4.0.3",
+    "ora": "^8.1.0",
+    "sharp": "^0.33.5"
+  }
+}
