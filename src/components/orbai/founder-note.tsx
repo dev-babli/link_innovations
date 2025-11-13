@@ -45,6 +45,7 @@ const FounderNote = () => {
           </div>
           <div className="text-left">
             <p className="text-sm font-medium text-[#999999]">Founder of ORB AI</p>
+            <p className="text-xs font-medium text-[#999999] mt-1">-Founder</p>
           </div>
         </motion.div>
       </div>

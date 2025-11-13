@@ -51,6 +51,7 @@ export function PhilosophyPromiseSection() {
             "I started Link Innovations to bring honesty and craftsmanship back into software development. We may be a small team, but that's our strength — every project gets direct attention, not layers of management. We treat every line of code like it powers our own product."
           </p>
           <span className="absolute bottom-4 right-4 text-[80px] font-serif text-text-secondary/20 leading-none rotate-180">"</span>
+          <p className="mt-6 text-base font-semibold text-text-secondary uppercase tracking-wide">- Founder</p>
         </motion.div>
       </div>
     </section>

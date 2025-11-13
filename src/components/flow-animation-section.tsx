@@ -28,27 +28,6 @@ const clientNeeds = [
   },
 ];
 
-const services = [
-  {
-    id: 1,
-    title: "Enterprise Web Solutions",
-    description: "High-performance web applications that scale",
-    icon: Globe
-  },
-  {
-    id: 2,
-    title: "Native Mobile Applications",
-    description: "iOS and Android apps with native performance",
-    icon: Smartphone
-  },
-  {
-    id: 3,
-    title: "Custom Software Development",
-    description: "Tailored solutions for unique business needs",
-    icon: Code
-  },
-];
-
 const results = [
   {
     id: 1,
@@ -488,61 +467,6 @@ export function FlowAnimationSection() {
             </motion.div>
           </div>
 
-          {/* SERVICES */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mt-20 pt-16 border-t border-border-subtle"
-          >
-            <h3 className="text-[32px] font-semibold text-text-primary mb-12 text-center">
-              Core Capabilities
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="
-                    relative p-8 lg:p-10 rounded-2xl 
-                    backdrop-blur-xl bg-white/5 border border-white/10 
-                    shadow-[0px_2px_8px_rgba(0,0,0,0.06)] 
-                    hover:bg-white/10 hover:border-white/20 hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)]
-                    transition-all duration-300 text-center group overflow-hidden
-                  "
-                >
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-
-                  <div className="relative z-10">
-                    <div
-                      className="w-20 h-20 rounded-2xl 
-                      bg-gradient-to-br from-blue-500/20 to-cyan-500/20 
-                      backdrop-blur-sm border border-white/20 
-                      flex items-center justify-center mx-auto mb-6 
-                      group-hover:scale-110 transition-transform duration-300
-                      shadow-md"
-                    >
-                      <service.icon className="w-10 h-10 text-text-primary" strokeWidth={2} />
-                    </div>
-
-                    <h4 className="text-text-primary font-semibold text-lg mb-2">
-                      {service.title}
-                    </h4>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

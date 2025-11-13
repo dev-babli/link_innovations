@@ -63,10 +63,9 @@ export default function HomePage() {
             <PhilosophyPromiseSection />
             
             {/* 1️⃣2️⃣ Social Proof */}
-            <div className="bg-background-primary">
-                {/* <TestimonialsColumns /> */}
+            {/* <div className="bg-background-primary">
                 <TrustedBySparkles />
-            </div>
+            </div> */}
             
             {/* 1️⃣3️⃣ Final CTA */}
             <CTAWithShader />
