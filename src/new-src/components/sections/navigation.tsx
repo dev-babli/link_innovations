@@ -341,7 +341,7 @@ export default function Navigation() {
   };
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-[100] flex justify-center">
+    <header className="relative z-[100] flex justify-center">
       <div
         className={cn(
           "relative flex items-center h-[80px] mt-6 bg-white/90 backdrop-blur-md rounded-[40px] p-4 pl-5 transition-shadow duration-300",

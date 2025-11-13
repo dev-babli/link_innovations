@@ -14,7 +14,7 @@ import TestimonialsColumns from '@/components/ui/testimonials-columns-1';
 import { TrustedBySparkles } from '@/components/ui/trusted-by-sparkles';
 import { CTAWithShader } from '@/components/ui/cta-with-shader';
 import OurAIServices from '@/components/MStackCard';
-import OverlappingCardsCarousel from '@/components/ui/overlapping-cards-carousel';
+// import OverlappingCardsCarousel from '@/components/ui/overlapping-cards-carousel';
 import JourneyMap from '@/components/promise-section';
 
 export default function HomePage() {
@@ -33,10 +33,10 @@ export default function HomePage() {
             <FeaturesSection />
             
             {/* 3️⃣ Overlapping Cards Carousel */}
-            <OverlappingCardsCarousel />
+            {/* <OverlappingCardsCarousel /> */}
             
             {/* 4️⃣ Services Cards */}
-            <SuccessStories />
+            <SuccessStories limit={4} compact />
             
             {/* 5️⃣ Our Process (6-Step Journey) */}
             <Process />

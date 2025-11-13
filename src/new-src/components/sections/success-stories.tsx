@@ -88,7 +88,16 @@ const services: Service[] = [
   },
 ];
 
-const SuccessStories = () => {
+interface SuccessStoriesProps {
+  limit?: number;
+  compact?: boolean;
+}
+
+const SuccessStories = ({ limit, compact = false }: SuccessStoriesProps) => {
+  const visibleServices = typeof limit === "number" ? services.slice(0, limit) : services;
+  const cardWidthClass = compact ? "md:max-w-[560px] lg:max-w-[600px]" : "max-w-none";
+  const imageHeightClass = compact ? "h-[310px] lg:h-[330px]" : "h-[340px]";
+
   return (
     <section className="bg-background-primary py-4 sm:py-4">
       <div className="container mx-auto px-4">
@@ -100,15 +109,15 @@ const SuccessStories = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="mx-auto mt-16 grid max-w-none grid-cols-1 gap-8 sm:mt-20 md:grid-cols-2">
-          {services.map((service) => (
+        <div className="mx-auto mt-16 grid max-w-none grid-cols-1 gap-y-5 gap-x-6 sm:mt-20 md:grid-cols-2 md:gap-y-5 md:gap-x-8 justify-items-center">
+          {visibleServices.map((service) => (
             <Link
               key={service.name}
               href={service.href}
-              className="group block overflow-hidden rounded-2xl bg-background-secondary shadow-soft border border-border-subtle transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1.5"
+              className={`group block overflow-hidden rounded-2xl bg-background-secondary shadow-soft border border-border-subtle transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1.5 w-full ${cardWidthClass}`}
             >
               {/* Full-Width Image Section */}
-              <div className="relative w-full h-[340px] overflow-hidden rounded-2xl">
+              <div className={`relative w-full overflow-hidden rounded-2xl ${imageHeightClass}`}>
                 <Image
                   src={service.imageUrl}
                   alt={service.name}
