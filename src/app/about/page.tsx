@@ -6,7 +6,7 @@ import Navigation from "@/new-src/components/sections/navigation";
 import Footer from "@/new-src/components/sections/footer";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import { Target, Users, Lightbulb, Shield, Globe, Award, TrendingUp, Clock, CheckCircle } from "lucide-react";
-import ImpactMetrics from "@/components/ImpactMetrics";
+import ImpactMetrics from "../../components/ImpactMetrics";
 import { CTAWithShader } from "@/components/ui/cta-with-shader";
 
 export default function AboutPage() {
@@ -105,7 +105,7 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-background-primary">
+      <section id="about-overview" className="pt-32 pb-20 bg-background-primary">
         <div className="container mx-auto px-6 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -135,7 +135,7 @@ export default function AboutPage() {
       />
 
       {/* Our Story */}
-      <section className="bg-background-primary py-24">
+      <section id="our-story" className="bg-background-primary py-24">
         <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -168,7 +168,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="bg-background-secondary py-24">
+      <section id="our-values" className="bg-background-secondary py-24">
         <div className="container mx-auto px-6 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -210,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why Work With Us */}
-      <section className="bg-background-primary py-24">
+      <section id="why-work-with-us" className="bg-background-primary py-24">
         <div className="container mx-auto px-6 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -250,7 +250,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-background-secondary py-24">
+      <section id="about-cta" className="bg-background-secondary py-24">
         <div className="container mx-auto px-6 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

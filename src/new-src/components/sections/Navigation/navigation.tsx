@@ -42,6 +42,30 @@ export default function Navigation() {
           href: "/about",
           icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
         },
+        {
+          label: "Our Journey",
+          description:
+            "See how we evolved from a small team into a global innovation partner.",
+          image: "/images/navigation/about-us.avif",
+          href: "/about#our-story",
+          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
+        },
+        {
+          label: "Our Values",
+          description:
+            "Discover the principles that guide every engagement we take on.",
+          image: "/images/navigation/about-us.avif",
+          href: "/about#our-values",
+          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
+        },
+        {
+          label: "Why Work With Us",
+          description:
+            "Explore what sets our teams and delivery approach apart.",
+          image: "/images/navigation/about-us.avif",
+          href: "/about#why-work-with-us",
+          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
+        },
       ],
     },
     {
@@ -56,46 +80,60 @@ export default function Navigation() {
           image: "/images/navigation/web-dev.avif",
         },
         {
+          label: "Web App Development",
+          href: "/services/web-app-development",
+          icon: <Code className="h-6 w-6 text-indigo-600" />,
+          description: "Enterprise-grade web apps and platforms.",
+          image: "/images/navigation/web-dev.avif",
+        },
+        {
+          label: "Mobile App Development",
+          href: "/services/mobile-app-development",
+          icon: <Smartphone className="h-6 w-6 text-indigo-600" />,
+          description: "Native and cross-platform mobile experiences.",
+          image: "/images/navigation/mobile.avif",
+        },
+        {
           label: "Mobile Apps",
           href: "/services/mobile-apps",
           icon: <Smartphone className="h-6 w-6 text-indigo-600" />,
-          description: "Native and cross-platform mobile apps.",
+          description: "Cross-platform apps delivered from a single codebase.",
           image: "/images/navigation/mobile.avif",
         },
         {
           label: "Cloud Services",
           href: "/services/cloud-services",
           icon: <Cloud className="h-6 w-6 text-indigo-600" />,
-          description: "Secure and scalable cloud solutions.",
+          description: "Secure and scalable cloud migration and management.",
           image: "/images/navigation/cloud.avif",
         },
         {
-          label: "AI Solutions",
-          href: "/services/ai-solutions",
+          label: "Cloud DevOps",
+          href: "/services/cloud-devops",
+          icon: <Server className="h-6 w-6 text-indigo-600" />,
+          description: "Automated CI/CD pipelines and infrastructure as code.",
+          image: "/images/navigation/cloud.avif",
+        },
+        {
+          label: "AI & Automation",
+          href: "/services/ai-automation",
           icon: <Cpu className="h-6 w-6 text-indigo-600" />,
-          description: "Intelligent AI systems to optimize operations.",
+          description: "Intelligent solutions to optimise operations.",
           image: "/images/navigation/ai.avif",
         },
         {
-          label: "Cyber Security",
+          label: "Automation Testing",
+          href: "/services/automation-testing",
+          icon: <Settings className="h-6 w-6 text-indigo-600" />,
+          description: "QA automation to accelerate release cycles.",
+          image: "/images/navigation/automation.avif",
+        },
+        {
+          label: "Cybersecurity",
           href: "/services/cybersecurity",
           icon: <Shield className="h-6 w-6 text-indigo-600" />,
           description: "Protect your digital assets and networks.",
           image: "/images/navigation/cybersecurity.avif",
-        },
-        {
-          label: "Automation Testing",
-          href: "/services/automation",
-          icon: <Settings className="h-6 w-6 text-indigo-600" />,
-          description: "Streamline workflows and improve efficiency.",
-          image: "/images/navigation/automation.avif",
-        },
-        {
-          label: "Microsoft Managed Services",
-          href: "/services/microsoft-managed",
-          icon: <Server className="h-6 w-6 text-indigo-600" />,
-          description: "Manage your Microsoft cloud infrastructure.",
-          image: "/images/navigation/microsoft.avif",
         },
         {
           label: "Data Analytics",
@@ -106,7 +144,7 @@ export default function Navigation() {
         },
       ],
     },
-    { href: "/contact-us", label: "Contact Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   const NavLinkComponent = ({
