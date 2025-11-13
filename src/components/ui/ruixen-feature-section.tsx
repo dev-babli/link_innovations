@@ -25,6 +25,7 @@ import {
   FaCloud,
   FaRocket,
   FaCog,
+  FaRobot,
 } from "react-icons/fa";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
@@ -60,6 +61,7 @@ const getIconColor = (
   if (IconComponent === FaCloud) return "#06B6D4";
   if (IconComponent === FaRocket) return "#8B5CF6";
   if (IconComponent === FaCog) return "#6B7280";
+  if (IconComponent === FaRobot) return "#6366F1";
 
   return "#000000";
 };
@@ -86,71 +88,83 @@ export const Highlight = ({
 const technologyStacks = [
   {
     id: 0,
-    category: "Frontend",
+    category: "Web Development",
     technologies: [
-      { name: "React", Icon: SiReact },
       { name: "Next.js", Icon: SiNextdotjs },
+      { name: "React", Icon: SiReact },
       { name: "TypeScript", Icon: SiTypescript },
       { name: "Tailwind CSS", Icon: SiTailwindcss },
     ],
     description:
-      "Modern frontend technologies for building scalable, performant user interfaces.",
+      "Composable architectures with modern frameworks for high-impact marketing sites and enterprise portals.",
   },
   {
     id: 1,
-    category: "Backend",
+    category: "AI & Automation",
     technologies: [
-      { name: "Node.js", Icon: SiNodedotjs },
+      { name: "LangChain", Icon: FaRobot },
+      { name: "OpenAI", Icon: FaRobot },
       { name: "Python", Icon: SiPython },
-      { name: "PostgreSQL", Icon: SiPostgresql },
-      { name: "MongoDB", Icon: SiMongodb },
+      { name: "Vector Stores", Icon: SiMongodb },
     ],
     description:
-      "Robust backend solutions with scalable architecture and reliable databases.",
+      "Intelligent automation powered by LLM pipelines, prompt orchestration, and explainable decisioning.",
   },
   {
     id: 2,
-    category: "Cloud & DevOps",
+    category: "App Development",
     technologies: [
-      { name: "AWS", Icon: FaAws },
-      { name: "Docker", Icon: SiDocker },
-      { name: "Kubernetes", Icon: SiKubernetes },
-      { name: "CI/CD", Icon: null },
+      { name: "React Native", Icon: SiReact },
+      { name: "Expo", Icon: SiReact },
+      { name: "TypeScript", Icon: SiTypescript },
+      { name: "CI/CD Mobile", Icon: FaCode },
     ],
     description:
-      "Cloud infrastructure and DevOps practices for seamless deployment and scaling.",
+      "Cross-platform mobile experiences with native performance, unified codebases, and rapid release cycles.",
+  },
+  {
+    id: 3,
+    category: "Managed Services",
+    technologies: [
+      { name: "AWS", Icon: FaAws },
+      { name: "Terraform", Icon: FaCloud },
+      { name: "Docker", Icon: SiDocker },
+      { name: "Kubernetes", Icon: SiKubernetes },
+    ],
+    description:
+      "Always-on cloud operations, observability, and performance tuning across hybrid and multi-cloud estates.",
   },
 ];
 
 const integrations = [
   {
-    name: "React",
-    desc: "Modern UI library for building interactive interfaces",
-    Icon: SiReact,
-  },
-  {
     name: "Next.js",
-    desc: "Full-stack React framework for production-ready apps",
+    desc: "Static + dynamic rendering for performant web experiences",
     Icon: SiNextdotjs,
   },
   {
-    name: "TypeScript",
-    desc: "Type-safe JavaScript for better code quality",
-    Icon: SiTypescript,
+    name: "LangChain",
+    desc: "Composable AI agents orchestrating retrieval, tools, and prompts",
+    Icon: FaRobot,
   },
   {
-    name: "Node.js",
-    desc: "Server-side JavaScript runtime for scalable backends",
-    Icon: SiNodedotjs,
+    name: "React Native",
+    desc: "Shared mobile codebase with near-native performance",
+    Icon: SiReact,
+  },
+  {
+    name: "Terraform",
+    desc: "Infrastructure as code for predictable managed services",
+    Icon: FaCloud,
   },
   {
     name: "PostgreSQL",
-    desc: "Advanced open-source relational database",
+    desc: "Robust relational data layer with tuned performance",
     Icon: SiPostgresql,
   },
   {
     name: "AWS",
-    desc: "Cloud infrastructure and services platform",
+    desc: "Cloud foundation for scalable and secure deployments",
     Icon: FaAws,
   },
 ];
@@ -735,7 +749,7 @@ export const TechnologyStack = ({
     <div className="relative mx-auto h-48 w-full md:h-48 md:w-96 my-4">
       {stacks.map((stack, index) => {
         const isFrontCard = index === 0;
-        const blurAmount = index * 2; // Increase blur for cards further back
+        const blurAmount = index === 0 ? 0 : Math.min(index * 1.2, 2.5);
 
         return (
           <motion.div
