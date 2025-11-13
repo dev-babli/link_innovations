@@ -18,8 +18,7 @@ import {
   SiFigma
 } from "react-icons/si";
 
-const VIDEO_SRC =
-  "https://yellow.ai/wp-content/uploads/2025/09/hero-video-25.mp4";
+const VIDEO_SRC = "/videos/linkinnovations-vid%201.mp4";
 
 // Base tech logos with original colors (will be styled white by default, show colors on hover)
 const techLogosBase = [
