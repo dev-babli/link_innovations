@@ -68,7 +68,7 @@ export default function ContactForm({
                 </div>
                 <div>
                   <p className="text-white font-semibold font-['Inter']">Email</p>
-                  <p className="text-gray-400 font-['Inter']">hello@linkinnovations.ai</p>
+                  <p className="text-gray-400 font-['Inter']">info@linkinnovations.ai</p>
                 </div>
               </div>
 

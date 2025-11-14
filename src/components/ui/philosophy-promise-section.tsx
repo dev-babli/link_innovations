@@ -44,14 +44,14 @@ export function PhilosophyPromiseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative p-8 lg:p-12 rounded-2xl bg-background-secondary border border-border-subtle shadow-[0px_2px_8px_rgba(0,0,0,0.06)] text-center max-w-4xl mx-auto"
+          className="relative p-8 lg:p-12 rounded-[32px] bg-background-secondary/95 border border-white/12 shadow-[0px_32px_80px_rgba(6,10,19,0.16)] text-center max-w-4xl mx-auto backdrop-blur-xl"
         >
-          <span className="absolute top-4 left-4 text-[80px] font-serif text-text-secondary/20 leading-none">"</span>
-          <p className="text-xl lg:text-2xl font-medium text-text-primary italic">
+          <span className="absolute top-4 left-6 text-[90px] font-serif text-text-secondary/15 leading-none">"</span>
+          <p className="text-xl lg:text-2xl font-medium text-text-primary/95 italic leading-relaxed">
             "I started Link Innovations to bring honesty and craftsmanship back into software development. We may be a small team, but that's our strength — every project gets direct attention, not layers of management. We treat every line of code like it powers our own product."
           </p>
-          <span className="absolute bottom-4 right-4 text-[80px] font-serif text-text-secondary/20 leading-none rotate-180">"</span>
-          <p className="mt-6 text-base font-semibold text-text-secondary uppercase tracking-wide">- Founder</p>
+          <span className="absolute bottom-4 right-6 text-[90px] font-serif text-text-secondary/15 leading-none rotate-180">"</span>
+          <p className="mt-6 text-xs sm:text-sm font-semibold text-text-secondary/85 uppercase tracking-[0.35em]">- Founder</p>
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { TrendingUp, Zap, Users, Globe, Smartphone, Code, Rocket, Gauge, Award, Settings } from "lucide-react";
 
@@ -59,8 +59,6 @@ export function FlowAnimationSection() {
     offset: ["start end", "end start"],
   });
 
-  const [activeFlow, setActiveFlow] = useState(0);
-
   return (
     <section
       ref={sectionRef}
@@ -102,11 +100,14 @@ export function FlowAnimationSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20 max-w-3xl mx-auto"
+          className="text-center mb-14 max-w-3xl mx-auto"
         >
-          <h2 className="text-[56px] font-medium leading-[1.15] tracking-[-0.015em] text-text-primary mb-4">
+          <h2 className="text-[48px] sm:text-[56px] font-medium leading-[1.12] tracking-[-0.015em] text-text-primary mb-4">
             From Vision to Market Leadership
           </h2>
+          <p className="text-base sm:text-lg text-text-secondary/90 leading-relaxed">
+            Align strategy, execution, and outcomes through a transparent delivery flow built to scale ambition.
+          </p>
         </motion.div>
 
         <div className="relative max-w-6xl mx-auto">
@@ -128,15 +129,14 @@ export function FlowAnimationSection() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  onClick={() => setActiveFlow(index)}
                   className="
                   relative p-6 lg:p-7 rounded-2xl 
-                  backdrop-blur-xl bg-white/5 border border-white/10 
-                  shadow-[0px_2px_8px_rgba(0,0,0,0.06)] 
-                  hover:bg-white/10 hover:border-white/20 hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)]
+                  backdrop-blur-xl bg-white/8 border border-white/12 
+                  shadow-[0px_16px_40px_rgba(6,10,19,0.12)] 
+                  hover:bg-white/14 hover:border-white/20 hover:shadow-[0px_22px_60px_rgba(6,10,19,0.16)]
                   overflow-hidden group
                   cursor-pointer
-                  transition-all duration-300
+                  transition-all duration-400
                 "
                 >
                   {/* Gradient overlay on hover */}
@@ -195,7 +195,7 @@ export function FlowAnimationSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative flex flex-col items-center justify-center py-12"
+            className="relative flex flex-col items-center justify-center py-12 px-6"
             >
               {/* Flow Lines (blue dashed) */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -384,7 +384,7 @@ export function FlowAnimationSection() {
                 ))}
               </div>
 
-              <p className="mt-6 text-sm font-semibold text-text-secondary text-center tracking-wide uppercase">
+              <p className="mt-6 text-xs sm:text-sm font-semibold text-text-secondary/85 text-center tracking-[0.28em] uppercase">
                 Strategic Execution
               </p>
             </motion.div>
@@ -408,11 +408,11 @@ export function FlowAnimationSection() {
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   className="
                   relative p-6 lg:p-7 rounded-2xl 
-                  backdrop-blur-xl bg-white/5 border border-white/10 
-                  shadow-[0px_2px_8px_rgba(0,0,0,0.06)] 
-                  hover:bg-white/10 hover:border-white/20 hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)]
+                  backdrop-blur-xl bg-white/8 border border-white/12 
+                  shadow-[0px_16px_40px_rgba(6,10,19,0.12)] 
+                  hover:bg-white/14 hover:border-white/20 hover:shadow-[0px_22px_60px_rgba(6,10,19,0.16)]
                   overflow-hidden group
-                  transition-all duration-300
+                  transition-all duration-400
                 "
                 >
                   {/* Gradient overlay on hover */}

@@ -1,71 +1,175 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Twitter, Instagram, Linkedin } from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 
 const Footer = () => {
+    const socialLinks = [
+        { href: "http://linkedin.com/company/link-innovations-official/?viewAsMember=true", label: "LinkedIn", Icon: Linkedin },
+        { href: "https://x.com/LinkInnov_98", label: "X (Twitter)", Icon: Twitter },
+        { href: "https://www.facebook.com/profile.php?id=61582798476647&notif_id=1761984753033602&notif_t=page_user_activity&ref=notif#", label: "Facebook", Icon: Facebook },
+        { href: "https://www.instagram.com/linkinnovationss_official/", label: "Instagram", Icon: Instagram },
+    ];
+
+    const navigation = [
+        {
+            title: "Company",
+            links: [
+                { href: "/about", label: "About" },
+                { href: "/services", label: "Services" },
+                { href: "/use-cases", label: "Use Cases" },
+                { href: "/contact", label: "Contact" },
+            ],
+        },
+        {
+            title: "Expertise",
+            links: [
+                { href: "/services/web-development", label: "Web Development" },
+                { href: "/services/ai-automation", label: "AI & Automation" },
+                { href: "/services/cloud-devops", label: "Cloud & DevOps" },
+                { href: "/services/cybersecurity", label: "Cybersecurity" },
+            ],
+        },
+        {
+            title: "Resources",
+            links: [
+                { href: "/blog", label: "Insights" },
+                { href: "/case-studies", label: "Case Studies" },
+                { href: "/pricing", label: "Pricing" },
+                { href: "/careers", label: "Careers" },
+            ],
+        },
+    ];
+
     return (
-        <footer className="bg-background-primary text-text-primary pt-20 pb-10 lg:pt-24 lg:pb-12">
-            <div className="container mx-auto px-6 lg:px-20">
-                {/* Top: Newsletter & Nav */}
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-x-10 gap-y-10 lg:gap-y-0">
-                    <div>
-                        <h5 className="text-xl font-medium text-text-primary mb-2">
-                            Link Innovations
-                        </h5>
-                        <p className="text-base text-text-secondary mb-4">
-                            Custom Software Development Studio
-                        </p>
+        <footer className="bg-background-primary text-text-primary">
+            <div className="relative overflow-hidden border-t border-border-subtle/60">
+                <div className="pointer-events-none absolute inset-0 opacity-70">
+                    <div className="absolute -top-24 left-1/2 h-64 w-[480px] -translate-x-1/2 rounded-full bg-accent-yellow/10 blur-[160px]" />
+                    <div className="absolute -bottom-32 right-10 h-48 w-48 rounded-full bg-accent-cyan/10 blur-[120px]" />
+                </div>
+
+                <div className="relative z-10 container mx-auto px-6 lg:px-20 py-16 lg:py-20 space-y-12">
+                    {/* Main grid */}
+                    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr]">
+                        <div className="space-y-6">
+                            <div>
+                                <p className="text-sm uppercase tracking-[0.25em] text-text-secondary">
+                                    Link Innovations
+                                </p>
+                                <h3 className="mt-3 text-2xl font-medium">
+                                    Custom software development studio
+                                </h3>
+                                <p className="mt-4 text-base text-text-secondary leading-relaxed">
+                                    We engineer resilient cloud platforms, AI assistants, and enterprise-grade digital products for ambitious teams across the globe.
+                                </p>
+                            </div>
+                            <div className="space-y-4 text-sm text-text-secondary">
+                                <div className="flex items-center gap-3">
+                                    <Mail className="h-4 w-4 text-text-primary" />
+                                    <a href="mailto:info@linkinnovations.ai" className="text-text-primary hover:text-accent-cyan">
+                                        info@linkinnovations.ai
+                                    </a>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Phone className="h-4 w-4 text-text-primary" />
+                                    <a href="tel:+1234567890" className="text-text-primary hover:text-accent-cyan">
+                                        +1 (234) 567-890
+                                    </a>
+                                </div>
+                                <p>123 Innovation Street, San Francisco, CA • Remote-first</p>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                            {navigation.map((section) => (
+                                <div key={section.title} className="space-y-3">
+                                    <p className="text-sm font-medium text-text-secondary uppercase tracking-wide">
+                                        {section.title}
+                                    </p>
+                                    <ul className="space-y-2">
+                                        {section.links.map((link) => (
+                                            <li key={link.label}>
+                                                <Link href={link.href} className="text-base text-text-primary/80 transition hover:text-text-primary">
+                                                    {link.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    
-                    <div className="lg:justify-self-end">
-                        <h5 className="text-base font-medium text-text-primary mb-4">
-                            Navigation
-                        </h5>
-                        <nav className="grid grid-cols-2 gap-x-8 gap-y-3 text-base">
-                            <Link href="/" className="text-text-secondary hover:text-text-primary transition-colors">Home</Link>
-                            <Link href="/services" className="text-text-secondary hover:text-text-primary transition-colors">Services</Link>
-                            <Link href="/about" className="text-text-secondary hover:text-text-primary transition-colors">About</Link>
-                            <Link href="/contact" className="text-text-secondary hover:text-text-primary transition-colors">Contact</Link>
-                        </nav>
+
+                    {/* Socials */}
+                    <div className="flex flex-col gap-6 border-t border-border-subtle/70 pt-8 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-wrap items-center gap-5">
+                            {socialLinks.map(({ href, label, Icon }) => (
+                                <a
+                                    key={label}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={label}
+                                    className="flex items-center gap-2 text-sm font-medium text-text-secondary transition hover:text-text-primary"
+                                >
+                                    <Icon className="h-5 w-5" />
+                                    {label}
+                                </a>
+                            ))}
+                        </div>
+
+                        <div className="flex flex-col gap-3 text-sm text-text-secondary sm:flex-row sm:items-center sm:justify-between">
+                            <p>© 2025 Link Innovations. All rights reserved.</p>
+                            <div className="flex flex-wrap gap-4 text-sm">
+                                <Link href="/privacy" className="hover:text-text-primary">Privacy</Link>
+                                <Link href="/terms" className="hover:text-text-primary">Terms</Link>
+                                <Link href="/cookies" className="hover:text-text-primary">Cookies</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Wordmark */}
+                    <div
+                        className="relative"
+                        style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)" }}
+                    >
+                        <svg
+                            viewBox="-20 0 1610 293"
+                            aria-hidden="true"
+                            preserveAspectRatio="none"
+                            className="block w-full text-text-primary/20"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="footer-wordmark"
+                                    x1="785"
+                                    y1="0"
+                                    x2="785"
+                                    y2="218.5"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop stopColor="currentColor" stopOpacity="0.35" />
+                                    <stop offset="1" stopColor="currentColor" stopOpacity="0.08" />
+                                </linearGradient>
+                            </defs>
+                            <text
+                                x="50%"
+                                y="65%"
+                                dominantBaseline="middle"
+                                textAnchor="middle"
+                                fontSize="200"
+                                fontWeight="700"
+                                letterSpacing="4"
+                                className="font-['Playfair_Display','Cormorant_Garamond','EB_Garamond','Libre_Baskerville','Merriweather',serif]"
+                                fill="url(#footer-wordmark)"
+                            >
+                                Link Innovations
+                            </text>
+                        </svg>
                     </div>
                 </div>
 
-                {/* Divider 1 */}
-                <div className="h-px bg-border-subtle my-16"></div>
-
-                {/* Middle: Social & Email */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_1fr] items-center gap-y-8 md:gap-y-0">
-                    <div className="flex items-center gap-6">
-                        <a href="https://www.linkedin.com/company/link-innovations" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-text-secondary hover:text-text-primary transition-colors">
-                            <Linkedin className="w-6 h-6" />
-                        </a>
-                        <a href="https://github.com/link-innovations" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-text-secondary hover:text-text-primary transition-colors">
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:hello@linkinnovations.com" aria-label="Email" className="text-text-secondary hover:text-text-primary transition-colors">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </a>
-                    </div>
-                     <a href="mailto:hello@linkinnovations.com" className="font-display text-4xl md:text-5xl lg:text-[56px] font-medium tracking-[-0.03em] text-text-primary leading-tight justify-self-start md:justify-self-end hover:text-text-secondary transition-colors">
-                        hello@linkinnovations.com
-                    </a>
-                </div>
-
-                {/* Divider 2 */}
-                <div className="h-px bg-border-subtle my-16"></div>
-
-                {/* Bottom: Credits */}
-                <div className="flex flex-col gap-y-6 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex flex-col items-start gap-y-3 sm:flex-row sm:items-center sm:gap-x-6 text-sm">
-                        <span className="text-text-secondary">© 2025 Link Innovations. All Rights Reserved.</span>
-                    </div>
-                </div>
             </div>
         </footer>
     );

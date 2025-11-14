@@ -35,8 +35,8 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email Us",
       description: "Send us an email anytime",
-      value: "hello@linkinnovations.com",
-      href: "mailto:hello@linkinnovations.com"
+      value: "info@linkinnovations.ai",
+      href: "mailto:info@linkinnovations.ai"
     },
     {
       icon: Phone,
@@ -128,7 +128,7 @@ export default function ContactPage() {
               <p className="text-base text-text-secondary mb-8 leading-relaxed">
                 Reach out to us through any of these channels, and we'll get back to you within 24 hours.
               </p>
-              
+
               <div className="space-y-6">
                 {contactMethods.map((method, index) => (
                   <motion.a

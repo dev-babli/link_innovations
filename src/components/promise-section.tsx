@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, Brain, Code2, Rocket, Sparkles } from "lucide-react";
 
@@ -43,8 +42,6 @@ export default function JourneyMap() {
     (stops[1] + stops[2]) / 2,
     (stops[2] + stops[3]) / 2,
   ];
-
-  const [activeRipple, setActiveRipple] = useState<number>(-1);
 
   return (
     <section className="relative bg-background-primary py-24 lg:py-32 px-6 overflow-hidden">
@@ -92,7 +89,7 @@ export default function JourneyMap() {
       </motion.div>
 
       {/* Journey Map Container - Glassmorphic */}
-      <div className="relative max-w-7xl mx-auto flex flex-col items-center backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-12 lg:p-20 shadow-[0_8px_32px_0_rgba(0,0,0,0.12)] z-10">
+      <div className="relative max-w-7xl mx-auto flex flex-col items-center backdrop-blur-2xl bg-white/5 border border-white/12 rounded-[36px] p-10 lg:p-20 shadow-[0_30px_80px_rgba(6,10,19,0.22)] z-10">
         <div className="relative w-full flex justify-between items-start">
           {/* Dotted Line */}
           <div
@@ -110,8 +107,12 @@ export default function JourneyMap() {
           {/* Moving Diamond */}
           <motion.div
             className="absolute w-4 h-4 bg-gradient-to-br from-blue-500 to-cyan-500 rotate-45 z-10 rounded-sm shadow-[0_0_12px_rgba(59,130,246,0.6)] border border-blue-300/50"
-            style={{ top: `${circleSize / 2 - 2}px` }} // vertically center along dotted line
-            animate={{ left: ["0%", "100%"] }} // move from start to end
+            style={{
+              top: `${circleSize / 2}px`,
+              left: "0%",
+              transform: "translate(-50%, -50%)",
+            }}
+            animate={{ left: ["0%", "100%"] }}
             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
           />
 
@@ -127,14 +128,17 @@ export default function JourneyMap() {
           `}</style>
 
           {journeySteps.map((step, i) => (
-            <div key={i} className="flex flex-col items-center relative z-20">
+            <div
+              key={i}
+              className="flex flex-col items-center relative z-20 w-full max-w-[300px]"
+            >
               {/* Circle + Icon */}
               <div
                 className="flex items-center justify-center flex-shrink-0"
                 style={{ width: circleSize, height: circleSize }}
               >
                 <div
-                  className="rounded-full flex items-center justify-center backdrop-blur-xl bg-white/10 border-2 border-white/20 relative z-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.12)] group overflow-hidden"
+                  className="rounded-full flex items-center justify-center backdrop-blur-2xl bg-white/12 border-2 border-white/25 relative z-10 shadow-[0_20px_40px_rgba(6,10,19,0.18)] group overflow-hidden"
                   style={{ width: circleSize, height: circleSize }}
                 >
                   <motion.div
@@ -147,7 +151,7 @@ export default function JourneyMap() {
                     }}
                   />
                   <div
-                    className={`relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br ${step.gradient} backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-md`}
+                    className={`relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br ${step.gradient} backdrop-blur-sm border border-white/25 flex items-center justify-center shadow-[0_14px_32px_rgba(15,39,80,0.22)] transition-transform duration-500 group-hover:scale-[1.08]`}
                   >
                     <step.icon
                       className="w-8 h-8 text-text-primary"
@@ -164,11 +168,12 @@ export default function JourneyMap() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative backdrop-blur-xl bg-white/20 border border-white/20
-            p-6 lg:p-8 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.12)]
-            text-center hover:bg-white/30 hover:border-white/30
-            transition-all duration-300 flex flex-col justify-between
-            min-h-[140px] w-full max-w-[280px]"
+                  whileHover={{ scale: 1.02 }}
+                  className="relative backdrop-blur-xl bg-white/18 border border-white/20
+            p-6 lg:p-8 rounded-2xl shadow-[0_20px_55px_rgba(6,10,19,0.18)]
+            text-center hover:bg-white/26 hover:border-white/35
+            transition-all duration-400 flex flex-col justify-between
+            min-h-[180px] w-full"
                 >
                   <h3 className="font-semibold text-xl text-text-primary mb-2">
                     {step.title}

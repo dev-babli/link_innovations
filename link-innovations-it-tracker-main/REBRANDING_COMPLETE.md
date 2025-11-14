@@ -219,7 +219,7 @@ All 39 migrated components from **Cortex**, **Metomic**, and **Vareto** have bee
 - Footer columns reorganized: Services, Industries, Company, Legal, Connect
 - All 7 services listed
 - All 8 industries listed
-- Contact email: contact@linkinnovations.ai
+- Contact email: info@linkinnovations.ai
 - Copyright: "© 2025 Link Innovations. All rights reserved."
 - Newsletter section: "Stay Connected"
 

@@ -100,9 +100,11 @@ const FeaturesSection = () => {
     <section
       ref={sectionRef}
       id="feature"
-      className="bg-[#F5F3EF] py-16 md:py-32"
+      className="relative overflow-hidden bg-[#F5F3EF] py-16 md:py-32"
     >
-      <div className="container mx-auto max-w-7xl px-6 text-center md:px-20">
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F5F3EF] to-[#E8E0D6] opacity-90" />
+      <div className="pointer-events-none absolute -top-32 right-[-12%] h-[420px] w-[420px] rounded-full bg-gradient-to-br from-[#d9c9ff]/30 via-[#f7f0ff]/10 to-transparent blur-3xl" />
+      <div className="container relative mx-auto max-w-7xl px-6 text-center md:px-20">
         <div
           className={`mx-auto mb-16 max-w-3xl transition-all duration-1000 ease-in-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
@@ -118,14 +120,14 @@ const FeaturesSection = () => {
         >
           <div className="mb-12 flex justify-center">
             {/* Rounded Rectangular Box Container with Elevation - Beige Background */}
-            <div className="relative inline-flex rounded-2xl bg-[#E8E3DD] p-2.5 shadow-[0px_2px_8px_rgba(0,0,0,0.06)]">
+            <div className="relative inline-flex rounded-2xl bg-white/70 p-2.5 shadow-[0px_20px_45px_rgba(31,22,10,0.08)] backdrop-blur-md border border-white/60">
               <TabsList
                 ref={tabsListRef}
                 className="relative inline-flex h-auto flex-wrap justify-center gap-3 bg-transparent p-0 shadow-none"
               >
                 {/* Sliding Glassmorphic Indicator */}
                 <div
-                  className="absolute inset-y-0 rounded-full bg-white/40 backdrop-blur-md border border-white/50 shadow-[0px_2px_8px_rgba(0,0,0,0.08)] pointer-events-none z-0"
+                  className="absolute inset-y-1 rounded-full bg-white/80 backdrop-blur-xl border border-white/70 shadow-[0px_12px_35px_rgba(15,12,8,0.12)] pointer-events-none z-0"
                   style={{
                     left: `${sliderStyle.left}px`,
                     width: `${sliderStyle.width}px`,
@@ -135,7 +137,7 @@ const FeaturesSection = () => {
                   }}
                 />
                 <div
-                  className="absolute inset-y-0 rounded-full bg-gradient-to-br from-white/60 via-white/40 to-white/30 backdrop-blur-sm pointer-events-none z-0"
+                  className="absolute inset-y-1 rounded-full bg-gradient-to-br from-white/90 via-white/70 to-white/40 pointer-events-none z-0"
                   style={{
                     left: `${sliderStyle.left}px`,
                     width: `${sliderStyle.width}px`,
@@ -152,7 +154,7 @@ const FeaturesSection = () => {
                     ref={(el) => {
                       tabRefs.current[index] = el;
                     }}
-                    className="group relative flex items-center gap-3 rounded-full border-none bg-transparent px-6 py-3 text-base font-medium text-[#666666] transition-all duration-300 ease-in-out hover:bg-transparent hover:text-[#1a1a1a] hover:scale-100 data-[state=active]:text-[#1a1a1a] data-[state=active]:scale-100 z-10"
+                    className="group relative flex items-center gap-3 rounded-full border-none bg-transparent px-6 py-3 text-base font-medium text-[#67615B] transition-all duration-300 ease-in-out hover:text-[#1a1a1a] hover:scale-[1.01] data-[state=active]:text-[#1a1a1a] data-[state=active]:scale-[1.02] z-10"
                     style={{ transitionDelay: `${index * 50}ms` }}
                   >
                     {/* Content */}
@@ -258,18 +260,18 @@ const FeatureTab = ({
   description: string;
   children: React.ReactNode;
 }) => (
-  <div className="group flex w-full flex-col items-center gap-8 rounded-xl border border-black/[.04] bg-white p-6 shadow-[0px_2px_8px_rgba(0,0,0,0.06)] transition-all duration-700 ease-in-out hover:border-black/[.08] hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)] lg:flex-row lg:gap-12 lg:p-12">
-    <div className="relative h-[240px] w-full flex-1 self-stretch overflow-hidden rounded-lg bg-gray-50 lg:h-[320px] lg:rounded-xl">
+  <div className="group flex w-full flex-col items-center gap-8 rounded-[32px] border border-white/60 bg-white/80 p-6 shadow-[0px_24px_60px_rgba(31,22,10,0.08)] backdrop-blur-lg transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-white hover:shadow-[0px_30px_70px_rgba(31,22,10,0.12)] lg:flex-row lg:gap-12 lg:p-12">
+    <div className="relative h-[240px] w-full flex-1 self-stretch overflow-hidden rounded-[26px] bg-white/40 lg:h-[320px]">
       {/* Illumination effect from behind on hover */}
       <div className="absolute -inset-4 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700 ease-in-out -z-10" />
       <div className="absolute -inset-2 bg-gradient-to-br from-blue-300/30 via-purple-300/30 to-pink-300/30 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 ease-in-out -z-10" />
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#5226bb]/[0.05] to-[#f64949]/[0.05] transition-opacity duration-700 ease-in-out group-hover:opacity-0"></div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#5226bb]/[0.06] to-[#f64949]/[0.03] transition-opacity duration-700 ease-in-out group-hover:opacity-0"></div>
       {children}
     </div>
     <div className="flex w-full flex-col gap-5 text-left lg:w-auto lg:flex-shrink-0 lg:basis-[400px]">
       <div>
-        <div className="inline-block rounded-md bg-accent-yellow px-3 py-1.5 transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:shadow-md">
+        <div className="inline-block rounded-md bg-accent-yellow/90 px-3 py-1.5 transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:shadow-[0_12px_24px_rgba(242,203,103,0.35)]">
           <span className="text-xs font-semibold uppercase tracking-[0.02em] text-[#1a1a1a]">
             {tag}
           </span>
@@ -278,7 +280,7 @@ const FeatureTab = ({
       <h3 className="text-2xl font-semibold leading-[1.3] tracking-[-0.01em] text-[#1a1a1a] transition-all duration-700 ease-in-out group-hover:translate-x-1 lg:text-3xl">
         {title}
       </h3>
-      <p className="text-base leading-[1.6] text-[#4a4a4a] transition-all duration-700 ease-in-out group-hover:text-[#1a1a1a]">
+      <p className="text-base leading-[1.7] text-[#4a4a4a] transition-all duration-700 ease-in-out group-hover:text-[#1a1a1a]">
         {description}
       </p>
     </div>

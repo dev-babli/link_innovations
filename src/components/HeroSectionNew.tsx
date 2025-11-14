@@ -18,7 +18,7 @@ import {
   SiFigma
 } from "react-icons/si";
 
-const VIDEO_SRC = "/videos/linkinnovations-vid%201.mp4";
+const VIDEO_SRC = "/videos/herosection.mp4";
 
 // Base tech logos with original colors (will be styled white by default, show colors on hover)
 const techLogosBase = [
@@ -161,6 +161,7 @@ const HeroSectionNew: React.FC = () => {
         playsInline
         aria-label="Hero animation showcasing Link Innovations"
       />
+      <div className="absolute inset-0 rounded-b-[60px] lg:rounded-b-[80px] bg-gradient-to-b from-black/70 via-black/40 to-black/70 pointer-events-none" />
 
       {/* Hero content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto">
@@ -168,39 +169,60 @@ const HeroSectionNew: React.FC = () => {
           <div className="text-center lg:text-left space-y-6 lg:space-y-7">
             {/* Main headline */}
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight font-heading hero-font-heading">
-                <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">Build Software That</span>{" "}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight font-heading hero-font-heading"
+              >
+                <span className="text-white/95 drop-shadow-[0_10px_35px_rgba(12,22,32,0.55)]">Build Software That</span>{" "}
                 <span className="relative hero-yellow-text">
                   Grows With You
                   <span className="absolute -bottom-2 left-0 right-0 h-1 rounded-full hero-yellow-gradient"></span>
                 </span>
-              </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-white max-w-2xl mx-auto lg:mx-0 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] font-body hero-font-body hero-description-text">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-white/90 max-w-2xl mx-auto lg:mx-0 drop-shadow-[0_12px_40px_rgba(7,15,23,0.6)] font-body hero-font-body hero-description-text"
+              >
                 From idea to launch in weeks, not months. We build scalable, performant software that your team and customers will love.
-              </p>
+              </motion.p>
             </div>
 
             {/* Feature bullets */}
-            <ul className="space-y-3 text-white/90 max-w-xl mx-auto lg:mx-0 text-left">
+            <motion.ul
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.35, duration: 0.6 }}
+              className="space-y-4 text-white/90 max-w-xl mx-auto lg:mx-0 text-left"
+            >
               <li className="flex items-start gap-3 group">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-colors hero-yellow-bg-opacity">
+                <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-colors hero-yellow-bg-opacity border border-white/30">
                   <div className="w-2 h-2 rounded-full hero-yellow-dot"></div>
                 </div>
-                <span className="text-base font-medium font-body hero-font-body">Modern tech stack for speed & performance</span>
+                <span className="text-base font-medium font-body hero-font-body text-white/95">
+                  Modern tech stack for speed & performance
+                </span>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-colors hero-yellow-bg-opacity">
+                <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-colors hero-yellow-bg-opacity border border-white/30">
                   <div className="w-2 h-2 rounded-full hero-yellow-dot"></div>
                 </div>
-                <span className="text-base font-medium font-body hero-font-body">Human-centered design across all platforms</span>
+                <span className="text-base font-medium font-body hero-font-body text-white/95">
+                  Human-centered design across all platforms
+                </span>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-colors hero-yellow-bg-opacity">
+                <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-colors hero-yellow-bg-opacity border border-white/30">
                   <div className="w-2 h-2 rounded-full hero-yellow-dot"></div>
                 </div>
-                <span className="text-base font-medium font-body hero-font-body">150+ integrations to launch faster</span>
+                <span className="text-base font-medium font-body hero-font-body text-white/95">
+                  150+ integrations to launch faster
+                </span>
               </li>
-            </ul>
+            </motion.ul>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
@@ -246,7 +268,7 @@ const HeroSectionNew: React.FC = () => {
               <h3 className="text-2xl lg:text-3xl font-medium tracking-tight font-heading hero-font-heading hero-built-with-text">
                 Built with
               </h3>
-              <p className="text-lg lg:text-xl mt-1 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] font-body hero-font-body hero-modern-tech-text">
+              <p className="text-lg lg:text-xl mt-1 drop-shadow-[0_12px_35px_rgba(7,15,23,0.45)] font-body hero-font-body hero-modern-tech-text">
                 Modern Technologies
               </p>
             </div>

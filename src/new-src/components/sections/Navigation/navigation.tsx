@@ -351,13 +351,13 @@ export default function Navigation() {
         )}
       >
         <Link href="/" className="flex-shrink-0 mr-4">
-          <div className="relative h-20 w-auto overflow-hidden rounded-[20px]">
+          <div className="relative h-24 w-auto overflow-hidden rounded-[20px]">
             <Image
               src="/logos/Logo_link__1_-removebg-preview.png"
               alt="Link Innovations"
-              width={300}
-              height={90}
-              className="h-20 w-auto object-cover rounded-[20px]"
+              width={360}
+              height={96}
+              className="h-24 w-auto object-cover rounded-[20px]"
               priority
             />
           </div>

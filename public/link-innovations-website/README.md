@@ -148,9 +148,10 @@ link-innovations-website/
 
 ## 🌐 Social Links
 
-- LinkedIn: linkedin.com/company/link-innovations
-- Twitter: twitter.com/linkinnovations
-- Facebook: facebook.com/linkinnovations
+- LinkedIn: http://linkedin.com/company/link-innovations-official/?viewAsMember=true
+- X (Twitter): https://x.com/LinkInnov_98
+- Instagram: https://www.instagram.com/linkinnovationss_official/
+- Facebook: https://www.facebook.com/profile.php?id=61582798476647&notif_id=1761984753033602&notif_t=page_user_activity&ref=notif#
 
 ---
 

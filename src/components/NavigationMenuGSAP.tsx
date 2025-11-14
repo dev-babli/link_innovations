@@ -30,8 +30,10 @@ export default function NavigationMenuGSAP({ className = '' }: NavigationMenuGSA
   ];
 
   const socialLinks = [
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/link-innovations' },
-    { label: 'Twitter', href: 'https://twitter.com/linkinnovations' },
+    { label: 'LinkedIn', href: 'http://linkedin.com/company/link-innovations-official/?viewAsMember=true' },
+    { label: 'X (Twitter)', href: 'https://x.com/LinkInnov_98' },
+    { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61582798476647&notif_id=1761984753033602&notif_t=page_user_activity&ref=notif#' },
+    { label: 'Instagram', href: 'https://www.instagram.com/linkinnovationss_official/' },
     { label: 'GitHub', href: 'https://github.com/link-innovations' }
   ];
 

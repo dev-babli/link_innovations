@@ -102,7 +102,7 @@ export function OrbFAQ() {
         >
           <p className="text-orb-light mb-4">Still have questions?</p>
           <a
-            href="mailto:contact@linkinnovations.com"
+            href="mailto:info@linkinnovations.ai"
             className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-orb-purple to-orb-blue text-white font-semibold hover:shadow-2xl hover:shadow-orb-purple/50 transition-all"
           >
             Contact Us

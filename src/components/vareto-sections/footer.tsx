@@ -83,7 +83,7 @@ export default function Footer() {
         },
         {
             groups: [
-                { title: 'Connect', links: ['Contact Us', 'LinkedIn', 'contact@linkinnovations.ai'] }
+                { title: 'Connect', links: ['Contact Us', 'LinkedIn', 'info@linkinnovations.ai'] }
             ]
         }
     ];

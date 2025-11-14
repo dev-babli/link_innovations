@@ -116,9 +116,9 @@ export const Hero = ({ content }: HeroProps) => {
     : defaultFeatures;
 
   return (
-    <section className="relative py-32 lg:py-48 lg:pt-52 overflow-hidden">
+    <section className="relative py-24 lg:py-32 overflow-hidden">
       {/* Elegant background layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/20" />
       
       {/* Sophisticated ambient lighting */}
       <div className="absolute top-0 left-[20%] w-[600px] h-[600px] rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(16,185,129,0.08) 0%, rgba(59,130,246,0.06) 50%, transparent 100%)' }} />
@@ -150,7 +150,7 @@ export const Hero = ({ content }: HeroProps) => {
       </div>
       
       <div className="container relative z-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto lg:max-w-6xl">
           {/* Refined badge */}
           <div className="flex items-center justify-center mb-12">
             <div className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-teal-500/8 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-xl shadow-[0_4px_24px_rgba(16,185,129,0.1)] relative overflow-hidden group transition-all duration-700 hover:scale-105 hover:shadow-[0_8px_32px_rgba(16,185,129,0.15)]">
@@ -164,7 +164,7 @@ export const Hero = ({ content }: HeroProps) => {
           </div>
 
           {/* Main heading - Elegant typography */}
-          <div className="text-center mb-16 relative">
+          <div className="text-center lg:text-left mb-16 relative">
             {/* Refined text glows - layered and sophisticated */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[700px] h-48 bg-gradient-to-r from-emerald-500/12 via-teal-500/10 to-cyan-500/12 blur-3xl rounded-full" />
@@ -172,7 +172,7 @@ export const Hero = ({ content }: HeroProps) => {
               <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-[650px] h-44 bg-gradient-to-r from-purple-500/10 via-pink-500/8 to-rose-500/10 blur-3xl rounded-full" />
             </div>
             
-            <h1 className="relative text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-[-0.02em] text-foreground mb-10 leading-[1.05] z-10">
+            <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.02em] text-foreground mb-10 leading-[1.05] z-10">
               <span className="relative inline-block mb-2">
                 <span className="relative z-10">{headingPrimary}</span>
                 <span className="absolute -inset-4 bg-emerald-500/15 blur-3xl -z-10 rounded-2xl" />
@@ -200,7 +200,7 @@ export const Hero = ({ content }: HeroProps) => {
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
             </div>
 
-            <p className="relative text-xl md:text-2xl lg:text-3xl text-muted-foreground/90 max-w-3xl mx-auto leading-[1.6] mb-4 z-10 font-light">
+            <p className="relative text-xl md:text-2xl text-muted-foreground/90 max-w-3xl mx-auto lg:mx-0 leading-[1.65] mb-4 z-10 font-light">
               {description}
             </p>
             <p className="relative text-base md:text-lg text-muted-foreground/70 z-10 font-light tracking-wide">
@@ -209,7 +209,7 @@ export const Hero = ({ content }: HeroProps) => {
           </div>
 
           {/* Elegant CTA Button */}
-          <div className="flex items-center justify-center mb-24 relative">
+          <div className="flex items-center justify-center lg:justify-start mb-16 relative">
             {/* Sophisticated glow effect */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-80 h-24 bg-gradient-to-r from-emerald-500/20 via-teal-500/15 to-cyan-500/20 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700" />

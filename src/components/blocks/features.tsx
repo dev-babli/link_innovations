@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { ChevronRight } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -11,12 +10,16 @@ type FeatureCard = {
   description?: string;
   image?: string;
   href?: string;
+  icon?: string;
 };
 
 interface FeaturesContent {
   featuresTitle?: string;
   featuresDescription?: string;
   features?: FeatureCard[];
+  capabilitiesTitle?: string;
+  capabilitiesDescription?: string;
+  capabilities?: FeatureCard[];
 }
 
 interface FeaturesProps {
@@ -48,23 +51,34 @@ export const Features = ({ content }: FeaturesProps) => {
     {}) as FeaturesContent;
 
   const title =
-    featuresContent.featuresTitle ?? "Built for modern web product squads";
+    featuresContent.featuresTitle ??
+    featuresContent.capabilitiesTitle ??
+    "Built for modern web product squads";
   const description =
     featuresContent.featuresDescription ??
+    featuresContent.capabilitiesDescription ??
     "Link Innovation ships full-stack web platforms that balance rapid delivery with maintainable, accessible, and testable codebases.";
 
   const items =
-    Array.isArray(featuresContent.features) &&
-    featuresContent.features.length > 0
-      ? featuresContent.features.map((card, index) => ({
-          ...defaultItems[index % defaultItems.length],
-          ...card,
-        }))
-      : defaultItems;
+    (Array.isArray(featuresContent.features) &&
+      featuresContent.features.length > 0
+      ? featuresContent.features
+      : Array.isArray(featuresContent.capabilities) &&
+          featuresContent.capabilities.length > 0
+        ? featuresContent.capabilities
+        : defaultItems
+    ).map((card, index) => ({
+      ...defaultItems[index % defaultItems.length],
+      ...card,
+    }));
 
   return (
-    <section id="feature-modern-teams" className="pb-28 lg:pb-32">
-      <div className="container">
+    <section
+      id="feature-modern-teams"
+      className="relative overflow-hidden py-20 lg:py-24"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/15" />
+      <div className="container relative">
         {/* Top dashed line with text */}
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
@@ -74,29 +88,33 @@ export const Features = ({ content }: FeaturesProps) => {
         </div>
 
         {/* Content */}
-        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <h2 className="text-xl tracking-tight md:text-2xl lg:text-3xl">
+        <div className="mx-auto mt-10 grid max-w-4xl items-start gap-6 md:gap-10 lg:mt-20 lg:grid-cols-[1.1fr_0.9fr]">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
             {title}
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base leading-snug">
+          <p className="text-muted-foreground text-base leading-relaxed">
             {description}
           </p>
         </div>
 
         {/* Features Card */}
-        <Card className="mt-8 rounded-3xl md:mt-12 lg:mt-20">
-          <CardContent className="flex p-0 max-md:flex-col">
+        <Card className="mt-10 rounded-[32px] border border-white/10 bg-card/80 shadow-[0_30px_80px_rgba(6,10,19,0.12)] md:mt-14 lg:mt-20">
+          <CardContent className="flex p-0 max-md:flex-col divide-y md:divide-y-0 md:divide-x divide-border/40">
             {items.map((item, i) => (
-              <div key={i} className="flex flex-1 max-md:flex-col">
-                <div className="flex-1 p-4 pe-0! md:p-6">
-                  <div className="relative aspect-[1.28/1] overflow-hidden">
+              <div key={i} className="flex flex-1 flex-col">
+                <div className="flex-1 p-6 lg:p-8">
+                  <div className="relative aspect-[1.28/1] overflow-hidden rounded-2xl bg-muted/40">
                     {item.image ? (
                       <Image
                         src={item.image}
                         alt={`${item.title} interface`}
                         fill
-                        className="object-cover object-left-top ps-4 pt-2"
+                        className="object-cover object-left-top"
                       />
+                    ) : item.icon ? (
+                      <div className="flex h-full w-full items-center justify-center bg-muted text-4xl">
+                        {item.icon}
+                      </div>
                     ) : (
                       <div className="flex h-full w-full items-center justify-center bg-muted text-sm text-muted-foreground">
                         Visual coming soon
@@ -105,30 +123,26 @@ export const Features = ({ content }: FeaturesProps) => {
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
 
-                  <Link
-                    href={item.href ?? "/contact"}
-                    className={
-                      "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
-                    }
-                  >
-                    <h3 className="font-display max-w-60 text-lg md:text-xl leading-tight font-bold tracking-tight">
-                      {item.title}
-                    </h3>
-                    <div className="rounded-full border p-2">
-                      <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
+                  <div className="mt-6 flex items-start justify-between gap-4 md:items-center">
+                    <div>
+                      <h3 className="font-display text-lg md:text-xl leading-tight font-semibold tracking-tight">
+                        {item.title}
+                      </h3>
+                      {item.description && (
+                        <p className="mt-2 text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
-                  </Link>
+                    <Link
+                      href={item.href ?? "/contact"}
+                      className="inline-flex items-center rounded-full border border-border/60 p-3 text-muted-foreground transition hover:border-foreground/50 hover:text-foreground"
+                      aria-label={`Explore ${item.title}`}
+                    >
+                      <ChevronRight className="size-5" />
+                    </Link>
+                  </div>
                 </div>
-                {i < items.length - 1 && (
-                  <div className="relative hidden md:block">
-                    <DashedLine orientation="vertical" />
-                  </div>
-                )}
-                {i < items.length - 1 && (
-                  <div className="relative block md:hidden">
-                    <DashedLine orientation="horizontal" />
-                  </div>
-                )}
               </div>
             ))}
           </CardContent>

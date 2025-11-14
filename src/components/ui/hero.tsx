@@ -57,7 +57,7 @@ const LogoTicker = () => (
                 }
             `}</style>
 
-      <div className="flex animate-[marquee_25s_linear_infinite]">
+      <div className="logo-marquee flex animate-[marquee_32s_linear_infinite]">
         {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
           <div key={index} className="flex-shrink-0 w-40 h-20 flex items-center justify-center mx-6">
             <Image
@@ -114,6 +114,9 @@ export default function ShaderShowcase() {
                 .hero-image-text-black h3,
                 .hero-image-text-black p {
                     color: #000000 !important;
+                }
+                .group:hover .logo-marquee {
+                  animation-play-state: paused;
                 }
             `}</style>
       <HeroBackground />

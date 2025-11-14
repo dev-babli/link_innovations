@@ -47,9 +47,10 @@ const navigationItems = [
 
 // Social links
 const socialLinks = [
-  { title: "LinkedIn", href: "https://www.linkedin.com" },
-  { title: "Twitter", href: "https://twitter.com" },
-  { title: "Facebook", href: "https://facebook.com" }
+  { title: "LinkedIn", href: "http://linkedin.com/company/link-innovations-official/?viewAsMember=true" },
+  { title: "X (Twitter)", href: "https://x.com/LinkInnov_98" },
+  { title: "Facebook", href: "https://www.facebook.com/profile.php?id=61582798476647&notif_id=1761984753033602&notif_t=page_user_activity&ref=notif#" },
+  { title: "Instagram", href: "https://www.instagram.com/linkinnovationss_official/" }
 ];
 
 interface GSAPNavigationMenuProps {

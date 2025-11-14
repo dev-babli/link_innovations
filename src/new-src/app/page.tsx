@@ -1,4 +1,4 @@
-import Navigation from "@/components/sections/navigation";
+import Navigation from "@/new-src/components/sections/navigation";
 import Hero from "@/components/sections/hero";
 import ProcessSection from "@/components/sections/process";
 import FeaturesSection from "@/components/sections/features";

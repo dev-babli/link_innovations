@@ -23,6 +23,7 @@ interface ResourceContent {
   resourceTitle?: string;
   resourceTopItems?: ResourceItem[];
   resourceBottomItems?: ResourceItem[];
+  approachTabData?: any[];
 }
 
 interface ResourceAllocationProps {
@@ -146,53 +147,83 @@ export const ResourceAllocation = ({ content }: ResourceAllocationProps) => {
   const title =
     allocationContent.resourceTitle ?? "Web delivery without the bottlenecks";
 
+  const deriveItemsFromApproach = (steps: any[] = []): ResourceItem[] =>
+    steps.map((step) => ({
+      title:
+        Array.isArray(step.title) && step.title.length
+          ? step.title.join("")
+          : step.title ?? step.subtitle ?? step.label,
+      description: step.description,
+      images: step.image
+        ? [
+            {
+              src: step.image,
+              alt: step.subtitle ?? step.title ?? "Process visual",
+              width: 480,
+              height: 320,
+            },
+          ]
+        : [],
+    }));
+
+  const derivedItems = deriveItemsFromApproach(
+    allocationContent.approachTabData,
+  );
+  const derivedTop = derivedItems.slice(0, 2);
+  const derivedBottom = derivedItems.slice(2);
+
+  const customTop = Array.isArray(allocationContent.resourceTopItems)
+    ? allocationContent.resourceTopItems
+    : undefined;
+  const customBottom = Array.isArray(allocationContent.resourceBottomItems)
+    ? allocationContent.resourceBottomItems
+    : undefined;
+
   const topItems =
-    Array.isArray(allocationContent.resourceTopItems) &&
-    allocationContent.resourceTopItems.length > 0
-      ? allocationContent.resourceTopItems.map((item, index) => ({
+    customTop && customTop.length > 0
+      ? customTop.map((item, index) => ({
           ...defaultTopItems[index % defaultTopItems.length],
           ...item,
         }))
-      : defaultTopItems;
+      : derivedTop.length > 0
+        ? derivedTop
+        : defaultTopItems;
 
   const bottomItems =
-    Array.isArray(allocationContent.resourceBottomItems) &&
-    allocationContent.resourceBottomItems.length > 0
-      ? allocationContent.resourceBottomItems.map((item, index) => ({
+    customBottom && customBottom.length > 0
+      ? customBottom.map((item, index) => ({
           ...defaultBottomItems[index % defaultBottomItems.length],
           ...item,
         }))
-      : defaultBottomItems;
+      : derivedBottom.length > 0
+        ? derivedBottom
+        : defaultBottomItems;
 
   return (
     <section
       id="resource-allocation"
-      className="overflow-hidden pb-28 lg:pb-32"
+      className="relative overflow-hidden py-20 lg:py-24"
     >
-      <div className="">
-        <h2 className="container text-center text-xl tracking-tight text-balance sm:text-2xl md:text-3xl lg:text-4xl">
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-muted/30" />
+      <div className="relative container max-w-6xl">
+        <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-semibold text-balance">
           {title}
         </h2>
 
-        <div className="mt-8 md:mt-12 lg:mt-20">
-          <DashedLine
-            orientation="horizontal"
-            className="container scale-x-105"
-          />
+        <div className="mt-10 md:mt-12 lg:mt-16 space-y-10">
+          <DashedLine orientation="horizontal" className="scale-x-105" />
 
           {/* Top Features Grid - 2 items */}
-          <div className="relative container flex max-md:flex-col">
+          <div className="relative flex max-md:flex-col">
             {topItems.map((item, i) => (
               <Item key={i} item={item} isLast={i === topItems.length - 1} />
             ))}
           </div>
-          <DashedLine
-            orientation="horizontal"
-            className="container max-w-7xl scale-x-110"
-          />
+
+          <DashedLine orientation="horizontal" className="scale-x-110" />
 
           {/* Bottom Features Grid - 3 items */}
-          <div className="relative container grid max-w-7xl md:grid-cols-3">
+          <div className="relative grid gap-4 md:grid-cols-3">
             {bottomItems.map((item, i) => (
               <Item
                 key={i}
@@ -202,11 +233,9 @@ export const ResourceAllocation = ({ content }: ResourceAllocationProps) => {
               />
             ))}
           </div>
+
+          <DashedLine orientation="horizontal" className="scale-x-110" />
         </div>
-        <DashedLine
-          orientation="horizontal"
-          className="container max-w-7xl scale-x-110"
-        />
       </div>
     </section>
   );
@@ -222,7 +251,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
   return (
     <div
       className={cn(
-        "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
+        "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 rounded-3xl border border-white/10 bg-background/80 shadow-[0_16px_45px_rgba(6,10,19,0.08)]",
         className,
         item.className,
       )}

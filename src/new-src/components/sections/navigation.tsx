@@ -1,382 +1,372 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  ChevronDown,
-  Code,
-  Smartphone,
-  Cloud,
-  Cpu,
   BarChart,
-  Server,
-  Settings,
+  BookOpen,
   CheckCircle,
+  ChevronDown,
+  Cloud,
+  Code,
+  Cpu,
+  Menu,
+  MessageCircle,
+  Settings,
   Shield,
+  Smartphone,
+  Tags,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import MegaMenu, {
+  type MegaMenuItem,
+} from "@/components/ui/mega-menu";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const scrollRef = useRef(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      if (!scrollRef.current) {
+        scrollRef.current = true;
+      }
+      setIsScrolled(window.scrollY > 4);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  const whoWeAre = [
     {
-      href: "/about",
-      label: "About",
-      dropdown: [
-        {
-          label: "About Us",
-          description:
-            "We are committed to innovation, excellence, and creating value for our clients.",
-          image: "/images/navigation/about-us.avif",
-          href: "/about",
-          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
-        },
-        {
-          label: "Our Journey",
-          description:
-            "See how we evolved from a small team into a global innovation partner.",
-          image: "/images/navigation/about-us.avif",
-          href: "/about#our-journey",
-          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
-        },
-        {
-          label: "Mission & Vision",
-          description:
-            "Discover how we blend human insight with AI to drive transformation.",
-          image: "/images/navigation/about-us.avif",
-          href: "/about#mission-vision",
-          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
-        },
-        {
-          label: "Culture & Values",
-          description:
-            "Explore the principles that shape our teams and client partnerships.",
-          image: "/images/navigation/about-us.avif",
-          href: "/about#our-culture",
-          icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
-        },
-      ],
+      label: "Inside Link",
+      description: "Who we are and how we collaborate with partners.",
+      href: "/about#about-overview",
+      image:
+        "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80",
     },
     {
-      href: "/services",
-      label: "Services",
-      dropdown: [
-        {
-          label: "Web Development",
-          href: "/services/web-development",
-          icon: <Code className="h-6 w-6 text-indigo-600" />,
-          description: "Build modern and responsive websites.",
-          image: "/images/navigation/web-dev.avif",
-        },
-        {
-          label: "Web App Development",
-          href: "/services/web-app-development",
-          icon: <Code className="h-6 w-6 text-indigo-600" />,
-          description: "Enterprise-grade web apps and platforms.",
-          image: "/images/navigation/web-dev.avif",
-        },
-        {
-          label: "Mobile App Development",
-          href: "/services/mobile-app-development",
-          icon: <Smartphone className="h-6 w-6 text-indigo-600" />,
-          description: "Native and cross-platform mobile experiences.",
-          image: "/images/navigation/mobile.avif",
-        },
-        {
-          label: "Mobile Apps",
-          href: "/services/mobile-apps",
-          icon: <Smartphone className="h-6 w-6 text-indigo-600" />,
-          description: "Cross-platform apps delivered from a single codebase.",
-          image: "/images/navigation/mobile.avif",
-        },
-        {
-          label: "Cloud Services",
-          href: "/services/cloud-services",
-          icon: <Cloud className="h-6 w-6 text-indigo-600" />,
-          description: "Secure and scalable cloud migration and management.",
-          image: "/images/navigation/cloud.avif",
-        },
-        {
-          label: "Cloud DevOps",
-          href: "/services/cloud-devops",
-          icon: <Server className="h-6 w-6 text-indigo-600" />,
-          description: "Automated CI/CD pipelines and infrastructure as code.",
-          image: "/images/navigation/cloud.avif",
-        },
-        {
-          label: "AI & Automation",
-          href: "/services/ai-automation",
-          icon: <Cpu className="h-6 w-6 text-indigo-600" />,
-          description: "Intelligent solutions to optimise operations.",
-          image: "/images/navigation/ai.avif",
-        },
-        {
-          label: "Automation Testing",
-          href: "/services/automation-testing",
-          icon: <Settings className="h-6 w-6 text-indigo-600" />,
-          description: "QA automation to accelerate release cycles.",
-          image: "/images/navigation/automation.avif",
-        },
-        {
-          label: "Cybersecurity",
-          href: "/services/cybersecurity",
-          icon: <Shield className="h-6 w-6 text-indigo-600" />,
-          description: "Protect your digital assets and networks.",
-          image: "/images/navigation/cybersecurity.avif",
-        },
-        {
-          label: "Data Analytics",
-          href: "/services/data-analytics",
-          icon: <BarChart className="h-6 w-6 text-indigo-600" />,
-          description: "Unlock insights and drive data-driven decisions.",
-          image: "/images/navigation/data-analytics.jpg",
-        },
-      ],
+      label: "Our Journey",
+      description: "From a boutique studio to a global innovation team.",
+      href: "/about#our-story",
+      image:
+        "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80",
     },
-    { href: "/contact", label: "Contact Us" },
+    {
+      label: "Our Values",
+      description: "Principles that guide every engagement we take on.",
+      href: "/about#our-values",
+      image:
+        "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80",
+    },
+    {
+      label: "Why Work With Us",
+      description: "What sets our teams and delivery approach apart.",
+      href: "/about#why-work-with-us",
+      image:
+        "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80",
+    },
   ];
 
-  const NavLinkComponent = ({
-    href,
-    label,
-    dropdown,
-  }: {
-    href: string;
-    label: string;
-    dropdown?: {
-      label: string;
-      href: string;
-      icon: React.ReactNode;
-      description: string;
-      image: string;
-    }[];
-  }) => {
-    if (dropdown) {
-      const isOpen = hoveredDropdown === label;
-      const isAbout = label === "About";
+  const whatWeDo = [
+    {
+      label: "Web Development",
+      description: "Composable marketing and content platforms.",
+      href: "/services/web-development",
+      icon: Code,
+    },
+    {
+      label: "Web App Development",
+      description: "Enterprise-grade apps and customer portals.",
+      href: "/services/web-app-development",
+      icon: Code,
+    },
+    {
+      label: "Mobile App Development",
+      description: "Native & cross-platform experiences.",
+      href: "/services/mobile-app-development",
+      icon: Smartphone,
+    },
+    {
+      label: "Mobile Apps",
+      description: "Shared-code apps for faster delivery.",
+      href: "/services/mobile-apps",
+      icon: Smartphone,
+    },
+    {
+      label: "Cloud Services",
+      description: "Secure migration & managed platforms.",
+      href: "/services/cloud-services",
+      icon: Cloud,
+    },
+    {
+      label: "Cloud DevOps",
+      description: "CI/CD pipelines and observability.",
+      href: "/services/cloud-devops",
+      icon: Cloud,
+    },
+    {
+      label: "AI & Automation",
+      description: "Applied AI solutions and copilots.",
+      href: "/services/ai-automation",
+      icon: Cpu,
+    },
+    {
+      label: "Automation Testing",
+      description: "QA automation to ship faster.",
+      href: "/services/automation-testing",
+      icon: Settings,
+    },
+    {
+      label: "Cybersecurity",
+      description: "Threat detection & hardening.",
+      href: "/services/cybersecurity",
+      icon: Shield,
+    },
+    {
+      label: "Data Analytics",
+      description: "Dashboards, BI, and ML insights.",
+      href: "/services/data-analytics",
+      icon: BarChart,
+    },
+  ];
 
-      return (
-        <div
-          className="relative"
-          onMouseEnter={() => setHoveredDropdown(label)}
-          onMouseLeave={() => {
-            setHoveredDropdown(null);
-            setHoveredItem(null);
-          }}
-        >
-          {/* Main button */}
-          <button className="flex items-center text-black text-base font-medium px-4 py-2 hover:text-indigo-600 transition-colors whitespace-nowrap">
-            {label}
-            <ChevronDown
-              className={cn(
-                "ml-1 h-4 w-4 text-black transition-transform duration-300",
-                isOpen ? "rotate-180" : "rotate-0"
-              )}
-            />
-          </button>
+  const ourWork = [
+    {
+      label: "Case Studies",
+      description: "A look at outcomes we delivered recently.",
+      href: "/use-cases",
+      icon: BookOpen,
+    },
+    {
+      label: "Insights & Blog",
+      description: "Research, methods, and POVs from the studio.",
+      href: "/blog",
+      icon: BookOpen,
+    },
+    {
+      label: "Pricing & Engagements",
+      description: "Pods, retainers, and fixed-bid launch models.",
+      href: "/pricing",
+      icon: Tags,
+    },
+    {
+      label: "Talk to Us",
+      description: "Get a curated roadmap plan in 24 hours.",
+      href: "/contact",
+      icon: MessageCircle,
+    },
+  ];
 
-          {/* Dropdown menu */}
-          <div
-            className={cn(
-              "absolute top-full left-1/2 mt-8 transform -translate-x-1/2 z-50 transition-all duration-500 origin-top scale-95",
-              isOpen
-                ? "opacity-100 translate-y-0 scale-100"
-                : "opacity-0 -translate-y-4 pointer-events-none"
-            )}
-          >
-            <div
-              className={cn(
-                "relative flex w-full bg-white backdrop-blur-md shadow-2xl rounded-2xl border-t-5 border-gray-800 overflow-hidden",
-                isAbout ? "flex-col items-center p-8 w-[60rem]" : "flex-row"
-              )}
-            >
-              {isAbout ? (
-                // About Us dropdown (single column)
-                dropdown.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex flex-col items-center gap-4"
-                  >
-                    <span className="text-gray-900 text-xl font-semibold">
-                      {item.label}
-                    </span>
-                    <p className="text-gray-500 text-base text-center max-w-3xl">
-                      {item.description}
-                    </p>
-                    <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-md mt-4">
-                      <Image
-                        src={item.image}
-                        alt={item.label}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                    </div>
-                    <Link
-                      href={item.href}
-                      className="mt-5 text-white px-6 py-3 w-[400px] text-center whitespace-nowrap rounded-xl font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-indigo-400/40 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                      Explore {item.label}
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                ))
-              ) : (
-                // Services dropdown (two columns)
-                <>
-                  {/* Left side: first 4 items */}
-                  <div className="flex flex-1 p-4 space-x-2">
-                    <div className="flex flex-col flex-1 space-y-1 border-r border-gray-100 pr-2">
-                      {dropdown.slice(0, 4).map((item) => (
-                        <div
-                          key={item.label}
-                          onMouseEnter={() => setHoveredItem(item.label)}
-                          className="flex flex-col gap-1 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer group"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0 transform group-hover:scale-110 group-hover:text-indigo-600 transition-transform duration-300">
-                              {item.icon}
-                            </div>
-                            <div className="flex flex-col relative">
-                              <span className="text-gray-900 font-semibold whitespace-nowrap group-hover:text-indigo-700 transition-colors">
-                                {item.label}
-                              </span>
-                              <span className="text-gray-500 text-sm leading-snug relative">
-                                {item.description}
-                                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Right side: remaining items */}
-                    <div className="flex flex-col flex-1 space-y-1 pl-2">
-                      {dropdown.slice(4).map((item) => (
-                        <div
-                          key={item.label}
-                          onMouseEnter={() => setHoveredItem(item.label)}
-                          className="flex flex-col gap-1 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer group"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0 transform group-hover:scale-110 group-hover:text-indigo-600 transition-transform duration-300">
-                              {item.icon}
-                            </div>
-                            <div className="flex flex-col relative">
-                              <span className="text-gray-900 font-semibold whitespace-nowrap group-hover:text-indigo-700 transition-colors">
-                                {item.label}
-                              </span>
-                              <span className="text-gray-500 text-sm leading-snug relative">
-                                {item.description}
-                                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Right side: image + button */}
-                  <div className="hidden md:flex flex-col items-center w-96 px-4 py-4 flex-shrink-0">
-                    {(hoveredItem || dropdown[0].label) &&
-                      dropdown
-                        .filter(
-                          (item) =>
-                            item.label === (hoveredItem || dropdown[0].label)
-                        )
-                        .map((item) => (
-                          <div
-                            key={item.label}
-                            className="flex flex-col items-center w-full"
-                          >
-                            <div className="relative w-full h-60 rounded-2xl overflow-hidden shadow-md">
-                              <Image
-                                src={item.image}
-                                alt={item.label}
-                                fill
-                                className="object-cover"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                            </div>
-
-                            <Link
-                              href={item.href}
-                              className="mt-5 text-white px-6 py-3 w-[340px] text-center whitespace-nowrap rounded-xl font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-indigo-400/40 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
-                            >
-                              Explore {item.label}
-                              <ArrowRight className="h-4 w-4" />
-                            </Link>
-                          </div>
-                        ))}
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      <Link
-        href={href}
-        className="text-black text-base font-medium px-4 py-2 hover:text-indigo-600 transition-colors whitespace-nowrap"
-      >
-        {label}
-      </Link>
-    );
-  };
+  const megaMenuItems: MegaMenuItem[] = useMemo(
+    () => [
+      {
+        id: 1,
+        label: "Services",
+        subMenus: [
+          {
+            title: "Build",
+            items: whatWeDo.slice(0, 4).map((svc) => ({
+              label: svc.label,
+              description: svc.description,
+              icon: svc.icon,
+              href: svc.href,
+            })),
+          },
+          {
+            title: "Scale",
+            items: whatWeDo.slice(4, 8).map((svc) => ({
+              label: svc.label,
+              description: svc.description,
+              icon: svc.icon,
+              href: svc.href,
+            })),
+          },
+          {
+            title: "Protect",
+            items: whatWeDo.slice(8).map((svc) => ({
+              label: svc.label,
+              description: svc.description,
+              icon: svc.icon,
+              href: svc.href,
+            })),
+          },
+        ],
+      },
+      {
+        id: 2,
+        label: "About us",
+        subMenus: [
+          {
+            title: "The Studio",
+            items: whoWeAre.map((item) => ({
+              label: item.label,
+              description: item.description,
+              icon: CheckCircle,
+              href: item.href,
+            })),
+          },
+        ],
+      },
+      {
+        id: 3,
+        label: "Resources",
+        subMenus: [
+          {
+            title: "Showcase",
+            items: ourWork.map((item) => ({
+              label: item.label,
+              description: item.description,
+              icon: item.icon,
+              href: item.href,
+            })),
+          },
+        ],
+      },
+      {
+        id: 4,
+        label: "Contact",
+        link: "/contact",
+      },
+    ],
+    [whoWeAre, whatWeDo, ourWork],
+  );
 
   return (
-    <header className="relative z-[100] flex justify-center">
+    <header className="relative z-[100] flex justify-center px-2 sm:px-4">
       <div
         className={cn(
-          "relative flex items-center h-[80px] mt-6 bg-white/90 backdrop-blur-md rounded-[40px] p-4 pl-5 transition-shadow duration-300",
-          isScrolled
-            ? "shadow-[0_1px_20px_0_rgba(224,215,198,0.5)]"
-            : "shadow-none"
+          "relative flex w-full max-w-5xl items-center justify-between gap-0 rounded-[28px] border border-slate-100 bg-white/90 px-3 sm:px-4 py-2 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-lg transition-all",
+          isScrolled ? "mt-1 shadow-[0_10px_24px_rgba(15,23,42,0.12)]" : "mt-3",
         )}
       >
-        <Link href="/" className="flex-shrink-0 mr-4">
-          <div className="relative h-20 w-auto overflow-hidden rounded-[20px]">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="relative h-16 w-auto overflow-hidden rounded-2xl">
             <Image
               src="/logos/Logo_link__1_-removebg-preview.png"
               alt="Link Innovations"
-              width={300}
-              height={90}
-              className="h-20 w-auto object-cover rounded-[20px]"
+              width={220}
+              height={64}
+              className="h-16 w-auto object-cover"
               priority
             />
           </div>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center justify-center flex-grow">
-          <nav className="flex items-center bg-black/[.04] rounded-full p-1">
-            {navLinks.map((link) => (
-              <NavLinkComponent
-                key={link.label}
-                href={link.href}
-                label={link.label}
-                dropdown={link.dropdown}
-              />
-            ))}
-          </nav>
+        <div className="flex flex-1 items-center justify-center md:justify-center">
+          <MegaMenu items={megaMenuItems} />
         </div>
+
+        <div className="hidden items-center md:flex">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-full bg-accent-yellow px-5 py-2 text-sm font-semibold text-slate-900 shadow-[0_15px_30px_rgba(250,204,21,0.35)] transition hover:bg-accent-yellow/90"
+          >
+            Book a Call
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <button
+          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-black/10 text-black md:hidden"
+          onClick={() => setMobileOpen(true)}
+        >
+          <Menu className="h-5 w-5" />
+        </button>
       </div>
+
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[120] bg-black/50 backdrop-blur-sm md:hidden">
+          <div className="absolute inset-x-0 top-0 rounded-b-3xl bg-white p-6 shadow-xl">
+            <div className="flex items-center justify-between">
+              <p className="text-lg font-semibold text-slate-900">Menu</p>
+              <button
+                className="rounded-2xl border border-slate-200 p-2 text-slate-600"
+                onClick={() => setMobileOpen(false)}
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <div className="mt-6 space-y-6">
+              <MobileSection title="About us">
+                {whoWeAre.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block rounded-2xl border border-slate-100 px-4 py-3 text-sm text-slate-700"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </MobileSection>
+              <MobileSection title="Services">
+                {whatWeDo.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block rounded-2xl border border-slate-100 px-4 py-3 text-sm text-slate-700"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </MobileSection>
+              <MobileSection title="Resources">
+                {ourWork.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block rounded-2xl border border-slate-100 px-4 py-3 text-sm text-slate-700"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </MobileSection>
+              <Link
+                href="/contact"
+                className="inline-flex w-full items-center justify-center rounded-2xl bg-accent-yellow px-5 py-3 text-sm font-semibold text-slate-900 shadow-[0_15px_30px_rgba(250,204,21,0.35)]"
+                onClick={() => setMobileOpen(false)}
+              >
+                Book a Call
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
+
+function MobileSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="rounded-2xl border border-slate-100 bg-white/80 p-4">
+      <button
+        className="flex w-full items-center justify-between text-sm font-semibold text-slate-900"
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        {title}
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 transition-transform",
+            open ? "rotate-180" : "rotate-0",
+          )}
+        />
+      </button>
+      {open && <div className="mt-3 space-y-2">{children}</div>}
+    </div>
+  );
+}
+

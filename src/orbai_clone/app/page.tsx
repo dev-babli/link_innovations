@@ -1,4 +1,4 @@
-import Navigation from '@/components/sections/navigation';
+import Navigation from "@/new-src/components/sections/navigation";
 import Hero from '@/components/sections/hero';
 import FounderNote from '@/components/sections/founder-note';
 import BenefitsSection from '@/components/sections/benefits';

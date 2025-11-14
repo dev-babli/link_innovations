@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Link Innovations - Transform Ideas Into Digital Reality",
     description: "Leading digital innovation agency specializing in web development, mobile apps, AI solutions, and cloud services.",
-    creator: "@linkinnovations",
+    creator: "@LinkInnov_98",
   },
   icons: {
     icon: '/logos/link_logo.jpg',

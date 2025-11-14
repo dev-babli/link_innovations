@@ -117,8 +117,9 @@ const ACHIEVEMENTS = [
 
 export const Process = () => {
   return (
-    <section className="w-full bg-background-primary py-1 lg:py-3">
-      <div className="container mx-auto max-w-7xl px-6 lg:px-20">
+    <section className="relative w-full bg-background-primary py-12 lg:py-16">
+      <div className="absolute inset-0 bg-gradient-to-b from-background-primary via-background-primary/95 to-background-primary pointer-events-none" />
+      <div className="container relative mx-auto max-w-7xl px-6 lg:px-20">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -160,25 +161,25 @@ export const Process = () => {
               </div>
             </div>
           </motion.div>
-          <ContainerScroll className="min-h-[300vh] space-y-6 py-8 md:min-h-[400vh] md:space-y-8 md:py-12">
+          <ContainerScroll className="min-h-[260vh] space-y-6 py-8 md:min-h-[340vh] md:space-y-10 md:py-12">
             {PROCESS_PHASES.map((phase, index) => (
               <CardSticky
                 key={phase.id}
                 index={index + 2}
-                className="group overflow-hidden rounded-4xl shadow-[0px_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)]"
+                className="group overflow-hidden rounded-[40px] border border-white/12 bg-white/6 backdrop-blur-xl shadow-[0px_24px_60px_rgba(7,12,20,0.22)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-[0px_28px_70px_rgba(7,12,20,0.28)]"
               >
                 {/* Image Section */}
-                <div className="relative w-full h-96 sm:h-[450px] md:h-[500px] overflow-hidden rounded-4xl">
+                <div className="relative w-full h-96 sm:h-[440px] md:h-[500px] overflow-hidden rounded-[40px]">
                   <img
                     src={phase.image}
                     alt={phase.title}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                   />
                 </div>
 
                 {/* Step Number Badge */}
                 <div className="absolute top-6 left-6 z-10">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-background-secondary/90 backdrop-blur-sm border border-border-subtle shadow-[0px_2px_8px_rgba(0,0,0,0.06)]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-background-secondary/95 backdrop-blur-sm border border-white/20 shadow-[0px_2px_8px_rgba(0,0,0,0.08)]">
                     <span className="text-sm font-medium text-text-primary">
                       {String(index + 1).padStart(2, "0")}
                     </span>
@@ -187,46 +188,21 @@ export const Process = () => {
 
                 {/* Text Content Overlay */}
                 <div className="absolute inset-x-0 bottom-0 z-10">
-                  <div
-                    className="relative backdrop-blur-md rounded-b-4xl"
-                    style={{
-                      background:
-                        index < 3
-                          ? "linear-gradient(to top, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.60) 25%, rgba(255,255,255,0.40) 50%, rgba(255,255,255,0.25) 75%, transparent 100%)"
-                          : "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.70) 25%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.30) 75%, transparent 100%)",
-                    }}
-                  >
-                    <div className="p-6 sm:p-8 md:p-10">
+                  <div className="relative backdrop-blur-xl rounded-b-[40px] bg-gradient-to-t from-black/75 via-black/50 to-black/10">
+                    <div className="p-7 sm:p-8 md:p-10">
                       <div className="mb-2">
                         <span
-                          className={`text-[10px] font-semibold uppercase tracking-[0.08em] ${
-                            index < 3
-                              ? "process-text-black"
-                              : "process-text-white"
-                          }`}
+                          className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/80"
                         >
                           Step {index + 1}
                         </span>
                       </div>
 
-                      <h2
-                        className={`text-[24px] sm:text-[28px] md:text-[32px] font-semibold leading-[1.2] tracking-[-0.015em] mb-3 ${
-                          index < 3
-                            ? "process-text-black"
-                            : "process-text-white"
-                        }`}
-                      >
+                      <h2 className="text-[24px] sm:text-[30px] md:text-[34px] font-semibold leading-[1.2] tracking-[-0.015em] mb-3 text-white">
                         {phase.title}
                       </h2>
 
-                      <p
-                        className={`text-sm sm:text-base leading-[1.5] max-w-xl font-medium ${
-                          index < 3
-                            ? "process-text-black"
-                            : "process-text-white"
-                        }`}
-                        style={{ opacity: index < 3 ? 0.9 : 0.95 }}
-                      >
+                      <p className="text-sm sm:text-base leading-[1.6] max-w-xl font-medium text-white/85">
                         {phase.description}
                       </p>
                     </div>

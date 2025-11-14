@@ -58,13 +58,16 @@ export default function Footer() {
               Building innovative digital solutions for modern businesses. Transforming ideas into reality through cutting-edge technology.
             </p>
             <div className="flex gap-6">
-              <a href="https://www.linkedin.com/company/link-innovations" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-text-tertiary hover:text-white transition-colors">
+              <a href="http://linkedin.com/company/link-innovations-official/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-text-tertiary hover:text-white transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </a>
-              <a href="https://twitter.com/link_innovations" target="_blank" rel="noopener noreferrer" aria-label="X/Twitter" className="text-text-tertiary hover:text-white transition-colors">
+              <a href="https://x.com/LinkInnov_98" target="_blank" rel="noopener noreferrer" aria-label="X/Twitter" className="text-text-tertiary hover:text-white transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
               </a>
-              <a href="https://facebook.com/link.innovations" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-text-tertiary hover:text-white transition-colors">
+              <a href="https://www.instagram.com/linkinnovationss_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-text-tertiary hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm9 1a1 1 0 0 0 0 2h1a1 1 0 1 0 0-2h-1zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" /></svg>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61582798476647&notif_id=1761984753033602&notif_t=page_user_activity&ref=notif#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-text-tertiary hover:text-white transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
               </a>
             </div>

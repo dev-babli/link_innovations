@@ -142,7 +142,7 @@ This document summarizes the **complete migration, rebranding, and enhancement**
 - **Name**: Link Innovations
 - **Tagline**: "Building innovative digital solutions for modern businesses"
 - **Target**: Enterprises & Startups/SMBs
-- **Email**: contact@linkinnovations.ai
+- **Email**: info@linkinnovations.ai
 
 ### Core Services (7)
 

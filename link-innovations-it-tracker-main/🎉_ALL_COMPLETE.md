@@ -92,7 +92,7 @@ Then visit:
 
 - **Name**: Link Innovations
 - **Tagline**: "Building innovative digital solutions for modern businesses"
-- **Email**: contact@linkinnovations.ai
+- **Email**: info@linkinnovations.ai
 
 ### Services (7 Core)
 

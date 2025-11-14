@@ -99,8 +99,9 @@ const SuccessStories = ({ limit, compact = false }: SuccessStoriesProps) => {
   const imageHeightClass = compact ? "h-[310px] lg:h-[330px]" : "h-[340px]";
 
   return (
-    <section className="bg-background-primary py-4 sm:py-4">
-      <div className="container mx-auto px-4">
+    <section className="relative bg-background-primary py-16 sm:py-20">
+      <div className="absolute inset-0 mx-auto max-w-6xl rounded-[48px] bg-gradient-to-br from-white/4 via-white/2 to-transparent blur-2xl opacity-60 pointer-events-none" />
+      <div className="container relative mx-auto px-4">
         {/* Section Heading */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-medium tracking-[-0.015em] text-text-primary sm:text-[56px] sm:leading-[1.15]">
@@ -109,34 +110,35 @@ const SuccessStories = ({ limit, compact = false }: SuccessStoriesProps) => {
         </div>
 
         {/* Services Grid */}
-        <div className="mx-auto mt-16 grid max-w-none grid-cols-1 gap-y-5 gap-x-6 sm:mt-20 md:grid-cols-2 md:gap-y-5 md:gap-x-8 justify-items-center">
+        <div className="mx-auto mt-14 grid max-w-none grid-cols-1 gap-y-5 gap-x-6 sm:mt-16 md:grid-cols-2 md:gap-y-6 md:gap-x-8 justify-items-center">
           {visibleServices.map((service) => (
             <Link
               key={service.name}
               href={service.href}
-              className={`group block overflow-hidden rounded-2xl bg-background-secondary shadow-soft border border-border-subtle transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1.5 w-full ${cardWidthClass}`}
+              className={`group block overflow-hidden rounded-[28px] bg-background-secondary/95 shadow-[0_18px_50px_rgba(10,15,20,0.12)] border border-border-subtle/70 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-[0_24px_60px_rgba(10,15,20,0.16)] hover:-translate-y-2 w-full ${cardWidthClass}`}
             >
               {/* Full-Width Image Section */}
-              <div className={`relative w-full overflow-hidden rounded-2xl ${imageHeightClass}`}>
+              <div className={`relative w-full overflow-hidden rounded-[28px] ${imageHeightClass}`}>
                 <Image
                   src={service.imageUrl}
                   alt={service.name}
                   fill
-                  className="object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-60" />
               </div>
 
               {/* Content Section */}
               <div className="p-8">
-                <h3 className="text-[28px] font-medium leading-[1.3] text-text-primary">
+                <h3 className="text-[30px] font-semibold leading-[1.3] text-text-primary tracking-[-0.01em]">
                   {service.name}
                 </h3>
-                <p className="mt-2 text-base text-text-secondary">
+                <p className="mt-3 text-base leading-7 text-text-secondary">
                   {service.description}
                 </p>
-                <div className="mt-6 flex items-center text-base font-medium text-text-primary">
+                <div className="mt-6 flex items-center text-base font-semibold text-text-primary">
                   Learn more
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </div>
               </div>
             </Link>

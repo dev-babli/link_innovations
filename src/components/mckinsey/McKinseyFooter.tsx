@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export function McKinseyFooter() {
   const currentYear = new Date().getFullYear();
@@ -28,7 +28,7 @@ export function McKinseyFooter() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="http://linkedin.com/company/link-innovations-official/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-mckinsey-blue transition-colors"
@@ -36,7 +36,7 @@ export function McKinseyFooter() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/LinkInnov_98"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-mckinsey-blue transition-colors"
@@ -44,12 +44,20 @@ export function McKinseyFooter() {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61582798476647&notif_id=1761984753033602&notif_t=page_user_activity&ref=notif#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-mckinsey-blue transition-colors"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/linkinnovationss_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-mckinsey-blue transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
